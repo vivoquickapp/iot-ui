@@ -1,0 +1,62 @@
+<import name="buttons" src='../Buttons/index.ux'>
+</import>
+<template>
+  <!-- template里只能有一个根节点 -->
+  <div>
+    <div class="c1" @click="fn">
+      <text>是否会送是否</text>
+    </div>
+    <buttons config="{{config}}" data="{{data}}"></buttons>
+  </div>
+
+</template>
+
+<style>
+  .c1 {
+    /* width: 100%; */
+    background-color: pink;
+    height: 200px;
+  }
+</style>
+
+<script>
+  import data from './data';
+
+  export default {
+    // 页面级组件的数据
+    //模型，影响传入数据的覆盖机制：private内定义的属性不允许被覆盖
+    data() {
+      return {
+        config: {
+          showText: true,
+          backgroundColor: 'skyblue',
+          column: 4,
+          iconWidth: 80,
+          paddingTop: 20,
+          paddingBottom: 20,
+          textHeight: 60,
+
+        },
+        data: data
+      }
+    },
+    onInit() {
+
+      setTimeout(() => {
+        this.data[0]['disabled'] = true;
+        this.data[0]['value'] = 2;
+        setTimeout(() => {
+          this.data[0]['disabled'] = false;
+          this.data[0]['value'] = 1;
+        }, 5000)
+
+      }, 5000)
+    },
+    fn() {
+
+      this.config.showText = !this.config.showText;
+
+      this.config = Object.assign({}, this.config);
+    }
+  }
+</script>

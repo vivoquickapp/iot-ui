@@ -1,0 +1,17 @@
+
+.vscode/
+
+.DS_Store
+node_modules
+build/
+dist/
+
+# Editor directories and files
+.ide
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
