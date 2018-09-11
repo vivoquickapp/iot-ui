@@ -1,0 +1,45 @@
+<import name="Switch" src="../Switch/index.ux">
+</import>
+<template>
+    <div class="box">
+        <text>test switch</text>
+        <Switch config="{{config}}"></Switch>
+    </div>
+</template>
+
+<style>
+    .box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<script>
+    import prompt from '@system.prompt'
+    export default {
+
+        onInit() {
+            setTimeout(() => {
+
+                let config = Object.assign({}, this.config);
+                config.checked = true;
+                this.config = config
+
+            }, 3000)
+        },
+        data() {
+            return {
+                config: {
+                    handleClick: function (checked) {
+                        prompt.showToast({
+                            message: checked
+                        })
+                    },
+                    checked: false,
+                    disabled: false
+                }
+            }
+        }
+    }
+</script>

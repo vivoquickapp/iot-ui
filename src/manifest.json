@@ -25,7 +25,7 @@
     "logLevel": "off"
   },
   "router": {
-    "entry": "testNavBar",
+    "entry": "testSwitch",
     "pages": {
       "testButtons": {
         "component": "index"
@@ -34,6 +34,9 @@
         "component": "index"
       },
       "About": {
+        "component": "index"
+      },
+      "testSwitch": {
         "component": "index"
       }
     }
