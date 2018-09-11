@@ -5,12 +5,12 @@
                 <text style="color:{{config.color}}">{{config.title}}</text>
             </div>
             <div class="buttons">
-                <div class="more" if="config.showMore" >
+                <div class="more" if="config.showMore" onclick="moreFn">
                     <stack>
                         <div class="more-item  {{activeMore}}">
 
                         </div>
-                        <div class="more-item more-item-head" onclick="moreFn">
+                        <div class="more-item more-item-head" >
                             <div class="m1-box">
                                 <div class="m1" style="backgroundColor:{{config.color}}"></div>
                             </div>
@@ -26,12 +26,12 @@
 
 
                 </div>
-                <div class="close" if="config.showClose" >
+                <div class="close" if="config.showClose" onclick="closeFn">
                     <stack>
                         <div class="close-item  {{activeClose}}">
 
                         </div>
-                        <stack onclick="closeFn">
+                        <stack >
                             <div class="close-1" style="backgroundColor:{{config.color}}"></div>
                             <div class="close-2" style="backgroundColor:{{config.color}}"></div>
                         </stack>
@@ -110,7 +110,6 @@
         width: 100px;
         justify-content: center;
 
-        /* background-color: orange; */
     }
 
     .close-item {
