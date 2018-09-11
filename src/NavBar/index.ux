@@ -59,7 +59,7 @@
     }
 
     .title text {
-        font-size: 46px;
+        font-size: 38px;
     }
 
     .buttons {
@@ -81,7 +81,7 @@
     }
 
     .more-item-head {
-        padding: 12px;
+        padding: 20px;
     }
 
     .more-item-active {
@@ -101,8 +101,8 @@
     }
 
     .m1 {
-        width: 12px;
-        height: 12px;
+        width: 10px;
+        height: 10px;
         border-radius: 12px;
     }
 
@@ -126,14 +126,14 @@
     }
 
     .close-1 {
-        width: 50px;
-        height: 6px;
+        width: 40px;
+        height: 4px;
         transform: rotate(45deg);
     }
 
     .close-2 {
-        width: 50px;
-        height: 6px;
+        width: 40px;
+        height: 4px;
         transform: rotate(-45deg);
     }
 
