@@ -2,25 +2,42 @@
     <div class="box" style="padding-left:{{config.paddingLeft}}px;padding-right:{{config.paddingRight}}px;backgroundColor:{{config.backgroundColor}}">
         <stack>
             <div class="title">
-                <text style="color:{{config.color}}">服是否</text>
+                <text style="color:{{config.color}}">{{config.title}}</text>
             </div>
             <div class="buttons">
-                <div class="more" if="config.showMore">
-                    <div class="m1-box">
-                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
-                    </div>
-                    <div class="m1-box">
-                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
-                    </div>
-                    <div class="m1-box">
-                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
-                    </div>
-                </div>
-                <div class="close" if="config.showClose">
+                <div class="more" if="config.showMore" >
                     <stack>
-                        <div class="close-1" style="backgroundColor:{{config.color}}"></div>
-                        <div class="close-2" style="backgroundColor:{{config.color}}"></div>
+                        <div class="more-item  {{activeMore}}">
+
+                        </div>
+                        <div class="more-item more-item-head" onclick="moreFn">
+                            <div class="m1-box">
+                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                            </div>
+                            <div class="m1-box">
+                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                            </div>
+                            <div class="m1-box">
+                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                            </div>
+                        </div>
+
                     </stack>
+
+
+                </div>
+                <div class="close" if="config.showClose" >
+                    <stack>
+                        <div class="close-item  {{activeClose}}">
+
+                        </div>
+                        <stack onclick="closeFn">
+                            <div class="close-1" style="backgroundColor:{{config.color}}"></div>
+                            <div class="close-2" style="backgroundColor:{{config.color}}"></div>
+                        </stack>
+
+                    </stack>
+
                 </div>
             </div>
         </stack>
@@ -37,7 +54,12 @@
     .title {
         justify-content: center;
         width: 100%;
+
         /* background-color: red; */
+    }
+
+    .title text {
+        font-size: 46px;
     }
 
     .buttons {
@@ -49,9 +71,26 @@
     .more {
         width: 100px;
         justify-content: center;
-        padding-left: 10px;
-        padding-right: 10px;
         /* background-color: red; */
+    }
+
+    .more-item {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .more-item-head {
+        padding: 12px;
+    }
+
+    .more-item-active {
+        border-radius: 80px;
+        animation-name: clickButton;
+        animation-duration: 160ms;
+        animation-iteration-count: 1;
+        opacity: 0;
+        background-color: aqua;
     }
 
     .m1-box {
@@ -68,10 +107,15 @@
     }
 
     .close {
-        width: 120px;
+        width: 100px;
         justify-content: center;
 
         /* background-color: orange; */
+    }
+
+    .close-item {
+        width: 100%;
+        height: 100%;
     }
 
     .close stack {
@@ -82,19 +126,38 @@
     }
 
     .close-1 {
-        width: 60px;
+        width: 50px;
         height: 6px;
         transform: rotate(45deg);
     }
 
     .close-2 {
-        width: 60px;
+        width: 50px;
         height: 6px;
         transform: rotate(-45deg);
+    }
+
+    @keyframes clickButton {
+        0% {
+
+            opacity: 0.2;
+            transform: scale(0.9);
+        }
+        50% {
+
+            transform: scale(1);
+            opacity: 0.3;
+        }
+        100% {
+
+            transform: scale(0.9);
+            opacity: 0.2;
+        }
     }
 </style>
 
 <script>
+
 
     let defaultConfig = {
 
@@ -103,10 +166,21 @@
         showMore: true,
         showClose: true,
         backgroundColor: '#ccc',
-        color: '#000000'
+        color: '#000000',
+        title: '',
+        handleMore: function () {
+        },
+        handleClose: function () {
+        }
     };
 
     export default {
+        data() {
+            return {
+                activeMore: '',
+                activeClose: ''
+            }
+        },
 
         props: {
             config: {
@@ -122,6 +196,28 @@
 
             }
         },
+        moreFn() {
+
+            if (this.config.handleMore) {
+                this.activeMore = 'more-item-active';
+                setTimeout(() => {
+                    this.activeMore = '';
+                }, 160)
+
+                this.config.handleMore();
+            }
+        },
+        closeFn() {
+            if (this.config.handleClose) {
+                this.activeClose = 'more-item-active';
+                setTimeout(() => {
+                    this.activeClose = '';
+                }, 160)
+
+                this.config.handleClose();
+            }
+
+        }
 
     }
 </script>

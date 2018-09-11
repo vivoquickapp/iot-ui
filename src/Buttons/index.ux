@@ -45,7 +45,6 @@
 </style>
 
 <script>
-  import prompt from '@system.prompt'
 
   let defaultConfig = {
     showText: false,

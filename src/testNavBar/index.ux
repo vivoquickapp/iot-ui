@@ -5,7 +5,7 @@
     <div class="box">
         <NavBar config="{{navBarConfig}}"></NavBar>
         <div class="c1">
-            <text>下面</text>
+            <text>{{title}}</text>
         </div>
         <Buttons config="{{config}}" data="{{data}}"></Buttons>
     </div>
@@ -24,12 +24,16 @@
 
 <script>
     import data from '../testButtons/data';
+    import prompt from '@system.prompt'
     export default {
         data() {
+            let that = this;
+            let itemList = ['item1', 'item2']
             return {
+                title: '',
                 config: {
                     showText: true,
-                    backgroundColor: '#ff0000',
+                    backgroundColor: '#5DB3FF',
                     column: 3,
                     iconWidth: 100,
                     paddingTop: 20,
@@ -38,10 +42,22 @@
                 },
                 data: data,
                 navBarConfig: {
-                    backgroundColor:'#ccc',
-                    showMore:true,
-                    showClose:true,
-                    color:'#fff'
+                    backgroundColor: '#ccc',
+                    showMore: true,
+                    showClose: true,
+                    color: '#fff',
+                    title:'这是标题',
+                    handleClose:function(){
+                        prompt.showToast({
+                            message: '关闭'
+                        })
+                    },
+                    handleMore: function () {
+                      
+                        prompt.showToast({
+                            message: '更多'
+                        })
+                    }
                 }
             }
         },
