@@ -1,0 +1,48 @@
+<import name="NavBar" src="../NavBar/index.ux"></import>
+<import name="Buttons" src="../Buttons/index.ux"></import>
+</import>
+<template>
+    <div class="box">
+        <NavBar></NavBar>
+        <div class="c1">
+            <text>下面</text>
+        </div>
+        <Buttons config="{{config}}" data="{{data}}"></Buttons>
+    </div>
+</template>
+
+<style>
+    .box {
+        flex-direction: column;
+    }
+
+    .c1 {
+        flex: 1;
+        background-color: pink;
+    }
+</style>
+
+<script>
+    import data from '../testButtons/data';
+    export default {
+        data() {
+            return {
+                config: {
+                    showText: true,
+                    backgroundColor: '#fff',
+                    column: 3,
+                    iconWidth: 100,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    textHeight: 60,
+
+                },
+                data: data
+            }
+        },
+        onInit() {
+
+        },
+
+    }
+</script>

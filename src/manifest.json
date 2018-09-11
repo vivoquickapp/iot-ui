@@ -25,9 +25,12 @@
     "logLevel": "off"
   },
   "router": {
-    "entry": "testButtons",
+    "entry": "testNavBar",
     "pages": {
       "testButtons": {
+        "component": "index"
+      },
+      "testNavBar": {
         "component": "index"
       },
       "About": {
