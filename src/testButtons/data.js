@@ -49,7 +49,7 @@ let data = [
 
     }
   }, {
-    disabled: false,
+    disabled: true,
     icons: [
       {
         url: './rec.jpg',
@@ -63,8 +63,12 @@ let data = [
         url: '../Common/logo.png',
         name: '不可用',
         fontColor: '#ccc',
+      }, , {
+        url: '../Common/logo.png',
+        name: '不可用',
+        fontColor: '#ccc',
       }],
-    value: 0,
+    value: 2,
     click: function (item) {
 
       item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;

@@ -2,7 +2,7 @@
 </import>
 <template>
   <!-- template里只能有一个根节点 -->
-  <div>
+  <div class="box">
     <div class="c1" @click="fn">
       <text>是否会送是否</text>
     </div>
@@ -12,10 +12,15 @@
 </template>
 
 <style>
+  .box{
+    flex-direction: column;
+  }
   .c1 {
     /* width: 100%; */
     background-color: pink;
     height: 200px;
+    flex: 1;
+    border:2px solid red;
   }
 </style>
 
