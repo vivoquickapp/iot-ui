@@ -3,7 +3,7 @@
 </import>
 <template>
     <div class="box">
-        <NavBar></NavBar>
+        <NavBar config="{{navBarConfig}}"></NavBar>
         <div class="c1">
             <text>下面</text>
         </div>
@@ -29,15 +29,20 @@
             return {
                 config: {
                     showText: true,
-                    backgroundColor: '#fff',
+                    backgroundColor: '#ff0000',
                     column: 3,
                     iconWidth: 100,
                     paddingTop: 20,
                     paddingBottom: 20,
                     textHeight: 60,
-
                 },
-                data: data
+                data: data,
+                navBarConfig: {
+                    backgroundColor:'#ccc',
+                    showMore:true,
+                    showClose:true,
+                    color:'#fff'
+                }
             }
         },
         onInit() {

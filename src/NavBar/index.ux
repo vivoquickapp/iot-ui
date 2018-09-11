@@ -1,23 +1,126 @@
 <template>
-    <div class="box">
-        <text>hello s navbar</text>
+    <div class="box" style="padding-left:{{config.paddingLeft}}px;padding-right:{{config.paddingRight}}px;backgroundColor:{{config.backgroundColor}}">
+        <stack>
+            <div class="title">
+                <text style="color:{{config.color}}">服是否</text>
+            </div>
+            <div class="buttons">
+                <div class="more" if="config.showMore">
+                    <div class="m1-box">
+                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                    </div>
+                    <div class="m1-box">
+                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                    </div>
+                    <div class="m1-box">
+                        <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                    </div>
+                </div>
+                <div class="close" if="config.showClose">
+                    <stack>
+                        <div class="close-1" style="backgroundColor:{{config.color}}"></div>
+                        <div class="close-2" style="backgroundColor:{{config.color}}"></div>
+                    </stack>
+                </div>
+            </div>
+        </stack>
     </div>
 </template>
 
 <style>
     .box {
         width: 100%;
-        height: 50px;
-        background-color: red;
+        height: 100px;
+
+    }
+
+    .title {
+        justify-content: center;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+
+    .more {
+        width: 100px;
+        justify-content: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        /* background-color: red; */
+    }
+
+    .m1-box {
+        flex: 1;
+        justify-content: center;
+        height: 100%;
+        align-items: center;
+    }
+
+    .m1 {
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+    }
+
+    .close {
+        width: 120px;
+        justify-content: center;
+
+        /* background-color: orange; */
+    }
+
+    .close stack {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-1 {
+        width: 60px;
+        height: 6px;
+        transform: rotate(45deg);
+    }
+
+    .close-2 {
+        width: 60px;
+        height: 6px;
+        transform: rotate(-45deg);
     }
 </style>
 
 <script>
 
+    let defaultConfig = {
+
+        paddingLeft: 30,
+        paddingRight: 30,
+        showMore: true,
+        showClose: true,
+        backgroundColor: '#ccc',
+        color: '#000000'
+    };
+
     export default {
 
-        onInit() {
+        props: {
+            config: {
+                default: defaultConfig
+            }
+        },
 
+        onInit() {
+            for (let key in defaultConfig) {
+                if (this.config[key] === undefined) {
+                    this.config[key] = defaultConfig[key];
+                }
+
+            }
         },
 
     }
