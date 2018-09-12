@@ -1,0 +1,39 @@
+<template>
+    <div class="box">
+        <text>组件:</text>
+        <a href="/testButtons">Buttons</a>
+        <a href="/testNavBar">NavBar</a>
+        <a href="/testSwitch">Switch</a>
+    </div>
+</template>
+
+<style>
+    .box {
+        flex-direction: column;
+
+    }
+
+    text,
+    a {
+        margin: 20px;
+        padding: 20px;
+
+    }
+
+    a {
+        border: 2px solid red;
+    }
+</style>
+
+<script>
+
+    export default {
+        data() {
+
+        },
+        onInit() {
+
+        }
+
+    }
+</script>

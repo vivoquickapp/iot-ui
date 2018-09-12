@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<style>
+<style lang="less">
     .box {
         flex-direction: column;
         justify-content: center;
@@ -18,14 +18,14 @@
 
     text {
         height: 100px;
-        background-color: #ccc;
+        background-color: skyblue;
         margin: 30px;
         width: 100%;
         padding: 10px;
     }
 
     .btn {
-        border: 2px solid blue;
+        border: 2px solid skyblue;
         border-radius: 50px;
         width: 600px;
 
@@ -38,9 +38,9 @@
     export default {
 
         onInit() {
-            setTimeout(() => {
-                this.checked = !this.checked;
-            }, 2000)
+            // setTimeout(() => {
+            //     this.checked = !this.checked;
+            // }, 2000)
 
 
         },

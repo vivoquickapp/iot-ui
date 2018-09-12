@@ -14,8 +14,9 @@
     },
     {
       "name": "system.shortcut"
-    },{
-      "name":"system.fetch"
+    },
+    {
+      "name": "system.fetch"
     }
   ],
   "permissions": [
@@ -27,8 +28,11 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "testSwitch",
+    "entry": "home",
     "pages": {
+      "home": {
+        "component": "index"
+      },
       "testButtons": {
         "component": "index"
       },

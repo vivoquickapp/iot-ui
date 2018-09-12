@@ -1,0 +1,76 @@
+
+.root {
+    width: @SwitchWidth+px;
+    height: @SwitchHeight+px;
+}
+
+stack {
+    align-items: center;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    border-radius: @SwitchHeight+px;
+}
+
+.switch-on {
+    background-color: @SwitchOnColor;
+}
+
+.switch-off {
+    background-color: @SwitchOffColor;
+}
+
+.switch-disabled-on {
+    background-color: @SwitchDisabledOnColor;
+}
+
+.switch-disabled-off {
+    background-color: @SwitchDisabledOffColor;
+}
+
+.circle-box {
+    padding-left: @SwitchPadding + px;
+    padding-right: @SwitchPadding + px;
+    width: 100%;
+}
+
+.circel-checked {
+    animation-name: checked;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    transform: translateX(@SwitchCircleTranslateX);
+}
+
+.circel-dischecked {
+    animation-name: dischecked;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+    transform: translateX(0);
+}
+
+.circle {
+    width: @SwitchCircleSize + px;
+    height: @SwitchCircleSize + px;
+    border-radius: @SwitchCircleSize + px;
+    background-color: @SwitchCircleColor;
+}
+
+@keyframes checked {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(@SwitchCircleTranslateX);
+    }
+}
+
+@keyframes dischecked {
+    0% {
+        transform: translateX(@SwitchCircleTranslateX);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -2,7 +2,7 @@
 
     <div class="root" onclick="fn">
         <stack>
-            <div class="box" style="background-color:{{bgColor}};">
+            <div class="box {{bgColor}}">
 
             </div>
             <div class="circle-box {{activeClass}}">
@@ -14,74 +14,9 @@
     </div>
 </template>
 
-<style>
-    .root {
-        width: 100px;
-        height: 50px;
-    }
-
-    stack {
-        align-items: center;
-    }
-
-    .box {
-        border-radius: 25px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .circle-box {
-        padding-left: 8px;
-        padding-right: 8px;
-
-        width: 100%;
-    }
-
-    .circel-checked {
-        animation-name: checked;
-        animation-duration: 100ms;
-        animation-iteration-count: 1;
-        transform: translateX(42);
-    }
-
-    .circel-dischecked {
-        animation-name: dischecked;
-        animation-duration: 100ms;
-        animation-iteration-count: 1;
-        transform: translateX(0);
-    }
-
-    .circle {
-        width: 42px;
-        height: 42px;
-        border-radius: 42px;
-        background-color: #ffffff;
-
-    }
-
-    @keyframes checked {
-        0% {
-
-            transform: translateX(0);
-        }
-
-        100% {
-
-            transform: translateX(42);
-        }
-    }
-
-    @keyframes dischecked {
-        0% {
-
-            transform: translateX(42);
-        }
-
-        100% {
-
-            transform: translateX(0);
-        }
-    }
+<style lang="less">
+    @import '../theme.less';
+    @import './switch.less';
 </style>
 
 <script>
@@ -91,7 +26,7 @@
         data() {
             return {
                 activeClass: 'circel-checked',
-                bgColor: '#60D2DD'
+                bgColor: 'circel-checked'
             }
         },
         props: {
@@ -144,18 +79,18 @@
             if (this.disabled) {
                 if (this.checked) {
                     this.activeClass = 'circel-checked';
-                    this.bgColor = '#CFF1F5';
+                    this.bgColor = 'switch-disabled-on';
                 } else {
                     this.activeClass = 'circel-dischecked';
-                    this.bgColor = '#F3F3F3';
+                    this.bgColor = 'switch-disabled-off';
                 }
             } else {
                 if (this.checked) {
                     this.activeClass = 'circel-checked';
-                    this.bgColor = '#60D2DD';
+                    this.bgColor = 'switch-on';
                 } else {
                     this.activeClass = 'circel-dischecked';
-                    this.bgColor = '#D8D8D8';
+                    this.bgColor = 'switch-off';
                 }
             }
 
