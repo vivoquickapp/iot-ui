@@ -1,8 +1,8 @@
 <template>
-    <div class="box" style="padding-left:{{config.paddingLeft}}px;padding-right:{{config.paddingRight}}px;backgroundColor:{{config.backgroundColor}}">
+    <div class="box">
         <stack>
             <div class="title">
-                <text style="color:{{config.color}}">{{config.title}}</text>
+                <text>{{config.title}}</text>
             </div>
             <div class="buttons">
                 <div class="more" if="config.showMore" onclick="moreFn">
@@ -10,15 +10,15 @@
                         <div class="more-item  {{activeMore}}">
 
                         </div>
-                        <div class="more-item more-item-head" >
+                        <div class="more-item more-item-head">
                             <div class="m1-box">
-                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                                <div class="m1"></div>
                             </div>
                             <div class="m1-box">
-                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                                <div class="m1"></div>
                             </div>
                             <div class="m1-box">
-                                <div class="m1" style="backgroundColor:{{config.color}}"></div>
+                                <div class="m1"></div>
                             </div>
                         </div>
 
@@ -31,9 +31,9 @@
                         <div class="close-item  {{activeClose}}">
 
                         </div>
-                        <stack >
-                            <div class="close-1" style="backgroundColor:{{config.color}}"></div>
-                            <div class="close-2" style="backgroundColor:{{config.color}}"></div>
+                        <stack>
+                            <div class="close-1"></div>
+                            <div class="close-2"></div>
                         </stack>
 
                     </stack>
@@ -44,115 +44,9 @@
     </div>
 </template>
 
-<style>
-    .box {
-        width: 100%;
-        height: 100px;
-
-    }
-
-    .title {
-        justify-content: center;
-        width: 100%;
-
-        /* background-color: red; */
-    }
-
-    .title text {
-        font-size: 38px;
-    }
-
-    .buttons {
-        width: 100%;
-        justify-content: flex-end;
-    }
-
-
-    .more {
-        width: 100px;
-        justify-content: center;
-        /* background-color: red; */
-    }
-
-    .more-item {
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-    }
-
-    .more-item-head {
-        padding: 20px;
-    }
-
-    .more-item-active {
-        border-radius: 80px;
-        animation-name: clickButton;
-        animation-duration: 160ms;
-        animation-iteration-count: 1;
-        opacity: 0;
-        background-color: aqua;
-    }
-
-    .m1-box {
-        flex: 1;
-        justify-content: center;
-        height: 100%;
-        align-items: center;
-    }
-
-    .m1 {
-        width: 10px;
-        height: 10px;
-        border-radius: 12px;
-    }
-
-    .close {
-        width: 100px;
-        justify-content: center;
-
-    }
-
-    .close-item {
-        width: 100%;
-        height: 100%;
-    }
-
-    .close stack {
-        width: 100%;
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .close-1 {
-        width: 40px;
-        height: 4px;
-        transform: rotate(45deg);
-    }
-
-    .close-2 {
-        width: 40px;
-        height: 4px;
-        transform: rotate(-45deg);
-    }
-
-    @keyframes clickButton {
-        0% {
-
-            opacity: 0.2;
-            transform: scale(0.9);
-        }
-        50% {
-
-            transform: scale(1);
-            opacity: 0.3;
-        }
-        100% {
-
-            transform: scale(0.9);
-            opacity: 0.2;
-        }
-    }
+<style lang="less">
+    @import '../theme.less';
+    @import './NavBar.less';
 </style>
 
 <script>
@@ -166,11 +60,7 @@
         showClose: true,
         backgroundColor: '#ccc',
         color: '#000000',
-        title: '',
-        handleMore: function () {
-        },
-        handleClose: function () {
-        }
+        title: ''
     };
 
     export default {
@@ -197,24 +87,21 @@
         },
         moreFn() {
 
-            if (this.config.handleMore) {
-                this.activeMore = 'more-item-active';
-                setTimeout(() => {
-                    this.activeMore = '';
-                }, 160)
+            this.activeMore = 'more-item-active';
+            setTimeout(() => {
+                this.activeMore = '';
+            }, 160)
 
-                this.config.handleMore();
-            }
+
+            this.$emit('evtMore', { name: "点击了更多按钮" });
         },
         closeFn() {
-            if (this.config.handleClose) {
-                this.activeClose = 'more-item-active';
-                setTimeout(() => {
-                    this.activeClose = '';
-                }, 160)
+            this.activeClose = 'more-item-active';
+            setTimeout(() => {
+                this.activeClose = '';
+            }, 160)
 
-                this.config.handleClose();
-            }
+            this.$emit('evtClose', { name: "点击了关闭按钮" });
 
         }
 

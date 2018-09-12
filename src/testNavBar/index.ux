@@ -3,11 +3,10 @@
 </import>
 <template>
     <div class="box">
-        <NavBar config="{{navBarConfig}}"></NavBar>
+        <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>
         <div class="c1">
-            <text>{{title}}</text>
+            <text>{{content}}</text>
         </div>
-        <Buttons config="{{config}}" data="{{data}}"></Buttons>
     </div>
 </template>
 
@@ -23,43 +22,31 @@
 </style>
 
 <script>
-    import data from '../testButtons/data';
     import prompt from '@system.prompt'
     export default {
         data() {
-            let that = this;
-            let itemList = ['item1', 'item2']
+
             return {
-                title: '',
-                config: {
-                    showText: true,
-                    backgroundColor: '#5DB3FF',
-                    column: 3,
-                    iconWidth: 100,
-                    paddingTop: 20,
-                    paddingBottom: 20,
-                    textHeight: 60,
-                },
-                data: data,
+                content: 'hello world',
+
                 navBarConfig: {
                     backgroundColor: '#ccc',
                     showMore: true,
                     showClose: true,
                     color: '#fff',
-                    title:'这是标题',
-                    handleClose:function(){
-                        prompt.showToast({
-                            message: '关闭'
-                        })
-                    },
-                    handleMore: function () {
-                      
-                        prompt.showToast({
-                            message: '更多'
-                        })
-                    }
+                    title: '这是标题',
+
+
                 }
             }
+        },
+        handleClose: function (evt) {
+
+            this.content = evt.detail.name + Math.random();
+        },
+        handleMore: function (evt) {
+
+            this.content = evt.detail.name + Math.random();
         },
         onInit() {
 
