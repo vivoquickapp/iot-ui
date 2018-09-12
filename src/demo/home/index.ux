@@ -1,9 +1,9 @@
 <template>
     <div class="box">
         <text>组件:</text>
-        <a href="/testButtons">Buttons</a>
-        <a href="/testNavBar">NavBar</a>
-        <a href="/testSwitch">Switch</a>
+        <a href="/demo/testButtons">Buttons</a>
+        <a href="/demo/testNavBar">NavBar</a>
+        <a href="/demo/testSwitch">Switch</a>
     </div>
 </template>
 

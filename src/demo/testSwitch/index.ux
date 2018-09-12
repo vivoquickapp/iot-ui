@@ -1,4 +1,4 @@
-<import name="Switch" src="../Switch/index.ux">
+<import name="Switch" src="../../Switch/index.ux">
 </import>
 <template>
     <div class="box">

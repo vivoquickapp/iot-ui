@@ -4,11 +4,11 @@ let data = [
     disabled: false,
     icons: [
       {
-        url: '/testButtons/rec.jpg',
+        url: '/demo/testButtons/rec.jpg',
         name: '小o活',
         fontColor: '#ff0000',
       }, {
-        url: '/testButtons/icon.png',
+        url: '/demo/testButtons/icon.png',
         name: '小微啊',
         fontColor: '#0000ff',
       }, {
@@ -28,11 +28,11 @@ let data = [
     disabled: false,
     icons: [
       {
-        url: '/testButtons/rec.jpg',
+        url: '/demo/testButtons/rec.jpg',
         name: '小微激活',
         fontColor: '#ff0000',
       }, {
-        url: '/testButtons/icon.png',
+        url: '/demo/testButtons/icon.png',
         name: '小微',
         fontColor: '#0000ff',
       }, {
@@ -52,11 +52,11 @@ let data = [
     disabled: true,
     icons: [
       {
-        url: '/testButtons/rec.jpg',
+        url: '/demo/testButtons/rec.jpg',
         name: '小微激活',
         fontColor: '#ff0000',
       }, {
-        url: '/testButtons/icon.png',
+        url: '/demo/testButtons/icon.png',
         name: '小微',
         fontColor: '#0000ff',
       }, {

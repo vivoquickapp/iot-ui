@@ -54,12 +54,8 @@
 
     let defaultConfig = {
 
-        paddingLeft: 30,
-        paddingRight: 30,
         showMore: true,
         showClose: true,
-        backgroundColor: '#ccc',
-        color: '#000000',
         title: ''
     };
 

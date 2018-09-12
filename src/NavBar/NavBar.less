@@ -1,11 +1,7 @@
-@NavBarPaddingLeft: 30px;
-@NavBarPaddingRight: 30px;
-@NavBarBackgroundColor: #FF0000;
-@NavBarFontColor: #00FF00;
-@NavBarTitleFontSize: 38px;
+
 .box {
     width: 100%;
-    height: 100px;
+    height: @NavBarHeight;
     padding-left: @NavBarPaddingLeft;
     padding-right: @NavBarPaddingRight;
     background-color: @NavBarBackgroundColor;
@@ -28,28 +24,28 @@
 }
 
 .more {
-    width: 100px;
+    width: @NavBarMoreSize;
     justify-content: center;
-    /* background-color: red; */
+    align-items: center;
 }
 
 .more-item {
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: @NavBarMoreSize;
+    height: @NavBarMoreSize;
 }
 
 .more-item-head {
-    padding: 20px;
+    padding: @NavBarMorePadding;
 }
 
 .more-item-active {
-    border-radius: 80px;
+    border-radius: @NavBarMoreSize;
     animation-name: clickButton;
     animation-duration: 160ms;
     animation-iteration-count: 1;
     opacity: 0;
-    background-color: aqua;
+    background-color: @NavBarActiveColor;
 }
 
 .m1-box {
@@ -60,20 +56,20 @@
 }
 
 .m1 {
-    width: 10px;
-    height: 10px;
-    border-radius: 12px;
+    width: @NavBarMoreDotSize;
+    height: @NavBarMoreDotSize;
+    border-radius: @NavBarMoreDotSize;
     background-color: @NavBarFontColor;
 }
 
 .close {
-    width: 100px;
+    width: @NavBarCloseSize;
     justify-content: center;
 }
 
 .close-item {
-    width: 100%;
-    height: 100%;
+    width: @NavBarCloseSize;
+    height: @NavBarCloseSize;
 }
 
 .close stack {
@@ -84,15 +80,15 @@
 }
 
 .close-1 {
-    width: 40px;
-    height: 4px;
+    width: @NavBarCloseWidth;
+    height: @NavBarCloseHeight;
     transform: rotate(45deg);
     background-color: @NavBarFontColor;
 }
 
 .close-2 {
-    width: 40px;
-    height: 4px;
+    width: @NavBarCloseWidth;
+    height: @NavBarCloseHeight;
     transform: rotate(-45deg);
     background-color: @NavBarFontColor;
 }

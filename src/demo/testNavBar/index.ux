@@ -1,5 +1,4 @@
-<import name="NavBar" src="../NavBar/index.ux"></import>
-<import name="Buttons" src="../Buttons/index.ux"></import>
+<import name="NavBar" src="../../NavBar/index.ux"></import>
 </import>
 <template>
     <div class="box">
@@ -30,10 +29,8 @@
                 content: 'hello world',
 
                 navBarConfig: {
-                    backgroundColor: '#ccc',
                     showMore: true,
                     showClose: true,
-                    color: '#fff',
                     title: '这是标题',
 
 

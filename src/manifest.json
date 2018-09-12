@@ -28,21 +28,21 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "home",
+    "entry": "demo/home",
     "pages": {
-      "home": {
+      "demo/home": {
         "component": "index"
       },
-      "testButtons": {
+      "demo/testButtons": {
         "component": "index"
       },
-      "testNavBar": {
+      "demo/testNavBar": {
         "component": "index"
       },
-      "About": {
+      "demo/About": {
         "component": "index"
       },
-      "testSwitch": {
+      "demo/testSwitch": {
         "component": "index"
       }
     }
