@@ -86,64 +86,62 @@
 
 <script>
 
-    let defaultConfig = {
-        handleClick: function () {
-
-        },
-        checked: false,
-        disabled: false
-
-    };
 
     export default {
         data() {
             return {
-                checked: true,
                 activeClass: 'circel-checked',
                 bgColor: '#60D2DD'
             }
         },
         props: {
-            config: {
-                default: defaultConfig
+            change: {
+                default: function () {
+
+                }
+            },
+            checked: {
+                default: false
+            },
+            disabled: {
+                default: false
             }
         },
 
         onInit() {
-            for (let key in defaultConfig) {
-                if (this.config[key] === undefined) {
-                    this.config[key] = defaultConfig[key];
-                }
-            }
-            this.checked = this.config.checked;
+
             this.isChecked();
-            this.$watch('config', 'configChange');
+            this.$watch('checked', 'checkedChange');
+            this.$watch('disabled', 'configChange');
 
         },
+        checkedChange() {
+
+            this.isChecked();
+        },
         configChange() {
-            this.checked = this.config.checked;
 
             this.isChecked();
 
         },
         fn() {
-            let { disabled } = this.config;
+            let disabled = this.disabled;
             if (!disabled) {
                 this.checked = !this.checked;
 
                 this.isChecked();
 
-                if (this.config.handleClick) {
-                    this.config.handleClick(this.checked);
+                if (this.change) {
+                    this.change(this.checked);
                 }
             };
 
 
         },
         isChecked() {
-            let { disabled } = this.config;
 
-            if (disabled) {
+
+            if (this.disabled) {
                 if (this.checked) {
                     this.activeClass = 'circel-checked';
                     this.bgColor = '#CFF1F5';

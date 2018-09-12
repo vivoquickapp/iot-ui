@@ -2,8 +2,10 @@
 </import>
 <template>
     <div class="box">
-        <text>值:{{value}}</text>
-        <Switch config="{{config}}"></Switch>
+        <text onclick="click" class="btn">disabled值:{{disabled}}点击切换disabled值</text>
+        <text>值:{{checked}}</text>
+        <Switch change="{{change}}" checked="{{checked}}" disabled="{{disabled}}"></Switch>
+        <text>checked改变 了{{i}}</text>
     </div>
 </template>
 
@@ -13,36 +15,53 @@
         justify-content: center;
         align-items: center;
     }
+
+    text {
+        height: 100px;
+        background-color: #ccc;
+        margin: 30px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn {
+        border: 2px solid blue;
+        border-radius: 50px;
+        width: 600px;
+
+    }
 </style>
 
 <script>
     import prompt from '@system.prompt'
+    let i = 0;
     export default {
 
         onInit() {
             setTimeout(() => {
+                this.checked = !this.checked;
+            }, 2000)
 
-                let config = Object.assign({}, this.config);
-                config.checked = true;
-                this.config = config
 
-            }, 3000)
+        },
+        click() {
+            this.disabled = !this.disabled;
+
         },
         data() {
             let that = this;
             return {
-                value:false,
+                i: 0,
+                value: true,
 
-                config: {
-                    handleClick: function (checked) {
-                        // prompt.showToast({
-                        //     message: checked
-                        // })
-                        that.value=checked
-                    },
-                    checked: false,
-                    disabled: false
-                }
+
+                change: function (checked) {
+                    that.checked = checked;
+                    i++;
+                    that.i = i;
+                },
+                checked: true,
+                disabled: false
             }
         }
     }

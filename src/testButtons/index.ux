@@ -35,7 +35,7 @@
         config: {
           showText: true,
           backgroundColor: 'skyblue',
-          column: 4,
+          column: 5,
           iconWidth: 80,
           paddingTop: 20,
           paddingBottom: 20,
