@@ -26,15 +26,12 @@
         data() {
             return {
                 activeClass: 'circel-checked',
-                bgColor: 'circel-checked'
+                bgColor: 'circel-checked',
+                my_checked: this.checked
             }
         },
         props: {
-            change: {
-                default: function () {
 
-                }
-            },
             checked: {
                 default: false
             },
@@ -51,6 +48,7 @@
 
         },
         checkedChange() {
+            this.my_checked = this.checked;
 
             this.isChecked();
         },
@@ -62,14 +60,13 @@
         fn() {
             let disabled = this.disabled;
             if (!disabled) {
-                this.checked = !this.checked;
+                this.my_checked = !this.my_checked;
 
                 this.isChecked();
 
-                if (this.change) {
-                    this.change(this.checked);
-                }
+                this.$emit('evtChange', { checked: this.my_checked });
             };
+
 
 
         },
@@ -77,7 +74,7 @@
 
 
             if (this.disabled) {
-                if (this.checked) {
+                if (this.my_checked) {
                     this.activeClass = 'circel-checked';
                     this.bgColor = 'switch-disabled-on';
                 } else {
@@ -85,7 +82,7 @@
                     this.bgColor = 'switch-disabled-off';
                 }
             } else {
-                if (this.checked) {
+                if (this.my_checked) {
                     this.activeClass = 'circel-checked';
                     this.bgColor = 'switch-on';
                 } else {

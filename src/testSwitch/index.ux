@@ -4,7 +4,7 @@
     <div class="box">
         <text onclick="click" class="btn">disabled值:{{disabled}}点击切换disabled值</text>
         <text>值:{{checked}}</text>
-        <Switch change="{{change}}" checked="{{checked}}" disabled="{{disabled}}"></Switch>
+        <Switch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler"></Switch>
         <text>checked改变 了{{i}}</text>
     </div>
 </template>
@@ -34,32 +34,26 @@
 
 <script>
     import prompt from '@system.prompt'
-    let i = 0;
+
     export default {
 
         onInit() {
-            // setTimeout(() => {
-            //     this.checked = !this.checked;
-            // }, 2000)
-
 
         },
         click() {
             this.disabled = !this.disabled;
 
         },
+        evtTypeHandler(evt) {
+            console.info(`父组件：事件响应: `, evt.type, evt.detail)
+            this.checked = evt.detail.checked;
+
+            this.i++;
+        },
         data() {
-            let that = this;
+
             return {
                 i: 0,
-                value: true,
-
-
-                change: function (checked) {
-                    that.checked = checked;
-                    i++;
-                    that.i = i;
-                },
                 checked: true,
                 disabled: false
             }
