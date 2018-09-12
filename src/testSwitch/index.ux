@@ -2,7 +2,7 @@
 </import>
 <template>
     <div class="box">
-        <text>test switch</text>
+        <text>值:{{value}}</text>
         <Switch config="{{config}}"></Switch>
     </div>
 </template>
@@ -29,12 +29,16 @@
             }, 3000)
         },
         data() {
+            let that = this;
             return {
+                value:false,
+
                 config: {
                     handleClick: function (checked) {
-                        prompt.showToast({
-                            message: checked
-                        })
+                        // prompt.showToast({
+                        //     message: checked
+                        // })
+                        that.value=checked
                     },
                     checked: false,
                     disabled: false
