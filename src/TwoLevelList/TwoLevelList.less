@@ -1,20 +1,42 @@
 @TwoLevelListTitleHeight: 100px;
+@TwoLevelListTitleBackground: #fff;
 @TwoLevelListTitlePaddingLeft: 20px;
 @TwoLevelListTitlePaddingRight: 20px;
 @TwoLevelListTitleBackIconSize: 32px;
-@TwoLevelListTitleBackIconBold: 3px;
+@TwoLevelListTitleBackIconBold: 4px;
 @TwoLevelListTitleBackIconColor: #666;
 @TwoLevelListTitleFontSize: 36px;
+@TwoLevelListItemPaddingLeft: 60px;
+@TwoLevelListItemPaddingRight: 60px;
+@TwoLevelListItemPaddingTop: 42px;
+@TwoLevelListItemPaddingBottom: 42px;
+@TwoLevelListLineColor: #ccc;
+@TwoLevelListLineHeight: 1px;
+@TwoLevelListItemArrowSize: 20px;
+@TwoLevelListItemArrowBold: 3px;
+@TwoLevelListItemArrowColor: #666;
+@TwoLevelListItemTitleFontSize: 28px;
+@TwoLevelListItemIconSize: 84px;
+@TwoLevelListItemIconImageSize: 60px;
+@TwoLevelListItemIconBorderRadius: 15px;
+@TwoLevelListItemIconPaddingRight: 30px;
+@TwoLevelListItemSubTitleColor: #666;
+@TwoLevelListItemSubTitleFontSize: 22px;
+@TwoLevelListItemSubTitlePaddingTop: 4px;
 .box {
     flex-direction: column;
     height: 100%;
 }
 
 .title {
-    background-color: skyblue;
+    background-color: @TwoLevelListTitleBackground;
     height: @TwoLevelListTitleHeight;
-    padding-left: @TwoLevelListTitlePaddingLeft;
-    padding-right: @TwoLevelListTitlePaddingRight;
+}
+
+.title-line {
+    width: 100%;
+    height: @TwoLevelListLineHeight;
+    background-color: @TwoLevelListLineColor;
 }
 
 .title-stack {
@@ -23,7 +45,8 @@
 }
 
 .title-icon {
-    width: @TwoLevelListTitleBackIconSize * 2;
+    width: @TwoLevelListTitleBackIconSize * 2 + @TwoLevelListTitlePaddingLeft;
+    padding-left: @TwoLevelListTitlePaddingLeft;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -50,9 +73,74 @@
 list {
     height: 100%;
     flex: 1;
-    background-color: orange;
+    padding-left: @TwoLevelListItemPaddingLeft;
 }
 
 list-item {
-    border: 1px solid red;
+    flex-direction: column;
+}
+
+.item-content {
+    flex: 1; // background-color: orange;
+    align-items: center;
+}
+
+.item-content-content {
+    flex: 1;
+    .item-title-box {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .item-title-sub {
+        color: @TwoLevelListItemSubTitleColor;
+        font-size: @TwoLevelListItemSubTitleFontSize;
+        padding-top: @TwoLevelListItemSubTitlePaddingTop;
+    }
+    .item-title-sub-none {
+        width: 0px;
+        height: 0px;
+    }
+    .item-title {
+        font-size: @TwoLevelListItemTitleFontSize;
+    }
+    .item-content-content-icon {
+        border-radius: @TwoLevelListItemIconBorderRadius;
+        background-color: #ccc;
+        width: @TwoLevelListItemIconSize;
+        height: @TwoLevelListItemIconSize;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-content-content-icon image {
+        width: @TwoLevelListItemIconImageSize;
+        height: @TwoLevelListItemIconImageSize;
+    }
+    .item-content-content-icon-padding-right {
+        height: 100%;
+        width: @TwoLevelListItemIconPaddingRight;
+    }
+}
+
+.item-line {
+    width: 100%;
+    height: @TwoLevelListLineHeight;
+    background-color: @TwoLevelListLineColor;
+}
+
+.item-arrow-box {
+    width: @TwoLevelListItemArrowSize * 2 + @TwoLevelListItemPaddingRight;
+    justify-content: center;
+    align-items: center;
+    padding-top: @TwoLevelListItemPaddingTop;
+    padding-bottom: @TwoLevelListItemPaddingBottom;
+    padding-right: @TwoLevelListItemPaddingRight;
+}
+
+.item-arrow-icon {
+    width: @TwoLevelListItemArrowSize ;
+    height: @TwoLevelListItemArrowSize;
+    border-style: solid;
+    border-width: @TwoLevelListItemArrowBold @TwoLevelListItemArrowBold 0 0;
+    border-color: @TwoLevelListItemArrowColor;
+    transform: rotate(45deg);
 }

@@ -1,10 +1,9 @@
-.
 <template>
     <div class="box">
         <div class="title">
             <stack class="title-stack">
-                <div class="title-icon">
-                    <div class="title-icon-2" @click="backTo"></div>
+                <div class="title-icon" @click="backTo">
+                    <div class="title-icon-2"></div>
                 </div>
 
                 <div class="title-text">
@@ -12,12 +11,34 @@
                 </div>
 
             </stack>
+
         </div>
+        <div class="title-line"></div>
         <list>
             <block for="datasource">
 
-                <list-item type="{{$item.type}}">
-                    <text>{{$item.title}}</text>
+                <list-item type="{{$idx}}">
+                    <div class="item-content">
+                        <div class="item-content-content">
+                            <div if="showicon" class="item-content-content-icon">
+                                <image src="{{$item.icon}}"></image>
+                            </div>
+                            <div if="showicon" class="item-content-content-icon-padding-right"></div>
+                            <div class="item-title-box">
+                                <text class="item-title">{{$idx}}.{{$item.title}}</text>
+                                <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}" >{{$item.subTitle}}</text>
+                            </div>
+
+
+                        </div>
+
+                        <div class="item-arrow-box" @click="itemClick($item)">
+                            <div class="item-arrow-icon">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-line"></div>
                 </list-item>
             </block>
 
@@ -45,10 +66,20 @@
             },
             title: {
                 default: ''
+            },
+            showicon: {
+                default: false
             }
         },
         backTo() {
             this.$emit('evtBack', {});
+        },
+        itemClick(item) {
+
+            if (item['clickArrow']) {
+                item['clickArrow'](item);
+            }
+
         }
     }
 </script>
