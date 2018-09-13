@@ -1,6 +1,6 @@
 <template>
   <!-- template里只能有一个根节点 -->
-  <div class="box" style="height:{{height+'px'}};backgroundColor:{{config.backgroundColor}}">
+  <div class="box" style="height:{{height+'px'}}">
     <block for="{{data}}">
       <div class="button" style="width:{{width+'%'}}; padding-top:{{config.paddingTop+'px'}}; padding-bottom:{{config.paddingBottom+'px'}}"
         @click="click($idx,$item)">
@@ -20,28 +20,9 @@
 
 </template>
 
-<style>
-  .box {
-    width: 100%;
-
-    flex-wrap: wrap;
-
-  }
-
-  .button {
-
-    justify-content: center;
-    flex-wrap: wrap;
-
-
-  }
-
-  .button-icon,
-  .button-text {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
+<style lang="less">
+  @import '../theme.less';
+  @import './Buttons.less';
 </style>
 
 <script>
@@ -49,7 +30,6 @@
   let defaultConfig = {
     showText: false,
     componentHeight: 0,
-    backgroundColor: '#ffffff',
     column: 4,
     iconWidth: 150,
     textHeight: 50,

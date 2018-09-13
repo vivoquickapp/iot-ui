@@ -12,15 +12,16 @@
 </template>
 
 <style>
-  .box{
+  .box {
     flex-direction: column;
   }
+
   .c1 {
     /* width: 100%; */
     background-color: pink;
     height: 200px;
     flex: 1;
-    border:2px solid red;
+    border: 2px solid red;
   }
 </style>
 
@@ -34,7 +35,6 @@
       return {
         config: {
           showText: true,
-          backgroundColor: 'skyblue',
           column: 5,
           iconWidth: 80,
           paddingTop: 20,
@@ -50,10 +50,6 @@
       setTimeout(() => {
         this.data[0]['disabled'] = true;
         this.data[0]['value'] = 2;
-        setTimeout(() => {
-          this.data[0]['disabled'] = false;
-          this.data[0]['value'] = 1;
-        }, 5000)
 
       }, 5000)
     },

@@ -37,6 +37,9 @@
             },
             disabled: {
                 default: false
+            },
+            name: {
+                default: undefined
             }
         },
 
@@ -64,7 +67,7 @@
 
                 this.isChecked();
 
-                this.$emit('evtChange', { checked: this.my_checked });
+                this.$emit('evtChange', { checked: this.my_checked, name: this.name });
             };
 
 

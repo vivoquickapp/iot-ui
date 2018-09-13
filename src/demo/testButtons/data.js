@@ -12,7 +12,7 @@ let data = [
         name: '小微啊',
         fontColor: '#0000ff',
       }, {
-        url: '/Common/logo.png',
+        url: '/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],
@@ -36,7 +36,7 @@ let data = [
         name: '小微',
         fontColor: '#0000ff',
       }, {
-        url: '/Common/logo.png',
+        url: '/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],
@@ -60,11 +60,11 @@ let data = [
         name: '小微',
         fontColor: '#0000ff',
       }, {
-        url: '/Common/logo.png',
+        url: '/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }, , {
-        url: '/Common/logo.png',
+        url: '/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],
