@@ -23,6 +23,9 @@
 @TwoLevelListItemSubTitleColor: #666;
 @TwoLevelListItemSubTitleFontSize: 22px;
 @TwoLevelListItemSubTitlePaddingTop: 4px;
+@TwoLevelListItemRightTextFontSize: 22px;
+@TwoLevelListItemRightTextFontColor: #666;
+@TwoLevelListItemRightTextPaddingRight: 24px;
 .box {
     flex-direction: column;
     height: 100%;
@@ -90,6 +93,7 @@ list-item {
     .item-title-box {
         flex-direction: column;
         justify-content: center;
+        flex: 1;
     }
     .item-title-sub {
         color: @TwoLevelListItemSubTitleColor;
@@ -118,6 +122,13 @@ list-item {
     .item-content-content-icon-padding-right {
         height: 100%;
         width: @TwoLevelListItemIconPaddingRight;
+    }
+    .item-right-text {
+        text {
+            font-size: @TwoLevelListItemRightTextFontSize;
+            color: @TwoLevelListItemRightTextFontColor;
+            padding-right: @TwoLevelListItemRightTextPaddingRight;
+        }
     }
 }
 

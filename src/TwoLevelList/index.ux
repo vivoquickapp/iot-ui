@@ -26,10 +26,11 @@
                             <div if="showicon" class="item-content-content-icon-padding-right"></div>
                             <div class="item-title-box">
                                 <text class="item-title">{{$idx}}.{{$item.title}}</text>
-                                <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}" >{{$item.subTitle}}</text>
+                                <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}">{{$item.subTitle}}</text>
                             </div>
-
-
+                            <div class="item-right-text">
+                                <text>{{$item.rightText}}</text>
+                            </div>
                         </div>
 
                         <div class="item-arrow-box" @click="itemClick($item)">
