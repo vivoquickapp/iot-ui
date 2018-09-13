@@ -1,3 +1,4 @@
+@TwoLevelListBackgroundColor: #ccc;
 @TwoLevelListTitleHeight: 100px;
 @TwoLevelListTitleBackground: #fff;
 @TwoLevelListTitlePaddingLeft: 20px;
@@ -29,6 +30,7 @@
 .box {
     flex-direction: column;
     height: 100%;
+   
 }
 
 .title {
@@ -76,11 +78,15 @@
 list {
     height: 100%;
     flex: 1;
-    padding-left: @TwoLevelListItemPaddingLeft;
+  
+    background-color: @TwoLevelListBackgroundColor;
 }
 
 list-item {
     flex-direction: column;
+    background-color: #fff;
+
+    padding-left: @TwoLevelListItemPaddingLeft;
 }
 
 .item-content {
