@@ -1,0 +1,58 @@
+@TwoLevelListTitleHeight: 100px;
+@TwoLevelListTitlePaddingLeft: 20px;
+@TwoLevelListTitlePaddingRight: 20px;
+@TwoLevelListTitleBackIconSize: 32px;
+@TwoLevelListTitleBackIconBold: 3px;
+@TwoLevelListTitleBackIconColor: #666;
+@TwoLevelListTitleFontSize: 36px;
+.box {
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    background-color: skyblue;
+    height: @TwoLevelListTitleHeight;
+    padding-left: @TwoLevelListTitlePaddingLeft;
+    padding-right: @TwoLevelListTitlePaddingRight;
+}
+
+.title-stack {
+    width: 100%;
+    height: 100%;
+}
+
+.title-icon {
+    width: @TwoLevelListTitleBackIconSize * 2;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-icon-2 {
+    width: @TwoLevelListTitleBackIconSize ;
+    height: @TwoLevelListTitleBackIconSize;
+    border-style: solid;
+    border-width: @TwoLevelListTitleBackIconBold @TwoLevelListTitleBackIconBold 0 0;
+    border-color: @TwoLevelListTitleBackIconColor;
+    transform: rotate(-135deg);
+}
+
+.title-text {
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    text {
+        font-size: @TwoLevelListTitleFontSize;
+    }
+}
+
+list {
+    height: 100%;
+    flex: 1;
+    background-color: orange;
+}
+
+list-item {
+    border: 1px solid red;
+}

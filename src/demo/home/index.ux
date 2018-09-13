@@ -4,6 +4,8 @@
         <a href="/demo/testButtons">Buttons</a>
         <a href="/demo/testNavBar">NavBar</a>
         <a href="/demo/testSwitch">Switch</a>
+        <a href="/demo/testLoading">Loading</a>
+        <a href="/demo/testTwoLevelList">TwoLevelList</a>
     </div>
 </template>
 

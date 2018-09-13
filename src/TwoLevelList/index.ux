@@ -1,0 +1,54 @@
+.
+<template>
+    <div class="box">
+        <div class="title">
+            <stack class="title-stack">
+                <div class="title-icon">
+                    <div class="title-icon-2" @click="backTo"></div>
+                </div>
+
+                <div class="title-text">
+                    <text>{{title}}</text>
+                </div>
+
+            </stack>
+        </div>
+        <list>
+            <block for="datasource">
+
+                <list-item type="{{$item.type}}">
+                    <text>{{$item.title}}</text>
+                </list-item>
+            </block>
+
+        </list>
+    </div>
+
+
+</template>
+<style lang="less">
+    @import '../theme.less';
+    @import './TwoLevelList.less';
+</style>
+
+<script>
+
+    export default {
+
+        onInit() {
+
+        },
+        props: {
+
+            datasource: {
+                default: []
+            },
+            title: {
+                default: ''
+            }
+        },
+        backTo() {
+            this.$emit('evtBack', {});
+        }
+    }
+</script>

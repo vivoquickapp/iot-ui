@@ -28,7 +28,7 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "demo/home",
+    "entry": "demo/testTwoLevelList",
     "pages": {
       "demo/home": {
         "component": "index"
@@ -43,6 +43,12 @@
         "component": "index"
       },
       "demo/testSwitch": {
+        "component": "index"
+      },
+      "demo/testLoading": {
+        "component": "index"
+      },
+      "demo/testTwoLevelList": {
         "component": "index"
       }
     }
