@@ -48,8 +48,12 @@
                 </list-item>
             </block>
             <list-item type="footer" if="{{footer}}" class="footer-box">
-                <div class="footer">
-                    <text>{{footer}}</text>
+                <div class="footer" >
+                    <block for="footer">
+                            <text  if="{{!$item.link}}">{{$item.text}}</text>
+                            <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{$item.text}}</a>
+                    </block>
+                    
                 </div>
             </list-item>
 
