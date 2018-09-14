@@ -2,11 +2,10 @@
 </import>
 <template>
     <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是大标题" showicon="{{showicon}}" onevt-back="backFn"
-    onevt-arrow="clickArrow"></TwoLevelList>
+        onevt-arrow="clickArrow"></TwoLevelList>
 </template>
 
 <style lang="less">
-   
 </style>
 
 <script>
@@ -18,16 +17,22 @@
 
         },
         private: {
-            showicon:true,
+            showicon: true,
             header: '这是页眉,页眉是针对整个页面做说明,而非针对单项列表,句末加标点.',
             footer: [
                 {
+                    text: '这是页脚可以有链接,带有link的是链接否则就是文字'
+                },
 
-                    text: '这是页脚,可以有链接'
+                {
+                    link: '/demo/home',
+                    text: '这是链接home',
+                }, {
+                    text: '青青子衿'
                 },
                 {
                     link: '/demo/home',
-                    text: 'home',
+                    text: '悠悠我心',
                 }
             ],
             // footer:undefined,
@@ -46,10 +51,10 @@
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
-                }, 
+                },
                 {
                     isGroup: true,
-                    padding:true
+                    padding: true
                 },
                 {
                     title: '主标题',
@@ -60,14 +65,18 @@
                     isGroup: true,
                     footer: [
                         {
+                            text: '这是分组脚注,可以有链接,带有link的是链接否则就是文字'
+                        },
 
-                            text: '这是分组脚注,可以有链接'
+                        {
+                            link: '/demo/home',
+                            text: '这是链接home',
+                        }, {
+                            text: '青青子衿'
                         },
                         {
                             link: '/demo/home',
-                            text: 'home',
-                        },{
-                            text:'文字'
+                            text: '悠悠我心',
                         }
                     ]
                 },

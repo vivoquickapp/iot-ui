@@ -51,7 +51,7 @@
                         {{$item.header}}
                     </text>
                     <div if="{{$item.footer}}" class="item-group-footer">
-                        <block for="value in $item.footer">
+                        <block for="value in parseFooter($item.footer)">
                             <text if="{{!value.link}}" class="footer-text">{{value.text}}</text>
                             <a href="{{value.link}}" if="{{value.link}}" class="footer-link">{{value.text}}</a>
                         </block>
@@ -64,7 +64,7 @@
             </block>
             <list-item type="item-group-footer" if="{{footer}}" class="footer-box">
                 <div class="footer">
-                    <block for="footer">
+                    <block for="parseFooter(footer)">
                         <text if="{{!$item.link}}" class="footer-text">{{$item.text}}</text>
                         <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{$item.text}}</a>
                     </block>
@@ -114,6 +114,31 @@
         itemClick(item) {
 
             this.$emit('evtArrow', { item: item });
+
+        },
+        parseFooter(footer) {
+            var arr = [];
+            for (let i = 0; i < footer.length; i++) {
+                var item = footer[i];
+                var textArr = (item['text'] || '').split('');
+                var link = item['link'];
+
+                for (let j = 0; j < textArr.length; j++) {
+                    if (link) {
+                        arr.push({
+                            text: textArr[j],
+                            link: link
+                        })
+                    } else {
+                        arr.push({
+                            text: textArr[j]
+                        })
+                    }
+
+                }
+            }
+            return arr;
+
 
         }
     }
