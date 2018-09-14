@@ -1,0 +1,74 @@
+<template>
+    <div class="action-sheet-box" show="{{self_visible}}" @click="cancelHandle">
+        <div class="content {{visible?'content-animate':''}}" style="height:{{height}}px" show="{{self_visible}}">
+            <list>
+                <block for="datasource">
+                    <list-item @click="handleClick($item)">
+                        <div class="div-box">
+                            <text>{{$item.name}}</text>
+
+                        </div>
+                        <div class="{{$idx+1==datasource.length?'div-line-none':'div-line'}}"></div>
+                    </list-item>
+                </block>
+
+
+            </list>
+
+        </div>
+
+    </div>
+</template>
+
+<style lang="less">
+    @import '../theme.less';
+    @import './ActionSheet.less';
+   
+</style>
+
+<script>
+
+    export default {
+        data() {
+            return {
+                self_visible: this.visible
+            }
+        },
+        props: {
+            datasource: {
+                default: []
+            },
+            height: {
+                default: 600
+            },
+            visible: {
+                default: false
+            }
+        },
+        onInit() {
+            this.self_visible = this.visible;
+            this.$watch('visible', 'watchPropsChange')
+        },
+        watchPropsChange(newVal) {
+            this.self_visible = newVal;
+
+        },
+        handleClick(item) {
+
+
+
+            this.$emit('evtChoose', {
+                item
+            })
+        },
+        cancelHandle() {
+
+            this.$emit('evtCancel', {
+                item: { cancel: true }
+            });
+        }
+
+
+
+    }
+</script>

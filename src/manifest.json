@@ -17,7 +17,8 @@
     },
     {
       "name": "system.fetch"
-    }
+    },
+    {"name": "system.share"}
   ],
   "permissions": [
     {
@@ -28,7 +29,7 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "iotUI/demo/home",
+    "entry": "iotUI/demo/testActionSheet",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"
@@ -50,15 +51,18 @@
       },
       "iotUI/demo/testTwoLevelList": {
         "component": "index"
+      },
+      "iotUI/demo/testActionSheet": {
+        "component": "index"
       }
     }
   },
   "display": {
-    "fullScreen":true,
+    "fullScreen": true,
     "titleBarBackgroundColor": "#f2f2f2",
     "titleBarTextColor": "#414141",
     "menu": false,
-    "titleBar":false,
+    "titleBar": false,
     "pages": {
       "Demo": {
         "titleBarText": "示例页",
