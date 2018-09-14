@@ -1,35 +1,4 @@
-@TwoLevelListBackgroundColor: #ccc;
-@TwoLevelListTitleHeight: 100px;
-@TwoLevelListTitleBackground: #fff;
-@TwoLevelListTitlePaddingLeft: 20px;
-@TwoLevelListTitlePaddingRight: 20px;
-@TwoLevelListTitleBackIconSize: 32px;
-@TwoLevelListTitleBackIconBold: 4px;
-@TwoLevelListTitleBackIconColor: #666;
-@TwoLevelListTitleFontSize: 36px;
-@TwoLevelListItemPaddingLeft: 60px;
-@TwoLevelListItemPaddingRight: 60px;
-@TwoLevelListItemPaddingTop: 42px;
-@TwoLevelListItemPaddingBottom: 42px;
-@TwoLevelListLineColor: #ccc;
-@TwoLevelListLineHeight: 1px;
-@TwoLevelListItemArrowSize: 20px;
-@TwoLevelListItemArrowBold: 3px;
-@TwoLevelListItemArrowColor: #666;
-@TwoLevelListItemTitleFontSize: 28px;
-@TwoLevelListItemIconSize: 84px;
-@TwoLevelListItemIconImageSize: 60px;
-@TwoLevelListItemIconBorderRadius: 15px;
-@TwoLevelListItemIconPaddingRight: 30px;
-@TwoLevelListItemSubTitleColor: #666;
-@TwoLevelListItemSubTitleFontSize: 22px;
-@TwoLevelListItemSubTitlePaddingTop: 4px;
-@TwoLevelListItemRightTextFontSize: 22px;
-@TwoLevelListItemRightTextFontColor: #666;
-@TwoLevelListItemRightTextPaddingRight: 24px;
-@TwoLevelListItemBackground: #fff;
-@TwoLevelListItemIconBackground: #ccc;
-@TwoLevelListLinkColor:#3388ff;
+
 .box {
     flex-direction: column;
     height: 100%;
@@ -52,8 +21,31 @@
     background-color: @TwoLevelListBackgroundColor;
     padding-right: @TwoLevelListItemPaddingRight;
 }
-.header-box{
+
+.header-box {
     background-color: @TwoLevelListBackgroundColor;
+}
+
+.item-group {
+    background-color: @TwoLevelListBackgroundColor;
+}
+
+.item-group-header {
+    padding-top: @TwoLevelListItemGroupPadding;
+    padding-bottom: 9px;
+    padding-right: @TwoLevelListItemPaddingRight;
+}
+
+.item-group-footer {
+    padding-top: 18px;
+    padding-bottom: 60px;
+    padding-right: @TwoLevelListItemPaddingRight;
+    flex-direction: column;
+}
+.item-group-padding{
+    width:100%;
+    height:@TwoLevelListItemGroupPadding;
+
 }
 
 .footer {
@@ -61,14 +53,19 @@
     padding-bottom: 60px;
     padding-right: @TwoLevelListItemPaddingRight;
     background-color: @TwoLevelListBackgroundColor;
+    flex-direction: column;
 }
-.footer-link{
-    color:@TwoLevelListLinkColor;
+
+.footer-link {
+    color: @TwoLevelListLinkColor;
+}
+
+.footer-text {
+    color: @TwoLevelListFooterTextColor;
 }
 
 .footer-box {
     background-color: @TwoLevelListBackgroundColor;
-
 }
 
 .title-stack {
