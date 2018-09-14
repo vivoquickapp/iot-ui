@@ -15,6 +15,11 @@
         </div>
         <div class="title-line"></div>
         <list>
+            <list-item type="header" if="{{header}}" class="header-box">
+                <div class="header">
+                    <text>{{header}}</text>
+                </div>
+            </list-item>
             <block for="datasource">
 
                 <list-item type="{{$idx}}">
@@ -25,7 +30,7 @@
                             </div>
                             <div if="showicon" class="item-content-content-icon-padding-right"></div>
                             <div class="item-title-box">
-                                <text class="item-title">{{$idx}}.{{$item.title}}</text>
+                                <text class="item-title">{{$item.title}}</text>
                                 <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}">{{$item.subTitle}}</text>
                             </div>
                             <div class="item-right-text">
@@ -42,8 +47,14 @@
                     <div class="item-line"></div>
                 </list-item>
             </block>
+            <list-item type="footer" if="{{footer}}" class="footer-box">
+                <div class="footer">
+                    <text>{{footer}}</text>
+                </div>
+            </list-item>
 
         </list>
+
     </div>
 
 
@@ -70,6 +81,12 @@
             },
             showicon: {
                 default: false
+            },
+            header: {
+                default: undefined
+            },
+            footer: {
+                default: undefined
             }
         },
         backTo() {
@@ -77,9 +94,7 @@
         },
         itemClick(item) {
 
-            if (item['clickArrow']) {
-                item['clickArrow'](item);
-            }
+            this.$emit('evtArrow', { item: item });
 
         }
     }

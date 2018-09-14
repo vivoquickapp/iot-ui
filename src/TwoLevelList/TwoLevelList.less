@@ -27,10 +27,11 @@
 @TwoLevelListItemRightTextFontSize: 22px;
 @TwoLevelListItemRightTextFontColor: #666;
 @TwoLevelListItemRightTextPaddingRight: 24px;
+@TwoLevelListItemBackground: #fff;
+@TwoLevelListItemIconBackground: #ccc;
 .box {
     flex-direction: column;
     height: 100%;
-   
 }
 
 .title {
@@ -42,6 +43,28 @@
     width: 100%;
     height: @TwoLevelListLineHeight;
     background-color: @TwoLevelListLineColor;
+}
+
+.header {
+    padding-top: 18px;
+    padding-bottom: 60px;
+    background-color: @TwoLevelListBackgroundColor;
+    padding-right: @TwoLevelListItemPaddingRight;
+}
+.header-box{
+    background-color: @TwoLevelListBackgroundColor;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-right: @TwoLevelListItemPaddingRight;
+    background-color: @TwoLevelListBackgroundColor;
+}
+
+.footer-box {
+    background-color: @TwoLevelListBackgroundColor;
+
 }
 
 .title-stack {
@@ -78,14 +101,12 @@
 list {
     height: 100%;
     flex: 1;
-  
     background-color: @TwoLevelListBackgroundColor;
 }
 
 list-item {
     flex-direction: column;
-    background-color: #fff;
-
+    background-color: @TwoLevelListItemBackground;
     padding-left: @TwoLevelListItemPaddingLeft;
 }
 
@@ -115,7 +136,7 @@ list-item {
     }
     .item-content-content-icon {
         border-radius: @TwoLevelListItemIconBorderRadius;
-        background-color: #ccc;
+        background-color: @TwoLevelListItemIconBackground;
         width: @TwoLevelListItemIconSize;
         height: @TwoLevelListItemIconSize;
         justify-content: center;
