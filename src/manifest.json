@@ -28,35 +28,37 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "demo/testTwoLevelList",
+    "entry": "iotUI/demo/home",
     "pages": {
-      "demo/home": {
+      "iotUI/demo/home": {
         "component": "index"
       },
-      "demo/testButtons": {
+      "iotUI/demo/testButtons": {
         "component": "index"
       },
-      "demo/testNavBar": {
+      "iotUI/demo/testNavBar": {
         "component": "index"
       },
-      "demo/About": {
+      "iotUI/demo/About": {
         "component": "index"
       },
-      "demo/testSwitch": {
+      "iotUI/demo/testSwitch": {
         "component": "index"
       },
-      "demo/testLoading": {
+      "iotUI/demo/testLoading": {
         "component": "index"
       },
-      "demo/testTwoLevelList": {
+      "iotUI/demo/testTwoLevelList": {
         "component": "index"
       }
     }
   },
   "display": {
+    "fullScreen":true,
     "titleBarBackgroundColor": "#f2f2f2",
     "titleBarTextColor": "#414141",
-    "menu": true,
+    "menu": false,
+    "titleBar":false,
     "pages": {
       "Demo": {
         "titleBarText": "示例页",

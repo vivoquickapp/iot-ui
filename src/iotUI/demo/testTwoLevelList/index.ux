@@ -1,7 +1,7 @@
 <import name="TwoLevelList" src="../../TwoLevelList/index.ux">
 </import>
 <template>
-    <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是大标题" showicon="{{showicon}}" onevt-back="backFn"
+    <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是二级列表大标题" showicon="{{showicon}}" onevt-back="backFn"
         onevt-arrow="clickArrow"></TwoLevelList>
 </template>
 
@@ -25,13 +25,13 @@
                 },
 
                 {
-                    link: '/demo/home',
+                    link: '/iotUI/demo/home',
                     text: '这是链接home',
                 }, {
                     text: '青青子衿'
                 },
                 {
-                    link: '/demo/home',
+                    link: '/iotUI/demo/home',
                     text: '悠悠我心',
                 }
             ],
@@ -47,7 +47,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testButtons/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -69,20 +69,20 @@
                         },
 
                         {
-                            link: '/demo/home',
+                            link: '/iotUI/demo/home',
                             text: '这是链接home',
                         }, {
                             text: '青青子衿'
                         },
                         {
-                            link: '/demo/home',
+                            link: '/iotUI/demo/home',
                             text: '悠悠我心',
                         }
                     ]
                 },
                 {
                     title: '主标题',
-                    icon: '/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testButtons/icon.png',
                     rightText: '右侧小字'
                 }
             ]

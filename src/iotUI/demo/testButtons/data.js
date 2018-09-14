@@ -4,15 +4,15 @@ let data = [
     disabled: false,
     icons: [
       {
-        url: '/demo/testButtons/rec.jpg',
+        url: '/iotUI/demo/testButtons/rec.jpg',
         name: '小o活',
         fontColor: '#ff0000',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '小微啊',
         fontColor: '#0000ff',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],
@@ -28,15 +28,15 @@ let data = [
     disabled: false,
     icons: [
       {
-        url: '/demo/testButtons/rec.jpg',
+        url: '/iotUI/demo/testButtons/rec.jpg',
         name: '小微激活',
         fontColor: '#ff0000',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '小微',
         fontColor: '#0000ff',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],
@@ -52,19 +52,19 @@ let data = [
     disabled: true,
     icons: [
       {
-        url: '/demo/testButtons/rec.jpg',
+        url: '/iotUI/demo/testButtons/rec.jpg',
         name: '小微激活',
         fontColor: '#ff0000',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '小微',
         fontColor: '#0000ff',
       }, {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }, , {
-        url: '/demo/testButtons/icon.png',
+        url: '/iotUI/demo/testButtons/icon.png',
         name: '不可用',
         fontColor: '#ccc',
       }],

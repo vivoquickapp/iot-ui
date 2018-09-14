@@ -1,11 +1,11 @@
 <template>
     <div class="box">
         <text>组件:</text>
-        <a href="/demo/testButtons">Buttons</a>
-        <a href="/demo/testNavBar">NavBar</a>
-        <a href="/demo/testSwitch">Switch</a>
-        <a href="/demo/testLoading">Loading</a>
-        <a href="/demo/testTwoLevelList">TwoLevelList</a>
+        <a href="/iotUI/demo/testButtons">Buttons</a>
+        <a href="/iotUI/demo/testNavBar">NavBar</a>
+        <a href="/iotUI/demo/testSwitch">Switch</a>
+        <a href="/iotUI/demo/testLoading">Loading</a>
+        <a href="/iotUI/demo/testTwoLevelList">TwoLevelList</a>
     </div>
 </template>
 
