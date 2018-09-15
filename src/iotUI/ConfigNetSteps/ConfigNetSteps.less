@@ -1,0 +1,40 @@
+.box {
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    background-color: @TwoLevelListTitleBackground;
+    height: @TwoLevelListTitleHeight;
+}
+
+.title-line {
+    width: 100%;
+    height: @TwoLevelListLineHeight;
+    background-color: @TwoLevelListLineColor;
+}
+.title-icon {
+    width: @TwoLevelListTitleBackIconSize * 2 + @TwoLevelListTitlePaddingLeft;
+    padding-left: @TwoLevelListTitlePaddingLeft;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-icon-2 {
+    width: @TwoLevelListTitleBackIconSize ;
+    height: @TwoLevelListTitleBackIconSize;
+    border-style: solid;
+    border-width: @TwoLevelListTitleBackIconBold @TwoLevelListTitleBackIconBold 0 0;
+    border-color: @TwoLevelListTitleBackIconColor;
+    transform: rotate(-135deg);
+}
+
+.title-text {
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+    text {
+        font-size: @TwoLevelListTitleFontSize;
+    }
+}

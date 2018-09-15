@@ -40,7 +40,8 @@
         'Loading',
         'TwoLevelList',
         'ActionSheet',
-        'Modal'
+        'Modal',
+        'ConfigNetSteps'
     ]
 
     export default {

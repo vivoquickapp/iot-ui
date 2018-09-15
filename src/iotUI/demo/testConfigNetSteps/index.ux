@@ -1,0 +1,30 @@
+<import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux">
+</import>
+<template>
+    <ConfigNetSteps title="设备名称" onevt-back="handleBack"></ConfigNetSteps>
+</template>
+
+<style lang="less">
+</style>
+
+<script>
+
+
+    export default {
+        data() {
+            return {
+
+            }
+
+        },
+        props: {
+
+        },
+        onInit() {
+
+        },
+        handleBack(evt) {
+            console.log(evt);
+        }
+    }
+</script>

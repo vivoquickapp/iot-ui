@@ -31,7 +31,7 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "iotUI/demo/home",
+    "entry": "iotUI/demo/testConfigNetSteps",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"
@@ -61,6 +61,9 @@
         "component": "index"
       },
       "iotUI/demo/testButton": {
+        "component": "index"
+      },
+      "iotUI/demo/testConfigNetSteps": {
         "component": "index"
       }
     }

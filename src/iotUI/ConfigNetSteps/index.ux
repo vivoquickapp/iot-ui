@@ -1,0 +1,47 @@
+<template>
+    <div class="box">
+        <div class="title">
+            <stack class="title-stack">
+                <div class="title-icon" @click="backTo">
+                    <div class="title-icon-2"></div>
+                </div>
+
+                <div class="title-text">
+                    <text>{{title}}</text>
+                </div>
+
+            </stack>
+
+        </div>
+    </div>
+</template>
+
+<style lang="less">
+    @import '../theme.less';
+    @import './ConfigNetSteps.less';
+</style>
+
+<script>
+
+
+    export default {
+        data() {
+            return {
+
+            }
+
+        },
+        props: {
+            title: {
+                default: ''
+            },
+
+        },
+        onInit() {
+
+        },
+        backTo() {
+            this.$emit('evtBack', {});
+        }
+    }
+</script>
