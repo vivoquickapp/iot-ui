@@ -2,10 +2,11 @@
 </import>
 <template>
     <div class="box">
-        <text onclick="click" class="btn">disabled值:{{disabled}}点击切换disabled值</text>
-        <text>值:{{checked}}</text>
+        <text onclick="click" class="btn">点击切换disabled值</text>
+        <text>disabled值:{{disabled}}</text>
+        <text>checked值:{{checked}}</text>
         <Switch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></Switch>
-        <text>checked改变 了{{i}}</text>
+        <text>改变次数{{i}}</text>
     </div>
 </template>
 
@@ -18,15 +19,14 @@
 
     text {
         height: 100px;
-        background-color: skyblue;
         margin: 30px;
         width: 100%;
         padding: 10px;
     }
 
     .btn {
-        border: 2px solid skyblue;
-        border-radius: 50px;
+        border: 2px solid blue;
+        border-radius: 10px;
         width: 600px;
 
     }

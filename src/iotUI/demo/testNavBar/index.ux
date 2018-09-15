@@ -16,12 +16,18 @@
 
     .c1 {
         flex: 1;
-        background-color: pink;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .c1 text {
+        padding: 20px;
     }
 </style>
 
 <script>
-    import prompt from '@system.prompt'
+    let i = 0;
+
     export default {
         data() {
 
@@ -38,12 +44,13 @@
             }
         },
         handleClose: function (evt) {
+            i++;
 
-            this.content = evt.detail.name + Math.random();
+            this.content = evt.detail.name + "---" + i;
         },
         handleMore: function (evt) {
-
-            this.content = evt.detail.name + Math.random();
+            i++;
+            this.content = evt.detail.name + "---" + i;
         },
         onInit() {
 

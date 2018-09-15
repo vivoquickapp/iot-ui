@@ -1,19 +1,11 @@
 <import name="Modal" src="../../Modal/index.ux"></import>
 <template>
-    <div>
-        <div class="box">
-            <div class="c1">
-                <text @click="fn">
-                    点击显示隐藏Modal
-                </text>
-            </div>
-
-            <text>
-                选择的值:
+    <div class="box">
+        <div class="c1">
+            <text @click="fn">
+                点击显示隐藏Modal
             </text>
-
         </div>
-
         <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
             <div class="c2">
                 <text>这是内容</text>
@@ -27,15 +19,15 @@
 
 <style lang="less">
     .box {
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
     .c1 {
-        border: 1px solid red;
+        border: 1px solid blue;
         margin: 20px;
         padding: 20px;
+        height: 100px;
+        border-radius: 10px;
     }
 
     .c2 {
