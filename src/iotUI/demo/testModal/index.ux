@@ -14,14 +14,18 @@
 
         </div>
 
-        <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel">
-            <text>这是slot</text>
+        <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
+            <div class="c2">
+                <text>这是内容</text>
+                <text>这是内容...</text>
+            </div>
+
         </Modal>
     </div>
 
 </template>
 
-<style>
+<style lang="less">
     .box {
         flex-direction: column;
         justify-content: center;
@@ -33,6 +37,11 @@
         margin: 20px;
         padding: 20px;
     }
+
+    .c2 {
+
+        flex-direction: column;
+    }
 </style>
 
 <script>
@@ -43,6 +52,23 @@
             visible: false,
             //height可以不传,默认值600
             height: 500,
+            //title不传,或者传false,undefined是不显示标题
+            title: "这是标题",
+            buttons: [
+                {
+                    name: '取消',
+                    //color可以不传
+                    color: 'red',
+                    //fontSize可以不传
+                    fontSize: 30
+                }
+                , {
+                    name: '确认',
+                    color: '#0000FF',
+                    fontSize: 30
+                }
+
+            ]
 
 
         },
@@ -50,10 +76,16 @@
 
 
         },
+        handleCancel() {
+            //取消
+            this.visible = false;
+        },
 
-        handleCancel(evt) {
-            this.visible = false;//取消选择 
-            console.log('取消旋转');
+        handleButtonClick(evt) {
+            this.visible = false;
+            console.log(evt.detail.item);//点击的button;
+
+
         },
         fn() {
 

@@ -1,4 +1,5 @@
-.action-sheet-box {
+
+.modal-box {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     width: 100%;
@@ -7,15 +8,41 @@
 }
 
 .content {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: @ModalPaddingLeft;
+    padding-right: @ModalPaddingRight;
     width: 100%;
 }
 
 .slot-box {
     background-color: #fff;
     width: 100%;
-    border-radius: 30px;
+    border-radius: @ModalSlotBorderRadius;
+    flex-direction: column;
+    padding-left: @ModalSoltPaddingLeft;
+    padding-right: @ModalSoltPaddingRight;
+}
+
+.title {
+    padding-bottom: @ModalTitlePaddingBottom;
+    padding-top: @ModalTitlePaddingTop;
+    justify-content: center;
+    text {
+        font-size: @ModalTitleFontSize;
+        color: @ModalTitleColor;
+    }
+}
+
+.slot-content {
+    flex: 1;
+}
+
+.btns {
+    div {
+        padding-bottom: @ModalButtonPaddingBottom;
+        padding-top: @ModalButtonPaddingTop;
+        flex: 1;
+        justify-content: center;
+    }
 }
 
 .content-animate {
@@ -24,46 +51,13 @@
     animation-iteration-count: 1;
 }
 
-list {
-    background-color: #fff;
-    border-radius: 20px;
-}
-
-list-item {
-    flex-direction: column;
-}
-
-.div-box {
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    width: 100%;
-    justify-content: center;
-}
-
-.div-box text {
-    color: #666;
-    font-size: 30px;
-}
-
-.div-line {
-    width: 100%;
-    height: 1px;
-    background-color: #ccc;
-}
-
-.div-line-none {
-    height: 0px;
-}
-
 @keyframes popup {
     0% {
         // transform: translateY(1000px);
-        transform:scale(0.8);
+        transform: scale(0.8);
     }
     100% {
         // transform: translateY(0);
-        transform:scale(1);
+        transform: scale(1);
     }
 }

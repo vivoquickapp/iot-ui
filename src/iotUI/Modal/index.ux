@@ -1,11 +1,18 @@
 <template>
-    <div class="action-sheet-box" show="{{self_visible}}" @click="cancelHandle">
+    <div class="modal-box" show="{{self_visible}}" @click="cancelHandle">
         <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="clickContent">
             <div class="slot-box">
-                <text>标题</text>
-                <slot></slot>
-                <div>
-                    <text>按钮</text>
+                <div class="title" if="title">
+                    <text>{{title}}</text>
+                </div>
+                <div class="slot-content">
+                    <slot></slot>
+                </div>
+
+                <div class="btns">
+                    <div for="buttons" @click="buttonClick($item)">
+                        <text style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:30}}px">{{$item.name}}</text>
+                    </div>
                 </div>
             </div>
         </div>
@@ -31,6 +38,12 @@
             },
             height: {
                 default: 600
+            },
+            title: {
+                default: undefined
+            },
+            buttons: {
+                default: []
             }
         },
         onInit() {
@@ -45,8 +58,14 @@
                 item: { cancel: true }
             });
         },
-        clickContent() {
+        buttonClick(item) {
+            this.$emit('evtClickButton', {
+                item: item
+            });
 
+        },
+        clickContent() {
+            //不做任何事情
         }
 
 
