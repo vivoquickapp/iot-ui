@@ -1,3 +1,5 @@
+<import name="Button" src="../Button/index.ux"></import>
+
 <template>
     <div class="box">
         <div class="title">
@@ -12,6 +14,15 @@
 
             </stack>
 
+        </div>
+        <div class="title-line"></div>
+        <div class="step-content">
+            <slot></slot>
+        </div>
+        <div class="btn-box" if="buttons.length>0">
+            <div for="buttons">
+                <Button title="{{$item.title}}" block="{{$item.block}}" type="{{$item.type}}" onevt-click="btnClick($idx,$item)"></Button>
+            </div>
         </div>
     </div>
 </template>
@@ -35,6 +46,9 @@
             title: {
                 default: ''
             },
+            buttons: {
+                default: []
+            }
 
         },
         onInit() {
@@ -42,6 +56,10 @@
         },
         backTo() {
             this.$emit('evtBack', {});
+        },
+        btnClick(btnIndex, item) {
+
+            this.$emit('evtClickBtn', { item, btnIndex });
         }
     }
 </script>
