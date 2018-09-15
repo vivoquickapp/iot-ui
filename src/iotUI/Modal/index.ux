@@ -1,0 +1,54 @@
+<template>
+    <div class="action-sheet-box" show="{{self_visible}}" @click="cancelHandle">
+        <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="clickContent">
+            <div class="slot-box">
+                <text>标题</text>
+                <slot></slot>
+                <div>
+                    <text>按钮</text>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style lang="less">
+    @import '../theme.less';
+    @import './Modal.less';
+</style>
+
+<script>
+
+    export default {
+        data() {
+            return {
+                self_visible: this.visible
+            }
+        },
+        props: {
+            visible: {
+                default: false
+            },
+            height: {
+                default: 600
+            }
+        },
+        onInit() {
+            this.$watch('visible', 'visiblechange')
+        },
+        visiblechange(newVal) {
+            this.self_visible = newVal;
+        },
+        cancelHandle() {
+
+            this.$emit('evtCancel', {
+                item: { cancel: true }
+            });
+        },
+        clickContent() {
+
+        }
+
+
+    }
+</script>

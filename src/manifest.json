@@ -18,7 +18,9 @@
     {
       "name": "system.fetch"
     },
-    {"name": "system.share"}
+    {
+      "name": "system.share"
+    }
   ],
   "permissions": [
     {
@@ -29,7 +31,7 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "iotUI/demo/testActionSheet",
+    "entry": "iotUI/demo/home",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"
@@ -53,6 +55,9 @@
         "component": "index"
       },
       "iotUI/demo/testActionSheet": {
+        "component": "index"
+      },
+      "iotUI/demo/testModal": {
         "component": "index"
       }
     }

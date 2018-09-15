@@ -6,7 +6,8 @@
         <a href="/iotUI/demo/testSwitch">Switch</a>
         <a href="/iotUI/demo/testLoading">Loading</a>
         <a href="/iotUI/demo/testTwoLevelList">TwoLevelList</a>
-        <a href="/iotUI/demo/testActionSheet">testActionSheet</a>
+        <a href="/iotUI/demo/testActionSheet">ActionSheet</a>
+        <a href="/iotUI/demo/testModal">Modal</a>
     </div>
 </template>
 
