@@ -1,0 +1,50 @@
+@ButtonPrimaryColor: @themeColor;
+@ButtonHeight: 120px;
+@ButtonPadding: 30px;
+@ButtonBorderRadius: 15px;
+@ButtonPrimaryTextColor: #fff;
+@ButtonFontSize: 38px;
+@ButtonDashedBorderBold: 3px;
+.primary {
+    background-color: @ButtonPrimaryColor;
+    padding-left: @ButtonPadding;
+    padding-right: @ButtonPadding;
+    height: @ButtonHeight;
+    border-radius: @ButtonBorderRadius;
+    justify-content: center;
+    align-items: center;
+    text {
+        color: @ButtonPrimaryTextColor;
+        font-size: @ButtonFontSize;
+    }
+}
+
+.dashed {
+    justify-content: center;
+    align-items: center;
+    border: @ButtonDashedBorderBold solid @ButtonPrimaryColor;
+    padding-left: @ButtonPadding;
+    padding-right: @ButtonPadding;
+    height: @ButtonHeight;
+    border-radius: @ButtonBorderRadius;
+    text {
+        color: @ButtonPrimaryColor;
+        font-size: @ButtonFontSize;
+    }
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.button-ani {
+    animation-name: ani111;
+    animation-duration: 80ms;
+    animation-iteration-count: 1;
+}
+
+@keyframes ani111 {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

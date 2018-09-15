@@ -1,0 +1,50 @@
+<template>
+    <div class="{{typeObj[type]}} {{animate}}  " style="width:{{block?'100%':''}}" @click="handleClick">
+
+        <text>{{title}}</text>
+    </div>
+</template>
+
+<style lang="less">
+    @import '../theme.less';
+    @import './Button.less';
+</style>
+
+<script>
+
+
+    export default {
+        data() {
+            return {
+                typeObj: {
+                    "primary": 'primary',
+                    "default": 'primary',
+                    "dashed": 'dashed'
+                },
+                animate: ''
+            }
+
+        },
+        props: {
+            title: {
+                default: ''
+            },
+            type: {
+                default: 'default'
+            },
+            block: {
+                default: false
+            }
+        },
+        onInit() {
+
+        },
+        handleClick() {
+            this.animate = 'button-ani';
+            setTimeout(() => {
+                this.animate = 0;
+            }, 100)
+            this.$emit('evtClick', {});
+        }
+    }
+</script>
