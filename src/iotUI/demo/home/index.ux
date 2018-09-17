@@ -37,12 +37,12 @@
         'Buttons',
         'NavBar',
         'Switch',
+        'CheckBox',
         'Loading',
         'TwoLevelList',
         'ActionSheet',
         'Modal',
-        'ConfigNetSteps',
-        'CheckBox'
+        'ConfigNetSteps'
     ]
 
     export default {

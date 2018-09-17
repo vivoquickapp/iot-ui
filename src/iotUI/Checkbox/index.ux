@@ -1,7 +1,9 @@
 <template>
-    <div class="box">
-        <div class="ok-icon"></div>
+    <div class="box {{activeClass}}" @click="handleClick">
+        <div class="ok-icon ok-icon-color" show="{{checked}}"></div>
     </div>
+
+
 </template>
 
 <style lang="less">
@@ -14,31 +16,75 @@
 
     export default {
         data() {
-            return {
 
+            return {
+                my_checked: this.checked,
+                activeClass: ''
             }
 
         },
         props: {
-            title: {
-                default: ''
-            },
-            type: {
-                default: 'default'
-            },
-            block: {
+            checked: {
                 default: false
+            },
+
+            disabled: {
+                default: false
+            },
+            name: {
+                default: undefined
+            },
+            value: {
+                default: undefined
             }
         },
         onInit() {
+            this.isChecked();
+            this.$watch('checked', 'checkedChange');
+            this.$watch('disabled', 'configChange');
 
         },
+        checkedChange(newVal) {
+
+            this.my_checked = newVal;
+            this.isChecked();
+
+        },
+        configChange() {
+            this.isChecked();
+        },
         handleClick() {
-            this.animate = 'button-ani';
-            setTimeout(() => {
-                this.animate = 0;
-            }, 100)
-            this.$emit('evtClick', {});
+            if (!this.disabled) {
+                this.my_checked = !this.my_checked;
+
+                this.isChecked();
+
+
+                this.$emit('evtChange', {
+                    checked: this.my_checked,
+                    name: this.name,
+                    value: this.value
+                });
+            }
+
+        },
+        isChecked() {
+
+            if (this.disabled) {
+                if (this.my_checked) {
+                    this.activeClass = 'disabled-checked';
+                } else {
+                    this.activeClass = 'disabled-dischecked';
+                }
+            } else {
+                if (this.my_checked) {
+                    this.activeClass = 'checked';
+                } else {
+                    this.activeClass = 'dischecked';
+                }
+            }
+
+
         }
     }
 </script>

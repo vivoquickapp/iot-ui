@@ -1,11 +1,15 @@
 <import name="CheckBox" src="../../CheckBox/index.ux"></import>
 <template>
     <div class="box">
-
-        <div class="item">
-            <CheckBox type="dashed" title='取消'></CheckBox>
+        <text onclick="click" class="btn">点击切换disabled值</text>
+        <text>disabled值:{{disabled}}</text>
+        <text>checked值:{{checked}}</text>
+        <div>
+            <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
         </div>
 
+
+        <text>改变次数{{i}}</text>
 
     </div>
 </template>
@@ -13,13 +17,22 @@
 <style lang="less">
     .box {
         flex-direction: column;
-
         justify-content: center;
         align-items: center;
     }
 
-    .item {
-        margin: 10px;
+    text {
+        height: 100px;
+        margin: 30px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn {
+        border: 2px solid blue;
+        border-radius: 10px;
+        width: 600px;
+
     }
 </style>
 
@@ -33,14 +46,21 @@
         data() {
 
             return {
-                block: false,//block属性true,将使按钮适合其父宽度
-                type: 'default',//dashed, primary
-                title: '按钮名字'
+                i: 0,
+                checked: true,
+                disabled: false
             }
         },
-        handleClickButton(evt) {
-            console.log('点击按钮')
-            console.log(evt);
+        click() {
+
+            this.disabled = !this.disabled;
+
+        },
+        handleChagne(evt) {
+            this.i++;
+            console.log('点击CheckBox')
+            console.log(evt.detail);
+            this.checked = evt.detail.checked;
         }
 
     }

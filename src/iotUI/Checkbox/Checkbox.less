@@ -1,11 +1,31 @@
-@CheckBoxSize: 60px;
-@CheckBoxBold: 4px;
+
 .box {
     width: @CheckBoxSize;
     height: @CheckBoxSize;
     border-radius: @CheckBoxSize;
-    background-color: red;
     justify-content: center;
+}
+
+.checked {
+    background-color: @CheckBoxCheckedColor;
+    .ok-icon-color {
+        border-color: @CheckBoxCheckedIconColor;
+    }
+}
+
+.dischecked {
+    border: @CheckBoxBold solid @CheckBoxDischeckedColor;
+}
+
+.disabled-checked {
+    background-color: @CheckBoxDisabledCheckedColor;
+    .ok-icon-color {
+        border-color: @CheckBoxDisabledCheckedIconColor;
+    }
+}
+
+.disabled-dischecked {
+    border: @CheckBoxBold solid @CheckBoxDisabledDischeckedColor;
 }
 
 .ok-icon {
@@ -13,10 +33,10 @@
     height: @CheckBoxSize / 3.6;
     border-style: solid;
     border-width: 0 0 @CheckBoxBold @CheckBoxBold;
-    border-color: #fff;
     transform: rotate(-45deg);
     margin-top: @CheckBoxSize / 3;
 }
-.ok-icon-disabled{
+
+.ok-icon-disabled {
     border-color: #90E0E7;
 }
