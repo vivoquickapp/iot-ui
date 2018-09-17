@@ -1,0 +1,44 @@
+<template>
+    <div class="box">
+        <div class="ok-icon"></div>
+    </div>
+</template>
+
+<style lang="less">
+    @import '../theme.less';
+    @import './Checkbox.less';
+</style>
+
+<script>
+
+
+    export default {
+        data() {
+            return {
+
+            }
+
+        },
+        props: {
+            title: {
+                default: ''
+            },
+            type: {
+                default: 'default'
+            },
+            block: {
+                default: false
+            }
+        },
+        onInit() {
+
+        },
+        handleClick() {
+            this.animate = 'button-ani';
+            setTimeout(() => {
+                this.animate = 0;
+            }, 100)
+            this.$emit('evtClick', {});
+        }
+    }
+</script>

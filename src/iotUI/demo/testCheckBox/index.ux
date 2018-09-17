@@ -1,13 +1,9 @@
-<import name="Button" src="../../Button/index.ux"></import>
+<import name="CheckBox" src="../../CheckBox/index.ux"></import>
 <template>
     <div class="box">
-        <div class="item">
-            <Button type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></Button>
 
-        </div>
         <div class="item">
-            <Button type="dashed" title='取消'></Button>
-
+            <CheckBox type="dashed" title='取消'></CheckBox>
         </div>
 
 

@@ -1,11 +1,12 @@
 <import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux"></import>
 
-<import name="WaveLoading" src="../../WaveLoading/index.ux"></import>
 
 <template>
     <div>
         <ConfigNetSteps title="设备名称" onevt-back="handleBack" buttons="{{buttons}}" onevt-click-btn="clickBtn">
-            <WaveLoading></WaveLoading>
+            <div>
+                <text>内容..</text>
+            </div>
         </ConfigNetSteps>
     </div>
 

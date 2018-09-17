@@ -1,0 +1,22 @@
+@CheckBoxSize: 60px;
+@CheckBoxBold: 4px;
+.box {
+    width: @CheckBoxSize;
+    height: @CheckBoxSize;
+    border-radius: @CheckBoxSize;
+    background-color: red;
+    justify-content: center;
+}
+
+.ok-icon {
+    width: @CheckBoxSize / 2;
+    height: @CheckBoxSize / 3.6;
+    border-style: solid;
+    border-width: 0 0 @CheckBoxBold @CheckBoxBold;
+    border-color: #fff;
+    transform: rotate(-45deg);
+    margin-top: @CheckBoxSize / 3;
+}
+.ok-icon-disabled{
+    border-color: #90E0E7;
+}

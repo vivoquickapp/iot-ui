@@ -31,7 +31,7 @@
     "logLevel": "debug"
   },
   "router": {
-    "entry": "iotUI/demo/home",
+    "entry": "iotUI/demo/testCheckBox",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"
@@ -64,6 +64,9 @@
         "component": "index"
       },
       "iotUI/demo/testConfigNetSteps": {
+        "component": "index"
+      },
+      "iotUI/demo/testCheckBox": {
         "component": "index"
       }
     }

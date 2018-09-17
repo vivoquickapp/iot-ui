@@ -1,16 +1,35 @@
 <template>
     <div class="box">
-        <text>是否会</text>
+        <div class="c1 "></div>
+
     </div>
 </template>
 
-<style lang="less">
-    @import '../theme.less';
-    @import './WaveLoading.less';
-    .box{
-        background-color: red;
+<style>
+    .box {
+        background-color: pink;
     }
-   
+
+    .c1 {
+        width: 300px;
+        height: 300px;
+        background-color: blue;
+        animation-name: box_rotate;
+        animation-duration: 3000ms;
+        animation-iteration-count: 100;
+    }
+
+
+
+
+    @keyframes box_rotate {
+        0% {
+            transform: scale(0);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
 </style>
 
 <script>
@@ -20,11 +39,13 @@
         data() {
             return {
 
+
             }
 
         },
 
         onInit() {
+
 
         }
     }
