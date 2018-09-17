@@ -1,5 +1,4 @@
-<import name="Switch" src="../../Switch/index.ux">
-</import>
+<import name="Switch" src="../../Switch/index.ux"></import>
 <template>
     <div class="box">
         <text onclick="click" class="btn">点击切换disabled值</text>

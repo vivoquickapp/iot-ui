@@ -1,5 +1,4 @@
-<import name="TwoLevelList" src="../../TwoLevelList/index.ux">
-</import>
+<import name="TwoLevelList" src="../../TwoLevelList/index.ux"></import>
 <template>
     <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是二级列表大标题" showicon="{{showicon}}" onevt-back="backFn"
         onevt-arrow="clickArrow"></TwoLevelList>

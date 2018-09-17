@@ -1,5 +1,4 @@
-<import name="buttons" src='../../Buttons/index.ux'>
-</import>
+<import name="buttons" src='../../Buttons/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">

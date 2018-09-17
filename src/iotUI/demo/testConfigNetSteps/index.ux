@@ -1,14 +1,14 @@
-<import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux">
-</import>
-<template>
-    <ConfigNetSteps title="设备名称" onevt-back="handleBack" buttons="{{buttons}}" onevt-click-btn="clickBtn">
-        <list>
-            <list-item for="productList">
-                <text>{{$idx}}.{{$item.name}}</text>
-            </list-item>
-        </list>
+<import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux"></import>
 
-    </ConfigNetSteps>
+<import name="WaveLoading" src="../../WaveLoading/index.ux"></import>
+
+<template>
+    <div>
+        <ConfigNetSteps title="设备名称" onevt-back="handleBack" buttons="{{buttons}}" onevt-click-btn="clickBtn">
+            <WaveLoading></WaveLoading>
+        </ConfigNetSteps>
+    </div>
+
 
 </template>
 

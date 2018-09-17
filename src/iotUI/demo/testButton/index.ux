@@ -1,4 +1,4 @@
-<import name="Button" src="../../Button/index.ux">
+<import name="Button" src="../../Button/index.ux"></import>
 </import>
 <template>
     <div class="box">
