@@ -12,11 +12,9 @@
 | title | 按钮显示的文字 | string | 空字符串 |
 | type | 设置按钮类型，可选值为 primary default dashed或者不设| string | default |
 | block | 将按钮宽度调整为其父宽度的选项 | boolean | false |
+|  onevt-click | 点击按钮事件 | | |
 
-事件:
-| 事件 | 说明 |
-| ---- | --- |
-| onevt-click | 点击按钮事件 |
+
 
 ``` html 
 <!-- 引入Button组件  -->
