@@ -4,6 +4,17 @@
 + 组件使用了less,需要在项目中执行 npm install --save-dev less-loader less
 + 如果想修改组件默认样式,请修改组件下的theme.less文件
 
+## 组件
++ Button按钮
++ Buttons按钮组
++ Checkbox选项
++ Switch开关
++ Loading
++ Modal对话框
++ ActionSheet对话框
++ NavBar导航栏
++ ConfigNetSteps配网步骤
++ TwoLevelList二级列表
 
 
 ### Button按钮
