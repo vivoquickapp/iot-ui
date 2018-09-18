@@ -89,7 +89,7 @@
             }, 160)
 
 
-            this.$emit('evtMore', { name: "点击了更多按钮" });
+            this.$emit('evtMore', { name: "more-btn" });
         },
         closeFn() {
             this.activeClose = 'more-item-active';
@@ -97,7 +97,7 @@
                 this.activeClose = '';
             }, 160)
 
-            this.$emit('evtClose', { name: "点击了关闭按钮" });
+            this.$emit('evtClose', { name: "close-btn" });
 
         }
 

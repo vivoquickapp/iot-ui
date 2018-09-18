@@ -5,8 +5,9 @@
       <div class="button" style="width:{{width+'%'}}; padding-top:{{config.paddingTop+'px'}}; padding-bottom:{{config.paddingBottom+'px'}}"
         @click="click($idx,$item)">
         <div class="button-icon">
-          <image src="{{$item.icons[$item.value].url}}" style="width:{{config.iconWidth+'px'}};height:{{config.iconWidth+'px'}};border-radius:{{config.iconWidth+'px'}}"></image>
-
+          <div style="width:{{config.iconWidth+'px'}};height:{{config.iconWidth+'px'}};">
+              <image src="{{$item.icons[$item.value].url}}" ></image>
+          </div>
         </div>
         <div class="button-text" if="{{config.showText}}" style="height:{{config.textHeight+'px'}}">
           <text style="color:{{$item.icons[$item.value].fontColor?$item.icons[$item.value].fontColor:'#000000'}}">{{$item.icons[$item.value].name}}</text>

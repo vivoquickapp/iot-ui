@@ -63,7 +63,7 @@
         },
         handleCancel(evt) {
             this.visible = false;//取消选择 
-            console.log('取消旋转');
+            console.log('取消选择 ');
         },
         fn() {
 

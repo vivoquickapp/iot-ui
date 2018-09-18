@@ -32,27 +32,103 @@
 </style>
 
 <script>
-  import data from './data';
 
   export default {
-    // 页面级组件的数据
-    //模型，影响传入数据的覆盖机制：private内定义的属性不允许被覆盖
+
     data() {
       return {
         config: {
           showText: true,
-          column: 5,
+          column: 4,
           iconWidth: 80,
           paddingTop: 20,
           paddingBottom: 20,
           textHeight: 60,
 
         },
-        data: data
-      }
-    },
-    onInit() {
+        data: [
+          {
+            disabled: false,
+            icons: [
+              {
+                //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
+                url: '/iotUI/demo/testButtons/rec.jpg',
+                name: '小o活',
+                fontColor: '#ff0000',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '小微啊',
+                fontColor: '#0000ff',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '不可用',
+                fontColor: '#ccc',
+              }],
+            value: 0,
+            click: function (item) {
 
+              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
+
+              console.log(item)
+
+            }
+          }, {
+            disabled: false,
+            icons: [
+              {
+                url: '/iotUI/demo/testButtons/rec.jpg',
+                name: '小微3',
+                fontColor: '#ff0000',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '小微',
+                fontColor: '#0000ff',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '不可用',
+                fontColor: '#ccc',
+              }],
+            value: 0,
+            click: function (item) {
+
+              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
+
+              console.log(item)
+
+            }
+          }, {
+            disabled: true,
+            icons: [
+              {
+                url: '/iotUI/demo/testButtons/rec.jpg',
+                name: '小微激活',
+                fontColor: '#ff0000',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '小微',
+                fontColor: '#0000ff',
+              }, {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '不可用',
+                fontColor: '#ccc',
+              }, , {
+                url: '/iotUI/demo/testButtons/icon.png',
+                name: '不可用',
+                fontColor: '#ccc',
+              }],
+            value: 2,
+            click: function (item) {
+
+              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
+
+              console.log(item)
+
+            }
+          }
+
+
+        ]
+      }
     },
     fn() {
 
