@@ -11,7 +11,7 @@
 
                 <div class="btns">
                     <div for="buttons" @click="buttonClick($item)">
-                        <text style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:30}}px">{{$item.name}}</text>
+                        <text style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:48}}px">{{$item.name}}</text>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                 default: false
             },
             height: {
-                default: 600
+                default: 700
             },
             title: {
                 default: undefined

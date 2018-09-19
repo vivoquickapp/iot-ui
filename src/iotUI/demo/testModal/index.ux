@@ -42,8 +42,8 @@
     export default {
         private: {
             visible: false,
-            //height可以不传,默认值600
-            height: 500,
+            //height可以不传,默认值700
+            height: 700,
             //title不传,或者传false,undefined是不显示标题
             title: "这是标题",
             buttons: [
@@ -52,12 +52,12 @@
                     //color可以不传
                     color: 'red',
                     //fontSize可以不传
-                    fontSize: 30
+                    fontSize: 48
                 }
                 , {
                     name: '确认',
                     color: '#0000FF',
-                    fontSize: 30
+                    fontSize: 48
                 }
 
             ]

@@ -19,6 +19,9 @@
     padding-bottom: 60px;
     background-color: @TwoLevelListBackgroundColor;
     padding-right: @TwoLevelListItemPaddingRight;
+    text {
+        font-size: @TwoLevelListHeaderFooterFontSize;
+    }
 }
 
 .header-box {
@@ -27,6 +30,12 @@
 
 .item-group {
     background-color: @TwoLevelListBackgroundColor;
+    text {
+        font-size: @TwoLevelListHeaderFooterFontSize ;
+    }
+    a {
+        font-size: @TwoLevelListHeaderFooterFontSize ;
+    }
 }
 
 .item-group-header {
@@ -55,10 +64,14 @@
     background-color: @TwoLevelListBackgroundColor;
     flex-direction: row;
     flex-wrap: wrap;
+    text {
+        font-size: @TwoLevelListHeaderFooterFontSize ;
+    }
 }
 
 .footer-link {
     color: @TwoLevelListLinkColor;
+    font-size: @TwoLevelListHeaderFooterFontSize ;
 }
 
 .footer-text {
@@ -75,8 +88,9 @@
 }
 
 .title-icon {
-    width: @TwoLevelListTitleBackIconSize * 2 + @TwoLevelListTitlePaddingLeft;
+    width: @TwoLevelListTitleBackIconSize + @TwoLevelListTitlePaddingLeft + @TwoLevelListTitlePaddingLeft;
     padding-left: @TwoLevelListTitlePaddingLeft;
+    padding-right: @TwoLevelListTitlePaddingLeft;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -97,6 +111,7 @@
     width: 100%;
     text {
         font-size: @TwoLevelListTitleFontSize;
+        font-weight: bold;
     }
 }
 
@@ -119,6 +134,8 @@ list-item {
 
 .item-content-content {
     flex: 1;
+    padding-top: @TwoLevelListItemPaddingTop;
+    padding-bottom: @TwoLevelListItemPaddingBottom;
     .item-title-box {
         flex-direction: column;
         justify-content: center;
@@ -168,12 +185,11 @@ list-item {
 }
 
 .item-arrow-box {
-    width: @TwoLevelListItemArrowSize * 2 + @TwoLevelListItemPaddingRight;
+    width: @TwoLevelListItemArrowSize + @TwoLevelListItemPaddingRight;
     justify-content: center;
     align-items: center;
-    padding-top: @TwoLevelListItemPaddingTop;
-    padding-bottom: @TwoLevelListItemPaddingBottom;
     padding-right: @TwoLevelListItemPaddingRight;
+    height: 100%;
 }
 
 .item-arrow-icon {
@@ -183,4 +199,5 @@ list-item {
     border-width: @TwoLevelListItemArrowBold @TwoLevelListItemArrowBold 0 0;
     border-color: @TwoLevelListItemArrowColor;
     transform: rotate(45deg);
+
 }

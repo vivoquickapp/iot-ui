@@ -45,8 +45,8 @@
     export default {
         private: {
             visible: false,
-            //height可以不传,默认值600
-            height: 500,
+            //height可以不传,默认值900
+            height: 900,
             datasource: arr,
             choosedValue: ''
 

@@ -39,7 +39,7 @@
                 default: []
             },
             height: {
-                default: 600
+                default: 900
             },
             visible: {
                 default: false
