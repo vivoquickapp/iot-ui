@@ -28,10 +28,11 @@
     }
   ],
   "config": {
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "designWidth":1080
   },
   "router": {
-    "entry": "iotUI/demo/home",
+    "entry": "iotUI/demo/testTwoLevelList",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"

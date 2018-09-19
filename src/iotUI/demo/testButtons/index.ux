@@ -20,14 +20,18 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
   }
 
   .t1 {
     border-radius: 10px;
     border: 1px solid blue;
-    padding: 20px;
+    padding: 40px;
 
+  }
+
+  text {
+    font-size: 40px;
   }
 </style>
 
@@ -40,10 +44,10 @@
         config: {
           showText: true,
           column: 4,
-          iconWidth: 80,
-          paddingTop: 20,
-          paddingBottom: 20,
-          textHeight: 60,
+          iconWidth: 140,
+          paddingTop: 60,
+          paddingBottom: 60,
+          textHeight: 80,
 
         },
         data: [

@@ -1,7 +1,10 @@
 <template>
-    <div class="box {{activeClass}}" @click="handleClick">
-        <div class="ok-icon ok-icon-color" show="{{checked}}"></div>
+    <div class="box-root" @click="handleClick">
+        <div class="box {{activeClass}}" >
+            <div class="ok-icon ok-icon-color" show="{{checked}}"></div>
+        </div>
     </div>
+
 
 
 </template>

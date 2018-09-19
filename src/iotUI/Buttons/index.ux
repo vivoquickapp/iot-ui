@@ -5,8 +5,8 @@
       <div class="button" style="width:{{width+'%'}}; padding-top:{{config.paddingTop+'px'}}; padding-bottom:{{config.paddingBottom+'px'}}"
         @click="click($idx,$item)">
         <div class="button-icon">
-          <div style="width:{{config.iconWidth+'px'}};height:{{config.iconWidth+'px'}};">
-              <image src="{{$item.icons[$item.value].url}}" ></image>
+          <div style="padding:4px;width:{{config.iconWidth}}px;height:{{config.iconWidth}}px;">
+            <image src="{{$item.icons[$item.value].url}}"></image>
           </div>
         </div>
         <div class="button-text" if="{{config.showText}}" style="height:{{config.textHeight+'px'}}">
@@ -32,10 +32,10 @@
     showText: false,
     componentHeight: 0,
     column: 4,
-    iconWidth: 150,
-    textHeight: 50,
-    paddingTop: 20,
-    paddingBottom: 20
+    iconWidth: 140,
+    textHeight: 80,
+    paddingTop: 60,
+    paddingBottom: 60
   };
   export default {
 
