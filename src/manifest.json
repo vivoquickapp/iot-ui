@@ -32,7 +32,7 @@
     "designWidth":1080
   },
   "router": {
-    "entry": "iotUI/demo/testModal",
+    "entry": "iotUI/demo/home",
     "pages": {
       "iotUI/demo/home": {
         "component": "index"
