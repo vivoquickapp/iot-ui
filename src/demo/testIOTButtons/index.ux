@@ -1,4 +1,4 @@
-<import name="IOTButtons" src='../../IOTButtons/index.ux'></import>
+<import name="IOTButtons" src='../../../IOTButtons/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
@@ -56,15 +56,15 @@
             icons: [
               {
                 //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                url: '/demo/testIOTButtons/rec.jpg',
                 name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字3',
                 fontColor: '#ccc',
               }],
@@ -80,15 +80,15 @@
             disabled: false,
             icons: [
               {
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                url: '/demo/testIOTButtons/rec.jpg',
                 name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字3',
                 fontColor: '#ccc',
               }],
@@ -104,19 +104,19 @@
             disabled: true,
             icons: [
               {
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                url: '/demo/testIOTButtons/rec.jpg',
                 name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字3',
                 fontColor: '#ccc',
               }, , {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
+                url: '/demo/testIOTButtons/icon.png',
                 name: '文字4',
                 fontColor: '#ccc',
               }],

@@ -1,4 +1,4 @@
-<import name="NavBar" src="../../NavBar/index.ux"></import>
+<import name="NavBar" src="../../../NavBar/index.ux"></import>
 <template>
     <div class="box">
         <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>

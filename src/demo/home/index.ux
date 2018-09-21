@@ -1,6 +1,6 @@
 <template>
     <div class="box">
-        <text class="title">组件:</text>
+        <text class="title">iot-ui组件demo:</text>
         <a href="{{$item.url}}" for="arr">{{$item.name}}</a>
     </div>
 </template>
@@ -12,9 +12,10 @@
     }
 
     .title {
-        background-color: #f5f5f5;
+        background-color: #ccc;
+        margin-top: 40px;
         height: 130px;
-        font-size: 40px;
+        font-size: 50px;
     }
 
     text,
@@ -26,13 +27,14 @@
     }
 
     a {
-        border: 2px solid blue;
+        background-color: #f5f5f5;
         border-radius: 10px;
+        padding: 30px;
     }
 </style>
 
 <script>
-    let str = '/iotUI/demo/test';
+    let str = '/demo/test';
     let temArr = [
         'IOTButton',
         'IOTButtons',

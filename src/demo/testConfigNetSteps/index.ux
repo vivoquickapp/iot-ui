@@ -1,4 +1,4 @@
-<import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux"></import>
+<import name="ConfigNetSteps" src="../../../ConfigNetSteps/index.ux"></import>
 
 
 <template>

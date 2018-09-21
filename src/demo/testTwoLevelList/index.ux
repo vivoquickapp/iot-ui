@@ -1,4 +1,4 @@
-<import name="TwoLevelList" src="../../TwoLevelList/index.ux"></import>
+<import name="TwoLevelList" src="../../../TwoLevelList/index.ux"></import>
 <template>
     <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是二级列表大标题" showicon="{{showicon}}" onevt-back="backFn"
         onevt-arrow="clickArrow"></TwoLevelList>
@@ -23,13 +23,13 @@
                 },
 
                 {
-                    link: '/iotUI/demo/home',
+                    link: '/demo/home',
                     text: '这也是链接',
                 }, {
                     text: '青青子衿'
                 },
                 {
-                    link: '/iotUI/demo/home',
+                    link: '/demo/home',
                     text: '这是链接',
                 }
             ],
@@ -37,7 +37,7 @@
             datasource: [
                 {
                     title: '小明',
-                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -45,7 +45,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/iotUI/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testIOTButtons/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -57,7 +57,7 @@
                 {
                     title: '主标题',
                     subTitle: '副标题',
-                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -67,20 +67,20 @@
                         },
 
                         {
-                            link: '/iotUI/demo/home',
+                            link: '/demo/home',
                             text: '这是链接1',
                         }, {
                             text: '这是文字'
                         },
                         {
-                            link: '/iotUI/demo/home',
+                            link: '/demo/home',
                             text: '这是链接2',
                         }
                     ]
                 },
                 {
                     title: '主标题',
-                    icon: '/iotUI/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testIOTButtons/icon.png',
                     rightText: '右侧小字'
                 }
             ]

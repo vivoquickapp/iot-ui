@@ -1,4 +1,4 @@
-<import name="ActionSheet" src="../../ActionSheet/index.ux"></import>
+<import name="ActionSheet" src="../../../ActionSheet/index.ux"></import>
 <template>
     <div>
         <div class="box">

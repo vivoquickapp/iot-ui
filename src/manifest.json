@@ -32,42 +32,39 @@
     "designWidth":1080
   },
   "router": {
-    "entry": "iotUI/demo/home",
+    "entry": "demo/home",
     "pages": {
-      "iotUI/demo/home": {
+      "demo/home": {
         "component": "index"
       },
-      "iotUI/demo/testIOTButtons": {
+      "demo/testIOTButtons": {
         "component": "index"
       },
-      "iotUI/demo/testNavBar": {
+      "demo/testNavBar": {
         "component": "index"
       },
-      "iotUI/demo/About": {
+      "demo/testIOTSwitch": {
         "component": "index"
       },
-      "iotUI/demo/testIOTSwitch": {
+      "demo/testCheckBox": {
         "component": "index"
       },
-      "iotUI/demo/testCheckBox": {
+      "demo/testLoading": {
         "component": "index"
       },
-      "iotUI/demo/testLoading": {
+      "demo/testTwoLevelList": {
         "component": "index"
       },
-      "iotUI/demo/testTwoLevelList": {
+      "demo/testActionSheet": {
         "component": "index"
       },
-      "iotUI/demo/testActionSheet": {
+      "demo/testModal": {
         "component": "index"
       },
-      "iotUI/demo/testModal": {
+      "demo/testIOTButton": {
         "component": "index"
       },
-      "iotUI/demo/testIOTButton": {
-        "component": "index"
-      },
-      "iotUI/demo/testConfigNetSteps": {
+      "demo/testConfigNetSteps": {
         "component": "index"
       }
     }

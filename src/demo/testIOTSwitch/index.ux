@@ -1,16 +1,11 @@
-<import name="CheckBox" src="../../CheckBox/index.ux"></import>
+<import name="IOTSwitch" src="../../../IOTSwitch/index.ux"></import>
 <template>
     <div class="box">
         <!-- <text onclick="click" class="btn">点击切换disabled值</text>
         <text>disabled值:{{disabled}}</text>
         <text>checked值:{{checked}}</text> -->
-        <div>
-            <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
-        </div>
-
-
+        <IOTSwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></IOTSwitch>
         <!-- <text>改变次数{{i}}</text> -->
-
     </div>
 </template>
 
@@ -37,11 +32,22 @@
 </style>
 
 <script>
+    import prompt from '@system.prompt'
 
     export default {
 
         onInit() {
 
+        },
+        click() {
+            this.disabled = !this.disabled;
+
+        },
+        evtTypeHandler(evt) {
+            console.info(`父组件：事件响应: `, evt.type, evt.detail.name)
+            this.checked = evt.detail.checked;
+
+            this.i++;
         },
         data() {
 
@@ -50,18 +56,6 @@
                 checked: true,
                 disabled: false
             }
-        },
-        click() {
-
-            this.disabled = !this.disabled;
-
-        },
-        handleChagne(evt) {
-            this.i++;
-            console.log('点击CheckBox')
-            console.log(evt.detail);
-            this.checked = evt.detail.checked;
         }
-
     }
 </script>

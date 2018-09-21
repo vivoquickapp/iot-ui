@@ -1,4 +1,4 @@
-<import name="IOTButton" src="../../IOTButton/index.ux"></import>
+<import name="IOTButton" src="../../../IOTButton/index.ux"></import>
 <template>
     <div class="box">
         <div class="item">
