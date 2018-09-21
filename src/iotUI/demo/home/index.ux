@@ -37,7 +37,7 @@
         'IOTButton',
         'IOTButtons',
         'NavBar',
-        'Switch',
+        'IOTSwitch',
         'CheckBox',
         'Loading',
         'TwoLevelList',
