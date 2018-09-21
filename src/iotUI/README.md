@@ -3,13 +3,13 @@
 ## 注意
 + 组件使用了less,需要在项目中执行 npm install --save-dev less-loader less
 + 如果想修改组件默认样式,请修改组件下的theme.less文件
-+ <import name="Button" src="../../Button/index.ux"></import>请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
++ 请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
 
 ## 组件
-+ Button按钮
-+ Buttons按钮组
++ IOTButton按钮
++ IOTButtons按钮组
 + Checkbox选项
-+ Switch开关
++ IOTSwitch开关
 + Loading
 + Modal对话框
 + ActionSheet对话框
@@ -18,7 +18,7 @@
 + TwoLevelList二级列表
 
 
-### Button按钮
+### IOTButton按钮
 
 属性:
 
@@ -32,18 +32,20 @@
 
 ### 示例
 ``` html 
-<!-- 引入Button组件  -->
-<import name="Button" src="../../Button/index.ux"></import>
+
+<import name="IOTButton" src="../../IOTButton/index.ux"></import>
 <template>
     <div class="box">
         <div class="item">
-            
-            <Button type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></Button>
+            <IOTButton type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></IOTButton>
 
         </div>
         <div class="item">
-            <Button type="dashed" title='取消'></Button>
+            <IOTButton type="dashed" title='取消'></IOTButton>
+
         </div>
+
+
     </div>
 </template>
 
@@ -82,11 +84,12 @@
 
     }
 </script>
+
 ```
 
 
 
-### Buttons按钮组
+### IOTButtons按钮组
 
 
 属性:
@@ -109,15 +112,15 @@
 ### 示例
 
 ``` html
-<import name="buttons" src='../../Buttons/index.ux'></import>
+<import name="IOTButtons" src='../../IOTButtons/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
     <div class="c1">
-      <text class="t1" @click="fn">点击切换是否显示button文字</text>
-      <text>是否显示button文字:{{ config.showText}}</text>
+      <!-- <text class="t1" @click="fn">点击切换是否显示button文字</text>
+      <text>是否显示button文字:{{ config.showText}}</text> -->
     </div>
-    <buttons config="{{config}}" data="{{data}}"></buttons>
+    <IOTButtons config="{{config}}" data="{{data}}"></IOTButtons>
   </div>
 
 </template>
@@ -131,14 +134,18 @@
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 40px;
   }
 
   .t1 {
     border-radius: 10px;
     border: 1px solid blue;
-    padding: 20px;
+    padding: 40px;
 
+  }
+
+  text {
+    font-size: 40px;
   }
 </style>
 
@@ -151,10 +158,10 @@
         config: {
           showText: true,
           column: 4,
-          iconWidth: 80,
-          paddingTop: 20,
-          paddingBottom: 20,
-          textHeight: 60,
+          iconWidth: 140,
+          paddingTop: 60,
+          paddingBottom: 60,
+          textHeight: 80,
 
         },
         data: [
@@ -163,16 +170,16 @@
             icons: [
               {
                 //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小o活',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微啊',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }],
             value: 0,
@@ -187,16 +194,16 @@
             disabled: false,
             icons: [
               {
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小微3',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }],
             value: 0,
@@ -211,20 +218,20 @@
             disabled: true,
             icons: [
               {
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小微激活',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }, , {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字4',
                 fontColor: '#ccc',
               }],
             value: 2,
@@ -269,18 +276,19 @@
 ### 示例
 
 ``` html
+
 <import name="CheckBox" src="../../CheckBox/index.ux"></import>
 <template>
     <div class="box">
-        <text onclick="click" class="btn">点击切换disabled值</text>
+        <!-- <text onclick="click" class="btn">点击切换disabled值</text>
         <text>disabled值:{{disabled}}</text>
-        <text>checked值:{{checked}}</text>
+        <text>checked值:{{checked}}</text> -->
         <div>
             <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
         </div>
 
 
-        <text>改变次数{{i}}</text>
+        <!-- <text>改变次数{{i}}</text> -->
 
     </div>
 </template>
@@ -342,7 +350,7 @@
 
 
 
-### Switch开关
+### IOTSwitch开关
 属性:
 
 | 属性  | 说明   |  类型 | 默认值  |
@@ -355,14 +363,14 @@
 ### 示例
 ``` html
 
-<import name="Switch" src="../../Switch/index.ux"></import>
+<import name="IOTSwitch" src="../../IOTSwitch/index.ux"></import>
 <template>
     <div class="box">
-        <text onclick="click" class="btn">点击切换disabled值</text>
+        <!-- <text onclick="click" class="btn">点击切换disabled值</text>
         <text>disabled值:{{disabled}}</text>
-        <text>checked值:{{checked}}</text>
-        <Switch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></Switch>
-        <text>改变次数{{i}}</text>
+        <text>checked值:{{checked}}</text> -->
+        <IOTSwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></IOTSwitch>
+        <!-- <text>改变次数{{i}}</text> -->
     </div>
 </template>
 
@@ -437,8 +445,8 @@
 </import>
 <template>
     <div class="box">
-        <text @click="fn" class="t1">点击切换Loading显示</text>
-        <text>Loading显示:{{show}}</text>
+        <!-- <text @click="fn" class="t1">点击切换Loading显示</text>
+        <text>Loading显示:{{show}}</text> -->
         <Loading size="default" if="{{show}}"></Loading>
     </div>
 </template>
@@ -909,7 +917,6 @@
 </style>
 
 <script>
-    import prompt from '@system.prompt';
 
     export default {
 
@@ -926,20 +933,20 @@
 
                 {
                     link: '/iotUI/demo/home',
-                    text: '这是链接home',
+                    text: '这也是链接',
                 }, {
                     text: '青青子衿'
                 },
                 {
                     link: '/iotUI/demo/home',
-                    text: '悠悠我心',
+                    text: '这是链接',
                 }
             ],
             // footer:undefined,
             datasource: [
                 {
                     title: '小明',
-                    icon: 'https://avatar.csdn.net/A/4/0/3_around_primary.jpg',
+                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -947,7 +954,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/iotUI/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testIOTButtons/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -959,7 +966,7 @@
                 {
                     title: '主标题',
                     subTitle: '副标题',
-                    icon: 'https://avatar.csdn.net/A/4/0/3_around_primary.jpg',
+                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -970,19 +977,19 @@
 
                         {
                             link: '/iotUI/demo/home',
-                            text: '这是链接home',
+                            text: '这是链接1',
                         }, {
-                            text: '青青子衿'
+                            text: '这是文字'
                         },
                         {
                             link: '/iotUI/demo/home',
-                            text: '悠悠我心',
+                            text: '这是链接2',
                         }
                     ]
                 },
                 {
                     title: '主标题',
-                    icon: '/iotUI/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testIOTButtons/icon.png',
                     rightText: '右侧小字'
                 }
             ]
@@ -990,15 +997,13 @@
         },
         backFn(evt) {
             console.log('back')
-            prompt.showToast({
-                message: '点击了back'
-            })
+            //点击左侧箭头
+         
         },
         clickArrow: function (evt) {
             console.log(evt.detail.item);
-            prompt.showToast({
-                message: evt.detail.item.title
-            })
+            //点击右侧箭头
+          
         }
 
     }
