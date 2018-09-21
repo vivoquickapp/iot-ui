@@ -4,6 +4,7 @@
 + 组件使用了less,需要在项目中执行 npm install --save-dev less-loader less
 + 如果想修改组件默认样式,请修改组件下的theme.less文件
 + 请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
++ 有的示例使用了prompt,manifest.json文件需要添加接口声明{"name": "system.prompt"}
 
 ## 组件
 + IOTButton按钮
