@@ -1,3 +1,7 @@
+## 运行demo方法
+1. npm install安装依赖. 建议安装yarn,通过yarn安装依赖.
+2. npm run watch打包文件,监听文件变化.如果文件变化,重新打包文件.
+3. npm run server打开服务器,扫描二维码安装rpk
 
 ## 目录结构
 
