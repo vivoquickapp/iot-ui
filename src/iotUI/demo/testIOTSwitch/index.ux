@@ -1,10 +1,10 @@
-<import name="Switch" src="../../Switch/index.ux"></import>
+<import name="IOTSwitch" src="../../IOTSwitch/index.ux"></import>
 <template>
     <div class="box">
         <text onclick="click" class="btn">点击切换disabled值</text>
         <text>disabled值:{{disabled}}</text>
         <text>checked值:{{checked}}</text>
-        <Switch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></Switch>
+        <IOTSwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="evtTypeHandler" name="张三"></IOTSwitch>
         <text>改变次数{{i}}</text>
     </div>
 </template>

@@ -37,7 +37,7 @@
       "iotUI/demo/home": {
         "component": "index"
       },
-      "iotUI/demo/testButtons": {
+      "iotUI/demo/testIOTButtons": {
         "component": "index"
       },
       "iotUI/demo/testNavBar": {
@@ -46,7 +46,7 @@
       "iotUI/demo/About": {
         "component": "index"
       },
-      "iotUI/demo/testSwitch": {
+      "iotUI/demo/testIOTSwitch": {
         "component": "index"
       },
       "iotUI/demo/testCheckBox": {
@@ -64,7 +64,7 @@
       "iotUI/demo/testModal": {
         "component": "index"
       },
-      "iotUI/demo/testButton": {
+      "iotUI/demo/testIOTButton": {
         "component": "index"
       },
       "iotUI/demo/testConfigNetSteps": {

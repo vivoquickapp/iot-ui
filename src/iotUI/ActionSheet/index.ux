@@ -3,7 +3,7 @@
         <div class="content {{visible?'content-animate':''}}" style="height:{{height}}px" show="{{self_visible}}">
             <list>
                 <block for="datasource">
-                    <list-item @click="handleClick($item)">
+                    <list-item type="{{$idx}}" @click="handleClick($item)">
                         <div class="div-box">
                             <text>{{$item.name}}</text>
 

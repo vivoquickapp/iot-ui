@@ -34,8 +34,8 @@
 <script>
     let str = '/iotUI/demo/test';
     let temArr = [
-        'Button',
-        'Buttons',
+        'IOTButton',
+        'IOTButtons',
         'NavBar',
         'Switch',
         'CheckBox',

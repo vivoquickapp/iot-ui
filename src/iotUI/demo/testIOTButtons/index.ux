@@ -1,4 +1,4 @@
-<import name="buttons" src='../../Buttons/index.ux'></import>
+<import name="IOTButton" src='../../IOTButton/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
@@ -6,7 +6,7 @@
       <text class="t1" @click="fn">点击切换是否显示button文字</text>
       <text>是否显示button文字:{{ config.showText}}</text>
     </div>
-    <buttons config="{{config}}" data="{{data}}"></buttons>
+    <IOTButton config="{{config}}" data="{{data}}"></IOTButton>
   </div>
 
 </template>
