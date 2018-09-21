@@ -1,12 +1,12 @@
-<import name="IOTButton" src='../../IOTButton/index.ux'></import>
+<import name="IOTButtons" src='../../IOTButtons/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
     <div class="c1">
-      <text class="t1" @click="fn">点击切换是否显示button文字</text>
-      <text>是否显示button文字:{{ config.showText}}</text>
+      <!-- <text class="t1" @click="fn">点击切换是否显示button文字</text>
+      <text>是否显示button文字:{{ config.showText}}</text> -->
     </div>
-    <IOTButton config="{{config}}" data="{{data}}"></IOTButton>
+    <IOTButtons config="{{config}}" data="{{data}}"></IOTButtons>
   </div>
 
 </template>
@@ -56,16 +56,16 @@
             icons: [
               {
                 //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小o活',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微啊',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }],
             value: 0,
@@ -80,16 +80,16 @@
             disabled: false,
             icons: [
               {
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小微3',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }],
             value: 0,
@@ -104,20 +104,20 @@
             disabled: true,
             icons: [
               {
-                url: '/iotUI/demo/testButtons/rec.jpg',
-                name: '小微激活',
+                url: '/iotUI/demo/testIOTButtons/rec.jpg',
+                name: '文字1',
                 fontColor: '#ff0000',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '小微',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字2',
                 fontColor: '#0000ff',
               }, {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字3',
                 fontColor: '#ccc',
               }, , {
-                url: '/iotUI/demo/testButtons/icon.png',
-                name: '不可用',
+                url: '/iotUI/demo/testIOTButtons/icon.png',
+                name: '文字4',
                 fontColor: '#ccc',
               }],
             value: 2,

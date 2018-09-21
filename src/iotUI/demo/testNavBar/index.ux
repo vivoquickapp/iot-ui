@@ -3,7 +3,7 @@
     <div class="box">
         <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>
         <div class="c1">
-            <text>{{content}}</text>
+            <!-- <text>{{content}}</text> -->
         </div>
     </div>
 </template>

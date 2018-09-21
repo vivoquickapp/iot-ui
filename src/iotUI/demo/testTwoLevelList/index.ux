@@ -8,7 +8,6 @@
 </style>
 
 <script>
-    import prompt from '@system.prompt';
 
     export default {
 
@@ -25,20 +24,20 @@
 
                 {
                     link: '/iotUI/demo/home',
-                    text: '这是链接home',
+                    text: '这也是链接',
                 }, {
                     text: '青青子衿'
                 },
                 {
                     link: '/iotUI/demo/home',
-                    text: '悠悠我心',
+                    text: '这是链接',
                 }
             ],
             // footer:undefined,
             datasource: [
                 {
                     title: '小明',
-                    icon: 'https://avatar.csdn.net/A/4/0/3_around_primary.jpg',
+                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -46,7 +45,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/iotUI/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testIOTButtons/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -58,7 +57,7 @@
                 {
                     title: '主标题',
                     subTitle: '副标题',
-                    icon: 'https://avatar.csdn.net/A/4/0/3_around_primary.jpg',
+                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -69,19 +68,19 @@
 
                         {
                             link: '/iotUI/demo/home',
-                            text: '这是链接home',
+                            text: '这是链接1',
                         }, {
-                            text: '青青子衿'
+                            text: '这是文字'
                         },
                         {
                             link: '/iotUI/demo/home',
-                            text: '悠悠我心',
+                            text: '这是链接2',
                         }
                     ]
                 },
                 {
                     title: '主标题',
-                    icon: '/iotUI/demo/testButtons/icon.png',
+                    icon: '/iotUI/demo/testIOTButtons/icon.png',
                     rightText: '右侧小字'
                 }
             ]
@@ -89,15 +88,13 @@
         },
         backFn(evt) {
             console.log('back')
-            prompt.showToast({
-                message: '点击了back'
-            })
+            //点击左侧箭头
+         
         },
         clickArrow: function (evt) {
             console.log(evt.detail.item);
-            prompt.showToast({
-                message: evt.detail.item.title
-            })
+            //点击右侧箭头
+          
         }
 
     }

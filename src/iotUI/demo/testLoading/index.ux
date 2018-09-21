@@ -2,8 +2,8 @@
 </import>
 <template>
     <div class="box">
-        <text @click="fn" class="t1">点击切换Loading显示</text>
-        <text>Loading显示:{{show}}</text>
+        <!-- <text @click="fn" class="t1">点击切换Loading显示</text>
+        <text>Loading显示:{{show}}</text> -->
         <Loading size="default" if="{{show}}"></Loading>
     </div>
 </template>
