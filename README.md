@@ -5,8 +5,13 @@
 + 如果想修改组件默认样式,请修改组件下的theme.less文件
 + 注意组件图片的引用路径.路径错误会导致图片无法显示. 图片路径请使用绝对路径或者http地址,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
 + 请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
-+ 有的示例使用了prompt,manifest.json文件需要添加接口声明{"name": "system.prompt"}
++ 有的示例使用了prompt,manifest.json文件需要添加接口声明,[接口声明示例](https://doc.quickapp.cn/features/system/prompt.html)
++ 如果使用IOT接口,manifest.json文件需要添加接口声明{"name": "service.iot"},然后import IOT from '@service.iot' 或 const IOT = require('@service.iot')
 + 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
+
+
+
+
 
 ## 组件
 + IOTButton按钮
@@ -1011,6 +1016,171 @@
 
     }
 </script>
+
+```
+
+
+## IOT接口
+
+``` javascript
+
+
+
+
+/**
+ * 具体参数配置请看IOT开发者文档
+ */
+
+IOT.getProvider()
+
+IOT.send({
+    action: "configNetworkFinish",
+    data: {
+        deviceName: `deviceName`,
+        deviceUuid: `deviceUuid`,
+        resultCode: `resultCode`
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+});
+
+
+IOT.send({
+    action: "encodeData",
+    data: {
+        encodeType: `encodeType`,
+        dataSrc: `dataSrc`
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+IOT.send({
+    action: "decodeData",
+    data: {
+        decodeType: `decodeType`,
+        dataSrc: `dataSrc`
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+IOT.send({
+    action: "getVersion",
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+IOT.send({
+    action: "getWifiList",
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+
+IOT.send({
+    action: "jumpMainPage",
+})
+
+
+IOT.send({
+    action: "queryDeviceStatus",
+    data: {
+        deviceList: [{
+            deviceName: `deviceName`,
+            deviceUuid: `deviceUuid`,
+            type: `type`
+        }]
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+
+IOT.send({
+    action: "sendAccount",
+    data: {
+        accessToken: `accessToken`,
+        refreshToken: `refreshToken`,
+        openId: `openId`,
+        scope: `scope`
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+IOT.send({
+    action: "startConfigDevice",
+    data: {
+        connectData: {
+            deviceSsid: `deviceSsid`,
+            ssid: `ssid`,
+            wifiPassword: `wifiPassword`,
+            secretType: `secretType`
+        },
+        deviceInfo: {
+            deviceName: `deviceName`,
+            deviceUuid: `deviceUuid`,
+            type: `type`
+        }
+    },
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+
+IOT.send({
+    action: "startScanDeviceWifi",
+    success: function (data) {
+
+    },
+    fail: function (data, code) {
+
+    }
+})
+
+
+IOT.send({
+    action: "stopConfigDevice"
+})
 
 ```
 
