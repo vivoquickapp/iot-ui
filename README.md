@@ -1,4 +1,38 @@
 
+## 目录结构
+
+├── ActionSheet
+│   ├── ActionSheet.less
+│   └── index.ux
+├── Checkbox
+│   ├── Checkbox.less
+│   └── index.ux
+├── ConfigNetSteps
+│   ├── ConfigNetSteps.less
+│   └── index.ux
+├── IOTButton
+│   ├── Button.less
+│   └── index.ux
+├── IOTButtons
+│   ├── Buttons.less
+│   └── index.ux
+├── IOTSwitch
+│   ├── index.ux
+│   └── switch.less
+├── Loading
+│   ├── Loading.less
+│   └── index.ux
+├── Modal
+│   ├── Modal.less
+│   └── index.ux
+├── NavBar
+│   ├── NavBar.less
+│   └── index.ux
+├── README.md
+├── TwoLevelList
+│   ├── TwoLevelList.less
+│   └── index.ux
+├── theme.less
 
 ## 注意
 + 组件使用了less,需要在项目中执行 npm install --save-dev less-loader less
