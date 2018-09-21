@@ -5,6 +5,7 @@
 + 如果想修改组件默认样式,请修改组件下的theme.less文件
 + 请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
 + 有的示例使用了prompt,manifest.json文件需要添加接口声明{"name": "system.prompt"}
++ 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
 
 ## 组件
 + IOTButton按钮
