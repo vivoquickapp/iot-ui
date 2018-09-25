@@ -1,0 +1,93 @@
+<template>
+  <div class="doc-page">
+    <div class="page-title-wrap">
+      <text class="page-title">{{componentName}}</text>
+    </div>
+
+    <div class="item-container">
+      <div class="item-content">
+        <text>版本信息:</text>
+        <text>IOT.send({ action: getVersion, success: function (data) { console.log(`handling success: size = ${data.name}`) },
+          fail: function (data, code) { console.log(`handling fail, code = ${code}`) } })
+        </text>
+      </div>
+      <input type="button" class="btn" onclick="getDeviceInfo" value="获取应用版本信息" />
+    </div>
+
+  </div>
+</template>
+
+<style>
+  .doc-page {
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .page-title-wrap {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    justify-content: center;
+  }
+
+  .page-title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-color: #bbbbbb;
+    color: #bbbbbb;
+    border-bottom-width: 2px;
+  }
+
+  .item-container {
+    margin-bottom: 50px;
+    margin-right: 60px;
+    margin-left: 60px;
+    flex-direction: column;
+  }
+
+  .item-content {
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 50px;
+  }
+</style>
+
+<script>
+  import IOT from '@service.iot';
+  import prompt from '@system.prompt'
+
+  export default {
+    private: {
+      componentName: 'getVersion',
+      info: ''
+    },
+    onInit() {
+      this.$page.setTitleBar({
+        text: '获取版本信息'
+      })
+    },
+    getDeviceInfo() {
+      let $this = this;
+      IOT.send({
+        action: "getVersion",
+        success: function (data) {
+          console.log(`handling success: size = ${data.name}`)
+          $this.info = JSON.stringify(data)
+          prompt.showToast({
+            message: (`handling success: size = ${data.name}`)
+          })
+        },
+        fail: function (data, code) {
+          console.log(`handling fail, data = ${data}`)
+          console.log(`handling fail, code = ${code}`)
+          $this.info = data + "," + code
+          prompt.showToast({
+            message: (`handling fail, code = ${code}`)
+          })
+        }
+      })
+    }
+  }
+</script>

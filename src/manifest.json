@@ -3,7 +3,7 @@
   "name": "iot-ui",
   "versionName": "1.0.0",
   "versionCode": "1",
-  "minPlatformVersion": "1010",
+  "minPlatformVersion": "1000",
   "icon": "/Common/logo.png",
   "features": [
     {
@@ -20,6 +20,9 @@
     },
     {
       "name": "system.share"
+    },
+    {
+      "name": "service.iot"
     }
   ],
   "permissions": [
@@ -29,7 +32,7 @@
   ],
   "config": {
     "logLevel": "debug",
-    "designWidth":1080
+    "designWidth": 1080
   },
   "router": {
     "entry": "demo/home",
@@ -65,6 +68,39 @@
         "component": "index"
       },
       "demo/testConfigNetSteps": {
+        "component": "index"
+      },
+      "interface/configNetworkFinish": {
+        "component": "index"
+      },
+      "interface/decodeData": {
+        "component": "index"
+      },
+      "interface/encodeData": {
+        "component": "index"
+      },
+      "interface/getVersion": {
+        "component": "index"
+      },
+      "interface/getWifiList": {
+        "component": "index"
+      },
+      "interface/jumpMainPage": {
+        "component": "index"
+      },
+      "interface/querydevicestatus": {
+        "component": "index"
+      },
+      "interface/sendAccount": {
+        "component": "index"
+      },
+      "interface/startConfigDevice": {
+        "component": "index"
+      },
+      "interface/startScanDeviceWifi": {
+        "component": "index"
+      },
+      "interface/stopConfigDevice": {
         "component": "index"
       }
     }
