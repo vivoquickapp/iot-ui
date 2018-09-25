@@ -2,8 +2,6 @@
     <div class="box">
         <text class="title">iot-ui组件demo:</text>
         <a href="{{$item.url}}" for="arr">{{$item.name}}</a>
-        <text class="title">iot-ui接口demo:</text>
-        <a href="{{interfaceStr}}{{$item}}" for="interfaceArr">{{$item}}</a>
     </div>
 </template>
 
@@ -50,20 +48,6 @@
         'ConfigNetSteps'
     ]
 
-    let interfaceStr = '/interface/';
-    let interfaceArr = [
-        'configNetworkFinish',
-        'decodeData',
-        'encodeData',
-        'getVersion',
-        'getWifiList',
-        'jumpMainPage',
-        'querydevicestatus',
-        'sendAccount',
-        'startConfigDevice',
-        'startScanDeviceWifi',
-        'stopConfigDevice'
-    ]
 
 
     export default {
@@ -77,9 +61,7 @@
 
             }
             return {
-                arr,
-                interfaceArr,
-                interfaceStr
+                arr
             }
 
         },

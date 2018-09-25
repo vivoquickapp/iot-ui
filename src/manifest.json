@@ -69,39 +69,6 @@
       },
       "demo/testConfigNetSteps": {
         "component": "index"
-      },
-      "interface/configNetworkFinish": {
-        "component": "index"
-      },
-      "interface/decodeData": {
-        "component": "index"
-      },
-      "interface/encodeData": {
-        "component": "index"
-      },
-      "interface/getVersion": {
-        "component": "index"
-      },
-      "interface/getWifiList": {
-        "component": "index"
-      },
-      "interface/jumpMainPage": {
-        "component": "index"
-      },
-      "interface/querydevicestatus": {
-        "component": "index"
-      },
-      "interface/sendAccount": {
-        "component": "index"
-      },
-      "interface/startConfigDevice": {
-        "component": "index"
-      },
-      "interface/startScanDeviceWifi": {
-        "component": "index"
-      },
-      "interface/stopConfigDevice": {
-        "component": "index"
       }
     }
   },
