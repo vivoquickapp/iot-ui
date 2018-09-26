@@ -20,9 +20,6 @@
     },
     {
       "name": "system.share"
-    },
-    {
-      "name": "service.iot"
     }
   ],
   "permissions": [
