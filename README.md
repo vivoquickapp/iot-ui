@@ -145,8 +145,14 @@
 
 | 属性  | 说明   |  类型 | 默认值  |
 | -----| ---- | ---- | ---- |
-| config | 按钮组配置信息 | object |  {showText: false,column: 4,iconWidth: 150,textHeight: 50,paddingTop: 20, paddingBottom: 20} |
+| show-text | 是否显示文字 | boolean | false |
+| column | 按钮列数目 | number | 4 |
+| icon-width | 按钮图标宽度 | number | 150 |
+| text-height | 文字高度 | number | 50 |
+| padding-top | 按钮组padding-top | number | 20 |
+| padding-bottom | 按钮组padding-bottom | number | 20 |
 | data | data是一个数组,数组里的对象是每个按钮的信息,| array | |
+| onevt-click | 点击事件 |  | |
 
 
 属性data数组的项目:
@@ -154,22 +160,24 @@
 | 属性 | 说明 | 类型  | 默认值 |
 | --- | ---- | --- | --- |
 | disabled | 按钮失效状态 | boolean | false |
-| icons | 数组,数组项对象有图标url,文字name, 文字颜色fontColor等属性,url请设置绝对路径 | array | |
-| value | value对应icons数组的索引,例如value值为2,按钮使用的就是icons[2]对象中的图标,文字和颜色| number | |
-| click | 按钮绑定的回调函数 | function | |
+| name | 文字| string | |
+| fontColor | 文字颜色 | string |
+| url | 图标路径 | string | |
 
 ### 示例
 
 ``` html
-<import name="IOTButtons" src='../../IOTButtons/index.ux'></import>
+
+<import name="IOTButtons" src='../../../IOTButtons/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
     <div class="c1">
-      <!-- <text class="t1" @click="fn">点击切换是否显示button文字</text>
-      <text>是否显示button文字:{{ config.showText}}</text> -->
+      <text class="t1" @click="fn">点击切换是否显示button文字</text>
+      <text>是否显示button文字:{{ showText}}</text>
     </div>
-    <IOTButtons config="{{config}}" data="{{data}}"></IOTButtons>
+    <IOTButtons show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
+      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></IOTButtons>
   </div>
 
 </template>
@@ -204,104 +212,57 @@
 
     data() {
       return {
-        config: {
-          showText: true,
-          column: 4,
-          iconWidth: 140,
-          paddingTop: 60,
-          paddingBottom: 60,
-          textHeight: 80,
 
-        },
+        showText: true,
+        column: 4,
+        iconWidth: 140,
+        paddingTop: 60,
+        paddingBottom: 60,
+        textHeight: 80,
+
         data: [
           {
             disabled: false,
-            icons: [
-              {
-                //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
-                name: '文字1',
-                fontColor: '#ff0000',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字2',
-                fontColor: '#0000ff',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字3',
-                fontColor: '#ccc',
-              }],
-            value: 0,
-            click: function (item) {
+            //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
+            url: '/demo/testIOTButtons/rec.jpg',
+            name: '文字1',
+            fontColor: 'blue',
 
-              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
-
-              console.log(item)
-
-            }
-          }, {
+          },
+          {
             disabled: false,
-            icons: [
-              {
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
-                name: '文字1',
-                fontColor: '#ff0000',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字2',
-                fontColor: '#0000ff',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字3',
-                fontColor: '#ccc',
-              }],
-            value: 0,
-            click: function (item) {
+            url: '/demo/testIOTButtons/icon.png',
+            name: '文字1',
+            fontColor: '#ff0000',
 
-              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
-
-              console.log(item)
-
-            }
           }, {
             disabled: true,
-            icons: [
-              {
-                url: '/iotUI/demo/testIOTButtons/rec.jpg',
-                name: '文字1',
-                fontColor: '#ff0000',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字2',
-                fontColor: '#0000ff',
-              }, {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字3',
-                fontColor: '#ccc',
-              }, , {
-                url: '/iotUI/demo/testIOTButtons/icon.png',
-                name: '文字4',
-                fontColor: '#ccc',
-              }],
-            value: 2,
-            click: function (item) {
-
-              item['value'] === 1 ? item['value'] = 0 : item['value'] = 1;
-
-              console.log(item)
-
-            }
+            url: '/demo/testIOTButtons/rec.jpg',
+            name: '文字1',
+            fontColor: '#ff0000',
           }
 
 
         ]
       }
     },
+    handleClick(evt) {
+      let { index, item } = evt.detail;
+      if (index === 1) {
+        if (item['url'] === '/demo/testIOTButtons/icon.png') {
+          item['url'] = '/demo/testIOTButtons/rec.jpg';
+        } else {
+          item['url'] = '/demo/testIOTButtons/icon.png';
+        }
+      }
+
+
+    },
     fn() {
 
-      this.config.showText = !this.config.showText;
+      this.showText = !this.showText;
 
-      this.config = Object.assign({}, this.config);
+
     }
   }
 </script>
