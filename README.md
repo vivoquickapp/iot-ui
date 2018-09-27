@@ -224,20 +224,20 @@
           {
             disabled: false,
             //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-            url: '/demo/testIOTButtons/rec.jpg',
+            url: '/demo/testBtns/rec.jpg',
             name: '文字1',
             fontColor: 'blue',
 
           },
           {
             disabled: false,
-            url: '/demo/testIOTButtons/icon.png',
+            url: '/demo/testBtns/icon.png',
             name: '文字1',
             fontColor: '#ff0000',
 
           }, {
             disabled: true,
-            url: '/demo/testIOTButtons/rec.jpg',
+            url: '/demo/testBtns/rec.jpg',
             name: '文字1',
             fontColor: '#ff0000',
           }
@@ -249,10 +249,10 @@
     handleClick(evt) {
       let { index, item } = evt.detail;
       if (index === 1) {
-        if (item['url'] === '/demo/testIOTButtons/icon.png') {
-          item['url'] = '/demo/testIOTButtons/rec.jpg';
+        if (item['url'] === '/demo/testBtns/icon.png') {
+          item['url'] = '/demo/testBtns/rec.jpg';
         } else {
-          item['url'] = '/demo/testIOTButtons/icon.png';
+          item['url'] = '/demo/testBtns/icon.png';
         }
       }
 
