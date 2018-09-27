@@ -815,15 +815,17 @@
 ### 示例
 
 ``` html
-<import name="ConfigNetSteps" src="../../ConfigNetSteps/index.ux"></import>
+<import name="ConfigNetSteps" src="../../../ConfigNetSteps/index.ux"></import>
 
 
 <template>
     <div>
         <ConfigNetSteps title="设备名称" onevt-back="handleBack" buttons="{{buttons}}" onevt-click-btn="clickBtn">
-            <div>
-                <text>内容..</text>
-            </div>
+            <list>
+                <list-item for="productList" type="{{$idx}}">
+                    <text>{{$item.name}}</text>
+                </list-item>
+            </list>
         </ConfigNetSteps>
     </div>
 
