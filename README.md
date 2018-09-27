@@ -910,9 +910,9 @@
 | subTitle | 副标题 | string | |
 | rightText | 右侧小字 | string | | 
 | icon | 如果showicon为true,请设置图标路径地址 | string | |
-| isGroup |  | boolean | false|
-| header | | string 或boolean | false |
-| padding | | boolean | false |
+| isGroup | 和属性header或者padding配合使用 | boolean | false|
+| header | 和属性isGroup配合使用 | string 或boolean | false |
+| padding | 和属性isGroup配合使用 | boolean | false |
 | footer | 同属性footer | | |
 
 
