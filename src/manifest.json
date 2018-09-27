@@ -37,7 +37,7 @@
       "demo/home": {
         "component": "index"
       },
-      "demo/testIOTButtons": {
+      "demo/testBtns": {
         "component": "index"
       },
       "demo/testNavBar": {
@@ -61,7 +61,7 @@
       "demo/testModal": {
         "component": "index"
       },
-      "demo/testIOTButton": {
+      "demo/testBtn": {
         "component": "index"
       },
       "demo/testConfigNetSteps": {

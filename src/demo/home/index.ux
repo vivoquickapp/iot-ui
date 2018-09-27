@@ -36,8 +36,8 @@
 <script>
     let str = '/demo/test';
     let temArr = [
-        'IOTButton',
-        'IOTButtons',
+        'Btn',
+        'Btns',
         'NavBar',
         'IOTSwitch',
         'CheckBox',

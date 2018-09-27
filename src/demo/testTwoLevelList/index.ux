@@ -37,7 +37,7 @@
             datasource: [
                 {
                     title: '小明',
-                    icon: '/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testBtns/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -45,7 +45,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testBtns/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -57,7 +57,7 @@
                 {
                     title: '主标题',
                     subTitle: '副标题',
-                    icon: '/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testBtns/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -80,7 +80,7 @@
                 },
                 {
                     title: '主标题',
-                    icon: '/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testBtns/icon.png',
                     rightText: '右侧小字'
                 }
             ]

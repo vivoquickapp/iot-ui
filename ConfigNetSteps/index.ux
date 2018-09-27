@@ -1,4 +1,4 @@
-<import name="IOTButton" src="../IOTButton/index.ux"></import>
+<import name="Btn" src="../Btn/index.ux"></import>
 
 <template>
     <div class="box">
@@ -21,7 +21,7 @@
         </div>
         <div class="btn-box" if="buttons.length>0">
             <div for="buttons">
-                <IOTButton title="{{$item.title}}" block="{{$item.block}}" type="{{$item.type}}" onevt-click="btnClick($idx,$item)"></IOTButton>
+                <Btn title="{{$item.title}}" block="{{$item.block}}" type="{{$item.type}}" onevt-click="btnClick($idx,$item)"></Btn>
             </div>
         </div>
     </div>

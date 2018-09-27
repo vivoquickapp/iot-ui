@@ -1,4 +1,4 @@
-<import name="IOTButtons" src='../../../IOTButtons/index.ux'></import>
+<import name="Btns" src='../../../Btns/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
@@ -6,8 +6,8 @@
       <text class="t1" @click="fn">点击切换是否显示button文字</text>
       <text>是否显示button文字:{{ showText}}</text>
     </div>
-    <IOTButtons show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></IOTButtons>
+    <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
+      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></Btns>
   </div>
 
 </template>
@@ -54,20 +54,20 @@
           {
             disabled: false,
             //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-            url: '/demo/testIOTButtons/rec.jpg',
+            url: '/demo/testBtns/rec.jpg',
             name: '文字1',
             fontColor: 'blue',
 
           },
           {
             disabled: false,
-            url: '/demo/testIOTButtons/icon.png',
+            url: '/demo/testBtns/icon.png',
             name: '文字1',
             fontColor: '#ff0000',
 
           }, {
             disabled: true,
-            url: '/demo/testIOTButtons/rec.jpg',
+            url: '/demo/testBtns/rec.jpg',
             name: '文字1',
             fontColor: '#ff0000',
           }
@@ -79,10 +79,10 @@
     handleClick(evt) {
       let { index, item } = evt.detail;
       if (index === 1) {
-        if (item['url'] === '/demo/testIOTButtons/icon.png') {
-          item['url'] = '/demo/testIOTButtons/rec.jpg';
+        if (item['url'] === '/demo/testBtns/icon.png') {
+          item['url'] = '/demo/testBtns/rec.jpg';
         } else {
-          item['url'] = '/demo/testIOTButtons/icon.png';
+          item['url'] = '/demo/testBtns/icon.png';
         }
       }
 

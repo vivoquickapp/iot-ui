@@ -1,12 +1,12 @@
-<import name="IOTButton" src="../../../IOTButton/index.ux"></import>
+<import name="Btn" src="../../../Btn/index.ux"></import>
 <template>
     <div class="box">
         <div class="item">
-            <IOTButton type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></IOTButton>
+            <Btn type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></Btn>
 
         </div>
         <div class="item">
-            <IOTButton type="dashed" title='取消'></IOTButton>
+            <Btn type="dashed" title='取消'></Btn>
 
         </div>
 

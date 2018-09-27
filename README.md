@@ -15,10 +15,10 @@
 ├── ConfigNetSteps
 │   ├── ConfigNetSteps.less
 │   └── index.ux
-├── IOTButton
+├── Btn
 │   ├── Button.less
 │   └── index.ux
-├── IOTButtons
+├── Btns
 │   ├── Buttons.less
 │   └── index.ux
 ├── IOTSwitch
@@ -55,8 +55,8 @@
 
 
 ## 组件
-+ IOTButton按钮
-+ IOTButtons按钮组
++ Btn按钮
++ Btns按钮组
 + Checkbox选项
 + IOTSwitch开关
 + Loading
@@ -67,7 +67,7 @@
 + TwoLevelList二级列表
 
 
-### IOTButton按钮
+### Btn按钮
 
 属性:
 
@@ -82,15 +82,15 @@
 ### 示例
 ``` html 
 
-<import name="IOTButton" src="../../IOTButton/index.ux"></import>
+<import name="Btn" src="../../../Btn/index.ux"></import>
 <template>
     <div class="box">
         <div class="item">
-            <IOTButton type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></IOTButton>
+            <Btn type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></Btn>
 
         </div>
         <div class="item">
-            <IOTButton type="dashed" title='取消'></IOTButton>
+            <Btn type="dashed" title='取消'></Btn>
 
         </div>
 
@@ -138,7 +138,7 @@
 
 
 
-### IOTButtons按钮组
+### Btns按钮组
 
 
 属性:
@@ -168,7 +168,7 @@
 
 ``` html
 
-<import name="IOTButtons" src='../../../IOTButtons/index.ux'></import>
+<import name="Btns" src='../../../Btns/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
@@ -176,8 +176,8 @@
       <text class="t1" @click="fn">点击切换是否显示button文字</text>
       <text>是否显示button文字:{{ showText}}</text>
     </div>
-    <IOTButtons show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></IOTButtons>
+    <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
+      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></Btns>
   </div>
 
 </template>
@@ -917,7 +917,7 @@
 ### 示例
 
 ``` html
-<import name="TwoLevelList" src="../../TwoLevelList/index.ux"></import>
+<import name="TwoLevelList" src="../../../TwoLevelList/index.ux"></import>
 <template>
     <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是二级列表大标题" showicon="{{showicon}}" onevt-back="backFn"
         onevt-arrow="clickArrow"></TwoLevelList>
@@ -942,13 +942,13 @@
                 },
 
                 {
-                    link: '/iotUI/demo/home',
+                    link: '/demo/home',
                     text: '这也是链接',
                 }, {
                     text: '青青子衿'
                 },
                 {
-                    link: '/iotUI/demo/home',
+                    link: '/demo/home',
                     text: '这是链接',
                 }
             ],
@@ -956,7 +956,7 @@
             datasource: [
                 {
                     title: '小明',
-                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testBtns/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -964,7 +964,7 @@
                 },
                 {
                     title: '李四',
-                    icon: '/iotUI/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testBtns/icon.png',
                     subTitle: '副标题',
                     rightText: '右侧小字'
 
@@ -976,7 +976,7 @@
                 {
                     title: '主标题',
                     subTitle: '副标题',
-                    icon: '/iotUI/demo/testIOTButtons/rec.jpg',
+                    icon: '/demo/testBtns/rec.jpg',
                 },
                 {
                     isGroup: true,
@@ -986,20 +986,20 @@
                         },
 
                         {
-                            link: '/iotUI/demo/home',
+                            link: '/demo/home',
                             text: '这是链接1',
                         }, {
                             text: '这是文字'
                         },
                         {
-                            link: '/iotUI/demo/home',
+                            link: '/demo/home',
                             text: '这是链接2',
                         }
                     ]
                 },
                 {
                     title: '主标题',
-                    icon: '/iotUI/demo/testIOTButtons/icon.png',
+                    icon: '/demo/testBtns/icon.png',
                     rightText: '右侧小字'
                 }
             ]
