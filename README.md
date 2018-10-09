@@ -1,7 +1,8 @@
 ## 运行demo方法
-1. npm install安装依赖. 建议安装yarn,通过yarn安装依赖.
-2. npm run watch打包文件,监听文件变化.如果文件变化,重新打包文件.
-3. npm run server打开服务器,扫描二维码安装rpk
+
+* 参考[iot组件使用demo](http://gitlab.vivo.com:9090/pingyi/iot-ui-demo)
+* 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下iot-ui组件
+
 
 ## 目录结构
 
