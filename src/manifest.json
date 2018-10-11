@@ -1,0 +1,79 @@
+{
+  "package": "com.application.iot-ui-demo",
+  "name": "iot-ui-demo",
+  "versionName": "1.0.0",
+  "versionCode": "1",
+  "minPlatformVersion": "1000",
+  "icon": "/Common/logo.png",
+  "features": [
+    {
+      "name": "system.prompt"
+    },
+    {
+      "name": "system.router"
+    },
+    {
+      "name": "system.shortcut"
+    },
+    {
+      "name": "system.fetch"
+    }
+  ],
+  "permissions": [
+    {
+      "origin": "*"
+    }
+  ],
+  "config": {
+    "logLevel": "debug",
+    "designWidth": 1080
+  },
+  "router": {
+    "entry": "home",
+    "pages": {
+      "home": {
+        "component": "index"
+      },
+      "testBtns": {
+        "component": "index"
+      },
+      "testNavBar": {
+        "component": "index"
+      },
+      "testIOTSwitch": {
+        "component": "index"
+      },
+      "testCheckBox": {
+        "component": "index"
+      },
+      "testLoading": {
+        "component": "index"
+      },
+      "testTwoLevelList": {
+        "component": "index"
+      },
+      "testActionSheet": {
+        "component": "index"
+      },
+      "testModal": {
+        "component": "index"
+      },
+      "testBtn": {
+        "component": "index"
+      },
+      "testConfigNetSteps": {
+        "component": "index"
+      }
+    }
+  },
+  "display": {
+    "fullScreen": true,
+    "titleBarBackgroundColor": "#f2f2f2",
+    "titleBarTextColor": "#414141",
+    "menu": false,
+    "titleBar": false,
+    "pages": {
+     
+    }
+  }
+}

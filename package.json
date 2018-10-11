@@ -1,10 +1,35 @@
 {
   "name": "iot-ui",
   "version": "1.0.0",
-  "description": "1. npm install安装依赖. 建议安装yarn,通过yarn安装依赖. 2. npm run watch打包文件,监听文件变化.如果文件变化,重新打包文件. 3. npm run server打开服务器,扫描二维码安装rpk",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "subversion": {
+    "toolkit": "0.0.34"
   },
-  "author": "",
-  "license": "MIT"
+  "description": "",
+  "scripts": {
+    "server": "hap server",
+    "postinstall": "hap postinstall",
+    "debug": "hap debug",
+    "build": "hap build",
+    "release": "hap release",
+    "watch": "hap watch"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "cross-env": "^5.1.4",
+    "css-what": "^2.1.0",
+    "hap-toolkit": "0.0.34",
+    "koa": "^2.3.0",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.2.1",
+    "koa-send": "^4.1.1",
+    "koa-static": "^4.0.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "socket.io": "^2.1.0",
+    "webpack": "^3.11.0"
+  }
 }

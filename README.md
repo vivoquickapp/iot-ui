@@ -1,7 +1,7 @@
 ## 运行demo方法
 
-* 参考[iot组件使用demo](http://gitlab.vivo.com:9090/pingyi/iot-ui-demo)
-* 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下iot-ui组件
+1. 方式一 下载iot-ui组件文件解压缩放到项目src文件夹下,使用现对路径引用组件.
+2. 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下iot-ui组件
 
 
 ## 目录结构
