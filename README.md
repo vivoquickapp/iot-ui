@@ -7,6 +7,7 @@
 <import name="Btn" src="../iot-ui/Btn/index.ux"></import>
 ```
 * 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件.例如引用Btn组件:
+
 ``` html
 <import name="Btn" src="../../node_modules/iot-ui/Btn/index.ux"></import>
 ```
