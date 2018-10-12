@@ -1,7 +1,15 @@
-## 运行demo方法
+## 使用iot-ui组件库方法
 
-1. 方式一 下载iot-ui组件文件解压缩放到项目src文件夹下,使用现对路径引用组件.
-2. 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下iot-ui组件
+1. 方式一 下载iot-ui组件文件解压缩放到项目src文件夹下,使用相对路径引用组件.
+2. 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件
+
+## 运行组件库demo方法
+
+1. 下载iot-ui组件库文件并且解压缩
+2. cd到解压缩的iot-ui组件库文件夹
+3. npm install 安装依赖
+4. npm run build 打包
+5. npm run watch 扫描二维码安装rpk
 
 
 ## 目录结构
