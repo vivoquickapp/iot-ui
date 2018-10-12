@@ -1,7 +1,8 @@
 ## 使用iot-ui组件库方法
-
-1. 方式一 下载iot-ui组件文件解压缩放到项目src文件夹下,使用相对路径引用组件.
-2. 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件
+* 首先需要先执行npm install --save-dev less-loader less
+* 项目manifest.json文件config.designWidth需要设置成1080,组件库是按照设计宽度1080开发的
+* 方式一 下载iot-ui组件文件解压缩放到项目src文件夹下,使用相对路径引用组件.
+* 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件
 
 ## 运行组件库demo方法
 
