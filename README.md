@@ -1,16 +1,8 @@
 ## 使用iot-ui组件库方法
 * 首先需要先执行npm install --save-dev less-loader less
 * 项目manifest.json文件config.designWidth需要设置成1080,组件库是按照设计宽度1080开发的
-* 方式一 下载iot-ui组件库,解压缩得到文件夹iot-ui,将iot-ui文件夹放到项目src文件夹下,使用相对路径引用组件.例如引用Btn组件:
-
-``` html
-<import name="Btn" src="../iot-ui/Btn/index.ux"></import>
-```
-* 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件.例如引用Btn组件:
-
-``` html
-<import name="Btn" src="../../node_modules/iot-ui/Btn/index.ux"></import>
-```
+* 方式一 下载iot-ui组件库,解压缩得到文件夹iot-ui,将iot-ui文件夹放到项目src文件夹下,使用相对路径引用组件.
+* 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件.
 * 如果需要修改iot-ui组件库样式,修改iot-ui组件库文件夹下theme.less文件,或者每个组件使用的less文件
 
 ## 运行组件库demo方法
