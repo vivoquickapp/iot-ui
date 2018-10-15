@@ -1,9 +1,14 @@
 ## 使用iot-ui组件库方法
-* 首先需要先执行npm install --save-dev less-loader less
+
+* 安装hap-toolkit, hap-toolkit版本>=0.0.37,查看hap-toolkit版本号执行 hap -V
+* 执行npm install --save-dev less-loader less
 * 项目manifest.json文件config.designWidth需要设置成1080,组件库是按照设计宽度1080开发的
-* 方式一 下载iot-ui组件库,解压缩得到文件夹iot-ui,将iot-ui文件夹放到项目src文件夹下,使用相对路径引用组件.
-* 方式二 如果使用npm安装iot-ui组件,iot-ui组件将下载到node_modules文件夹下,需要使用相对路径引用node_modules文件夹下的iot-ui组件.
-* 如果需要修改iot-ui组件库样式,修改iot-ui组件库文件夹下theme.less文件,或者每个组件使用的less文件
+* 安装iot-ui组件库 npm install iot-ui --save
+* 使用import标签引用组件例如使用Btn组件:
+
+``` html
+ <import name="Btn" src="iot-ui/Btn/index.ux"></import>
+```
 
 ## 运行组件库demo方法
 
@@ -93,7 +98,7 @@
 ### 示例
 ``` html 
 
-<import name="Btn" src="../../../Btn/index.ux"></import>
+<import name="Btn" src="iot-ui/Btn/index.ux"></import>
 <template>
     <div class="box">
         <div class="item">
@@ -179,7 +184,7 @@
 
 ``` html
 
-<import name="Btns" src='../../../Btns/index.ux'></import>
+<import name="Btns" src='iot-ui/Btns/index.ux'></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
@@ -298,7 +303,7 @@
 
 ``` html
 
-<import name="CheckBox" src="../../CheckBox/index.ux"></import>
+<import name="CheckBox" src="iot-ui/CheckBox/index.ux"></import>
 <template>
     <div class="box">
         <!-- <text onclick="click" class="btn">点击切换disabled值</text>
@@ -384,7 +389,7 @@
 ### 示例
 ``` html
 
-<import name="IOTSwitch" src="../../IOTSwitch/index.ux"></import>
+<import name="IOTSwitch" src="iot-ui/IOTSwitch/index.ux"></import>
 <template>
     <div class="box">
         <!-- <text onclick="click" class="btn">点击切换disabled值</text>
@@ -462,7 +467,7 @@
 
 ``` html
 
-<import name="Loading" src="../../Loading/index.ux">
+<import name="Loading" src="iot-ui/Loading/index.ux">
 </import>
 <template>
     <div class="box">
@@ -538,7 +543,7 @@
 
 ``` html
 
-<import name="Modal" src="../../Modal/index.ux"></import>
+<import name="Modal" src="iot-ui/Modal/index.ux"></import>
 <template>
     <div class="box">
         <div class="c1">
@@ -648,7 +653,7 @@
 
 ``` html
 
-<import name="ActionSheet" src="../../ActionSheet/index.ux"></import>
+<import name="ActionSheet" src="iot-ui/ActionSheet/index.ux"></import>
 <template>
     <div>
         <div class="box">
@@ -741,7 +746,7 @@
 
 ``` html 
 
-<import name="NavBar" src="../../NavBar/index.ux"></import>
+<import name="NavBar" src="iot-ui/NavBar/index.ux"></import>
 <template>
     <div class="box">
         <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>
@@ -826,7 +831,7 @@
 ### 示例
 
 ``` html
-<import name="ConfigNetSteps" src="../../../ConfigNetSteps/index.ux"></import>
+<import name="ConfigNetSteps" src="iot-ui/ConfigNetSteps/index.ux"></import>
 
 
 <template>
@@ -930,7 +935,7 @@
 ### 示例
 
 ``` html
-<import name="TwoLevelList" src="../../../TwoLevelList/index.ux"></import>
+<import name="TwoLevelList" src="iot-ui/TwoLevelList/index.ux"></import>
 <template>
     <TwoLevelList datasource="{{datasource}}" header="{{header}}" footer="{{footer}}" title="这是二级列表大标题" showicon="{{showicon}}" onevt-back="backFn"
         onevt-arrow="clickArrow"></TwoLevelList>
