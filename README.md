@@ -1,7 +1,7 @@
 ## 使用iot-ui组件库方法
 
 * 安装hap-toolkit, hap-toolkit版本>=0.0.37,查看hap-toolkit版本号执行 hap -V
-* 执行npm install --save-dev less-loader less
+* 组件使用了less,需要在项目中执行npm install --save-dev less-loader less
 * 项目manifest.json文件config.designWidth需要设置成1080,组件库是按照设计宽度1080开发的
 * 安装iot-ui组件库 npm install iot-ui --save
 * 使用import标签引用组件例如使用Btn组件:
@@ -10,13 +10,14 @@
  <import name="Btn" src="iot-ui/Btn/index.ux"></import>
 ```
 
-## 运行组件库demo方法
+## 注意
 
-1. 下载iot-ui组件库文件并且解压缩
-2. cd到解压缩的iot-ui组件库文件夹
-3. npm install 安装依赖
-4. npm run build 打包
-5. npm run watch 扫描二维码安装rpk
++ 如果想修改组件默认样式,请修改组件库下的theme.less文件
++ 注意组件图片的引用路径.路径错误会导致图片无法显示. 图片路径请使用绝对路径或者http地址,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
+
++ 有的示例使用了prompt,manifest.json文件需要添加接口声明,[接口声明示例](https://doc.quickapp.cn/features/system/prompt.html)
++ 如果使用IOT接口,manifest.json文件需要添加接口声明{"name": "service.iot"},然后import IOT from '@service.iot' 或 const IOT = require('@service.iot')
++ 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
 
 
 ## 目录结构
@@ -56,15 +57,6 @@
 ├── theme.less
 
 ```
-
-## 注意
-+ 组件使用了less,需要在项目中执行 npm install --save-dev less-loader less
-+ 如果想修改组件默认样式,请修改组件下的theme.less文件
-+ 注意组件图片的引用路径.路径错误会导致图片无法显示. 图片路径请使用绝对路径或者http地址,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-+ 请引入正确的路径,示例代码的路径与你的路径不同,组件如果在node_modules下,请正确引用到node_modules下
-+ 有的示例使用了prompt,manifest.json文件需要添加接口声明,[接口声明示例](https://doc.quickapp.cn/features/system/prompt.html)
-+ 如果使用IOT接口,manifest.json文件需要添加接口声明{"name": "service.iot"},然后import IOT from '@service.iot' 或 const IOT = require('@service.iot')
-+ 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
 
 
 
