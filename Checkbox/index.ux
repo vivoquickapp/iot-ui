@@ -1,7 +1,7 @@
 <template>
     <div class="box-root" @click="handleClick">
-        <div class="box {{activeClass}}" >
-            <div class="ok-icon ok-icon-color" show="{{checked}}"></div>
+        <div class="box {{activeClass}}">
+            <div class="ok-icon ok-icon-color {{okIcon}}" show="{{checked}}"></div>
         </div>
     </div>
 
@@ -22,7 +22,8 @@
 
             return {
                 my_checked: this.checked,
-                activeClass: ''
+                activeClass: '',
+                okIcon: ''
             }
 
         },
@@ -43,18 +44,37 @@
         },
         onInit() {
             this.isChecked();
+            this.okIconChange();
+
             this.$watch('checked', 'checkedChange');
             this.$watch('disabled', 'configChange');
+
+        },
+        okIconChange() {
+            if (this.checked) {
+                if (this.disabled) {
+                    this.okIcon = 'disabled-checked-icon'
+
+                } else {
+                    this.okIcon = 'checked-icon'
+                }
+            } else {
+                this.okIcon = ''
+            }
 
         },
         checkedChange(newVal) {
 
             this.my_checked = newVal;
             this.isChecked();
+            this.okIconChange();
+
 
         },
         configChange() {
             this.isChecked();
+            this.okIconChange();
+
         },
         handleClick() {
             if (!this.disabled) {
