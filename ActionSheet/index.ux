@@ -1,5 +1,5 @@
 <template>
-    <div class="action-sheet-box" show="{{self_visible}}" @click="cancelHandle">
+    <div class="action-sheet-box" show="{{self_visible}}" @click="handleCancel">
         <div class="content {{visible?'content-animate':''}}" style="height:{{height}}px" show="{{self_visible}}">
             <list>
                 <block for="datasource">
@@ -61,7 +61,7 @@
                 item
             })
         },
-        cancelHandle() {
+        handleCancel() {
 
             this.$emit('evtCancel', {
                 item: { cancel: true }

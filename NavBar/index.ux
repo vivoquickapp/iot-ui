@@ -5,7 +5,7 @@
                 <text>{{config.title}}</text>
             </div>
             <div class="buttons">
-                <div class="more" if="config.showMore" onclick="moreFn">
+                <div class="more" if="config.showMore" onclick="handleClickMore">
                     <stack>
                         <div class="more-item  {{activeMore}}">
 
@@ -26,7 +26,7 @@
 
 
                 </div>
-                <div class="close" if="config.showClose" onclick="closeFn">
+                <div class="close" if="config.showClose" onclick="handleClickClose">
                     <stack>
                         <div class="close-item  {{activeClose}}">
 
@@ -81,7 +81,7 @@
 
             }
         },
-        moreFn() {
+        handleClickMore() {
 
             this.activeMore = 'more-item-active';
             setTimeout(() => {
@@ -91,7 +91,7 @@
 
             this.$emit('evtMore', { name: "more-btn" });
         },
-        closeFn() {
+        handleClickClose() {
             this.activeClose = 'more-item-active';
             setTimeout(() => {
                 this.activeClose = '';

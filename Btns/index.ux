@@ -2,7 +2,7 @@
   <!-- template里只能有一个根节点 -->
   <div class="box" style="height:{{height+'px'}}">
     <block for="{{data}}">
-      <div class="button" style="width:{{width+'%'}}; padding-top:{{paddingTop+'px'}}; padding-bottom:{{paddingBottom+'px'}}" @click="click($idx,$item)">
+      <div class="button" style="width:{{width+'%'}}; padding-top:{{paddingTop+'px'}}; padding-bottom:{{paddingBottom+'px'}}" @click="handleClick($idx,$item)">
         <div class="button-icon">
           <div style="padding:4px;width:{{iconWidth}}px;height:{{iconWidth}}px;">
             <image src="{{$item.url}}"></image>
@@ -87,7 +87,7 @@
 
 
     },
-    click(index, item) {
+    handleClick(index, item) {
 
       if (!item['disabled']) {
         // item['click'](item);

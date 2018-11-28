@@ -4,7 +4,7 @@
     <div class="box">
         <div class="title">
             <stack class="title-stack">
-                <div class="title-icon" @click="backTo">
+                <div class="title-icon" @click="handleBackTo">
                     <div class="title-icon-2"></div>
                 </div>
 
@@ -54,7 +54,7 @@
         onInit() {
 
         },
-        backTo() {
+        handleBackTo() {
             this.$emit('evtBack', {});
         },
         btnClick(btnIndex, item) {

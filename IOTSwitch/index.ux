@@ -1,6 +1,6 @@
 <template>
 
-    <div class="root" onclick="fn">
+    <div class="root" onclick="handleClick">
         <stack>
             <div class="box {{bgColor}}">
 
@@ -60,7 +60,7 @@
             this.isChecked();
 
         },
-        fn() {
+        handleClick() {
             let disabled = this.disabled;
             if (!disabled) {
                 this.my_checked = !this.my_checked;

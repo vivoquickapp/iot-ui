@@ -1,6 +1,6 @@
 <template>
-    <div class="modal-box" show="{{self_visible}}" @click="cancelHandle">
-        <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="clickContent">
+    <div class="modal-box" show="{{self_visible}}" @click="handleCancel">
+        <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="handleClickContent">
             <div class="slot-box">
                 <div class="title" if="title">
                     <text>{{title}}</text>
@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="btns">
-                    <div for="buttons" @click="buttonClick($item)">
+                    <div for="buttons" @click="handleButtonClick($item)">
                         <text style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:48}}px">{{$item.name}}</text>
                     </div>
                 </div>
@@ -52,19 +52,19 @@
         visiblechange(newVal) {
             this.self_visible = newVal;
         },
-        cancelHandle() {
+        handleCancel() {
 
             this.$emit('evtCancel', {
                 item: { cancel: true }
             });
         },
-        buttonClick(item) {
+        handleButtonClick(item) {
             this.$emit('evtClickButton', {
                 item: item
             });
 
         },
-        clickContent() {
+        handleClickContent() {
             //不做任何事情
         }
 

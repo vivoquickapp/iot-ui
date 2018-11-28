@@ -2,7 +2,7 @@
     <div class="box">
         <div class="title">
             <stack class="title-stack">
-                <div class="title-icon" @click="backTo">
+                <div class="title-icon" @click="handleClickBack">
                     <div class="title-icon-2"></div>
                 </div>
 
@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="item-arrow-box" @click="itemClick($item)">
+                        <div class="item-arrow-box" @click="handleClickItem($item)">
                             <div class="item-arrow-icon">
                             </div>
                         </div>
@@ -108,10 +108,10 @@
                 default: undefined
             }
         },
-        backTo() {
+        handleClickBack() {
             this.$emit('evtBack', {});
         },
-        itemClick(item) {
+        handleClickItem(item) {
 
             this.$emit('evtArrow', { item: item });
 
