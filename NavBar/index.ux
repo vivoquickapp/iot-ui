@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="root-box">
         <stack>
             <div class="title">
                 <text>{{config.title}}</text>

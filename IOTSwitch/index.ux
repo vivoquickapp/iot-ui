@@ -1,6 +1,6 @@
 <template>
 
-    <div class="root" onclick="handleClick">
+    <div class="root-box" onclick="handleClick">
         <stack>
             <div class="box {{bgColor}}">
 

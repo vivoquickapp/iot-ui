@@ -1,5 +1,5 @@
 <template>
-    <div class="box">
+    <div class="root-box">
         <div class="title">
             <stack class="title-stack">
                 <div class="title-icon" @click="handleClickBack">

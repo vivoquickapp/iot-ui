@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-box" show="{{self_visible}}" @click="handleCancel">
+    <div class="root-box" show="{{self_visible}}" @click="handleCancel">
         <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="handleClickContent">
             <div class="slot-box">
                 <div class="title" if="title">
