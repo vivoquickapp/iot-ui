@@ -32,8 +32,8 @@
 
                         </div>
                         <stack>
-                            <div class="close-1"></div>
-                            <div class="close-2"></div>
+                            <div class="close-line-1"></div>
+                            <div class="close-line-2"></div>
                         </stack>
 
                     </stack>
