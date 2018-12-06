@@ -1,105 +1,82 @@
 <template>
-    <div class="root-box">
-        <stack>
-            <div class="title">
-                <text>{{config.title}}</text>
+  <div class="root-box">
+    <stack>
+      <div class="title">
+        <text>{{ config.title }}</text>
+      </div>
+      <div class="buttons">
+        <div class="more" if="config.showMore" onclick="handleClickMore">
+          <stack>
+            <div class="more-item  {{activeMore}}"></div>
+            <div class="more-item more-item-head">
+              <div class="m1-box"><div class="m1"></div></div>
+              <div class="m1-box"><div class="m1"></div></div>
+              <div class="m1-box"><div class="m1"></div></div>
             </div>
-            <div class="buttons">
-                <div class="more" if="config.showMore" onclick="handleClickMore">
-                    <stack>
-                        <div class="more-item  {{activeMore}}">
-
-                        </div>
-                        <div class="more-item more-item-head">
-                            <div class="m1-box">
-                                <div class="m1"></div>
-                            </div>
-                            <div class="m1-box">
-                                <div class="m1"></div>
-                            </div>
-                            <div class="m1-box">
-                                <div class="m1"></div>
-                            </div>
-                        </div>
-
-                    </stack>
-
-
-                </div>
-                <div class="close" if="config.showClose" onclick="handleClickClose">
-                    <stack>
-                        <div class="close-item  {{activeClose}}">
-
-                        </div>
-                        <stack>
-                            <div class="close-line-1"></div>
-                            <div class="close-line-2"></div>
-                        </stack>
-
-                    </stack>
-
-                </div>
-            </div>
-        </stack>
-    </div>
+          </stack>
+        </div>
+        <div class="close" if="config.showClose" onclick="handleClickClose">
+          <stack>
+            <div class="close-item  {{activeClose}}"></div>
+            <stack>
+              <div class="close-line-1"></div>
+              <div class="close-line-2"></div>
+            </stack>
+          </stack>
+        </div>
+      </div>
+    </stack>
+  </div>
 </template>
 
 <style lang="less">
-    @import '../theme.less';
-    @import './NavBar.less';
+@import "../theme.less";
+@import "./NavBar.less";
 </style>
 
 <script>
+let defaultConfig = {
+  showMore: true,
+  showClose: true,
+  title: ""
+};
 
-
-    let defaultConfig = {
-
-        showMore: true,
-        showClose: true,
-        title: ''
+export default {
+  data() {
+    return {
+      activeMore: "",
+      activeClose: ""
     };
+  },
 
-    export default {
-        data() {
-            return {
-                activeMore: '',
-                activeClose: ''
-            }
-        },
-
-        props: {
-            config: {
-                default: defaultConfig
-            }
-        },
-
-        onInit() {
-            for (let key in defaultConfig) {
-                if (this.config[key] === undefined) {
-                    this.config[key] = defaultConfig[key];
-                }
-
-            }
-        },
-        handleClickMore() {
-
-            this.activeMore = 'more-item-active';
-            setTimeout(() => {
-                this.activeMore = '';
-            }, 160)
-
-
-            this.$emit('evtMore', { name: "more-btn" });
-        },
-        handleClickClose() {
-            this.activeClose = 'more-item-active';
-            setTimeout(() => {
-                this.activeClose = '';
-            }, 160)
-
-            this.$emit('evtClose', { name: "close-btn" });
-
-        }
-
+  props: {
+    config: {
+      default: defaultConfig
     }
+  },
+
+  onInit() {
+    for (let key in defaultConfig) {
+      if (this.config[key] === undefined) {
+        this.config[key] = defaultConfig[key];
+      }
+    }
+  },
+  handleClickMore() {
+    this.activeMore = "more-item-active";
+    setTimeout(() => {
+      this.activeMore = "";
+    }, 160);
+
+    this.$emit("evtMore", { name: "more-btn" });
+  },
+  handleClickClose() {
+    this.activeClose = "more-item-active";
+    setTimeout(() => {
+      this.activeClose = "";
+    }, 160);
+
+    this.$emit("evtClose", { name: "close-btn" });
+  }
+};
 </script>

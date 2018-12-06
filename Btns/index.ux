@@ -2,98 +2,98 @@
   <!-- template里只能有一个根节点 -->
   <div class="root-box" style="height:{{height+'px'}}">
     <block for="{{data}}">
-      <div class="button" style="width:{{width+'%'}}; padding-top:{{paddingTop+'px'}}; padding-bottom:{{paddingBottom+'px'}}" @click="handleClick($idx,$item)">
+      <div
+        class="button"
+        style="width:{{width+'%'}}; padding-top:{{paddingTop+'px'}}; padding-bottom:{{paddingBottom+'px'}}"
+        @click="handleClick($idx, $item)"
+      >
         <div class="button-icon">
-          <div style="padding:4px;width:{{iconWidth}}px;height:{{iconWidth}}px;">
+          <div
+            style="padding:4px;width:{{iconWidth}}px;height:{{iconWidth}}px;"
+          >
             <image src="{{$item.url}}"></image>
           </div>
         </div>
-        <div class="button-text" if="{{showText}}" style="height:{{textHeight+'px'}}">
-          <text style="color:{{$item.fontColor?$item.fontColor:'#000000'}}">{{$item.name}}</text>
-
+        <div
+          class="button-text"
+          if="{{showText}}"
+          style="height:{{textHeight+'px'}}"
+        >
+          <text style="color:{{$item.fontColor?$item.fontColor:'#000000'}}">{{
+            $item.name
+          }}</text>
         </div>
-
       </div>
     </block>
-
   </div>
-
 </template>
 
 <style lang="less">
-  @import '../theme.less';
-  @import './Buttons.less';
+@import "../theme.less";
+@import "./Buttons.less";
 </style>
 
 <script>
-
-
-  export default {
-
-    data() {
-      return {
-        height: 0,
-        width: 25,
-        componentHeight: 0
-
-      }
+export default {
+  data() {
+    return {
+      height: 0,
+      width: 25,
+      componentHeight: 0
+    };
+  },
+  props: {
+    data: {
+      default: []
     },
-    props: {
-
-      data: {
-        default: []
-      },
-      showText: {
-        default: false
-      },
-      column: {
-        default: 4
-      },
-      iconWidth: {
-        default: 140
-      },
-      textHeight: {
-        default: 80
-      },
-      paddingTop: {
-        default: 60
-      },
-      paddingBottom: {
-        default: 60
-      }
+    showText: {
+      default: false
     },
-    onInit() {
-
-      this.calculateHeight();
-
+    column: {
+      default: 4
     },
-
-    calculateHeight() {
-      let len = this.data.length;
-      let { column, iconWidth, textHeight, paddingTop, paddingBottom } = this;
-
-      this.width = 100 / column;
-
-      let height;
-
-      if (this.showText) {
-        height = parseInt((len + column - 1) / column) * (iconWidth + textHeight + paddingTop + paddingBottom);
-      } else {
-        height = parseInt((len + column - 1) / column) * (iconWidth + paddingTop + paddingBottom);
-
-      }
-      this.height = height;
-      this.componentHeight = height;
-
-
+    iconWidth: {
+      default: 140
     },
-    handleClick(index, item) {
+    textHeight: {
+      default: 80
+    },
+    paddingTop: {
+      default: 60
+    },
+    paddingBottom: {
+      default: 60
+    }
+  },
+  onInit() {
+    this.calculateHeight();
+  },
 
-      if (!item['disabled']) {
-        // item['click'](item);
-        this.$emit('evtClick', { index, item });
-      }
+  calculateHeight() {
+    let len = this.data.length;
+    let { column, iconWidth, textHeight, paddingTop, paddingBottom } = this;
 
+    this.width = 100 / column;
+
+    let height;
+
+    if (this.showText) {
+      height =
+        parseInt((len + column - 1) / column) *
+        (iconWidth + textHeight + paddingTop + paddingBottom);
+    } else {
+      height =
+        parseInt((len + column - 1) / column) *
+        (iconWidth + paddingTop + paddingBottom);
+    }
+    this.height = height;
+    this.componentHeight = height;
+  },
+  handleClick(index, item) {
+    if (!item["disabled"]) {
+      // item['click'](item);
+      this.$emit("evtClick", { index, item });
     }
   }
+};
 </script>

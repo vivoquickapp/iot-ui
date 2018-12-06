@@ -1,100 +1,79 @@
 <template>
-
-    <div class="root-box" onclick="handleClick">
-        <stack>
-            <div class="box {{bgColor}}">
-
-            </div>
-            <div class="circle-box {{activeClass}}">
-                <div class="circle"></div>
-            </div>
-
-        </stack>
-
-    </div>
+  <div class="root-box" onclick="handleClick">
+    <stack>
+      <div class="box {{bgColor}}"></div>
+      <div class="circle-box {{activeClass}}"><div class="circle"></div></div>
+    </stack>
+  </div>
 </template>
 
 <style lang="less">
-    @import '../theme.less';
-    @import './switch.less';
+@import "../theme.less";
+@import "./switch.less";
 </style>
 
 <script>
-
-
-    export default {
-        data() {
-            return {
-                activeClass: 'circel-checked',
-                bgColor: 'circel-checked',
-                my_checked: this.checked
-            }
-        },
-        props: {
-
-            checked: {
-                default: false
-            },
-            disabled: {
-                default: false
-            },
-            name: {
-                default: undefined
-            }
-        },
-
-        onInit() {
-
-            this.isChecked();
-            this.$watch('checked', 'checkedChange');
-            this.$watch('disabled', 'configChange');
-
-        },
-        checkedChange() {
-            this.my_checked = this.checked;
-
-            this.isChecked();
-        },
-        configChange() {
-
-            this.isChecked();
-
-        },
-        handleClick() {
-            let disabled = this.disabled;
-            if (!disabled) {
-                this.my_checked = !this.my_checked;
-
-                this.isChecked();
-
-                this.$emit('evtChange', { checked: this.my_checked, name: this.name });
-            };
-
-
-
-        },
-        isChecked() {
-
-
-            if (this.disabled) {
-                if (this.my_checked) {
-                    this.activeClass = 'circel-checked';
-                    this.bgColor = 'switch-disabled-on';
-                } else {
-                    this.activeClass = 'circel-dischecked';
-                    this.bgColor = 'switch-disabled-off';
-                }
-            } else {
-                if (this.my_checked) {
-                    this.activeClass = 'circel-checked';
-                    this.bgColor = 'switch-on';
-                } else {
-                    this.activeClass = 'circel-dischecked';
-                    this.bgColor = 'switch-off';
-                }
-            }
-
-
-        }
+export default {
+  data() {
+    return {
+      activeClass: "circel-checked",
+      bgColor: "circel-checked",
+      my_checked: this.checked
+    };
+  },
+  props: {
+    checked: {
+      default: false
+    },
+    disabled: {
+      default: false
+    },
+    name: {
+      default: undefined
     }
+  },
+
+  onInit() {
+    this.isChecked();
+    this.$watch("checked", "checkedChange");
+    this.$watch("disabled", "configChange");
+  },
+  checkedChange() {
+    this.my_checked = this.checked;
+
+    this.isChecked();
+  },
+  configChange() {
+    this.isChecked();
+  },
+  handleClick() {
+    let disabled = this.disabled;
+    if (!disabled) {
+      this.my_checked = !this.my_checked;
+
+      this.isChecked();
+
+      this.$emit("evtChange", { checked: this.my_checked, name: this.name });
+    }
+  },
+  isChecked() {
+    if (this.disabled) {
+      if (this.my_checked) {
+        this.activeClass = "circel-checked";
+        this.bgColor = "switch-disabled-on";
+      } else {
+        this.activeClass = "circel-dischecked";
+        this.bgColor = "switch-disabled-off";
+      }
+    } else {
+      if (this.my_checked) {
+        this.activeClass = "circel-checked";
+        this.bgColor = "switch-on";
+      } else {
+        this.activeClass = "circel-dischecked";
+        this.bgColor = "switch-off";
+      }
+    }
+  }
+};
 </script>

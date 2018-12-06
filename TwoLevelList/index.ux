@@ -1,145 +1,140 @@
 <template>
-    <div class="root-box">
-        <div class="title">
-            <stack class="title-stack">
-                <div class="title-icon" @click="handleClickBack">
-                    <div class="title-icon-2"></div>
-                </div>
-
-                <div class="title-text">
-                    <text>{{title}}</text>
-                </div>
-
-            </stack>
-
+  <div class="root-box">
+    <div class="title">
+      <stack class="title-stack">
+        <div class="title-icon" @click="handleClickBack">
+          <div class="title-icon-2"></div>
         </div>
-        <div class="title-line"></div>
-        <list>
-            <list-item type="header" if="{{header}}" class="header-box">
-                <div class="header">
-                    <text>{{header}}</text>
-                </div>
-            </list-item>
-            <block for="datasource">
 
-                <list-item type="{{$idx}}" if="{{!$item.isGroup}}">
-                    <div class="item-content">
-                        <div class="item-content-content">
-                            <div if="showicon" class="item-content-content-icon">
-                                <image src="{{$item.icon}}"></image>
-                            </div>
-                            <div if="showicon" class="item-content-content-icon-padding-right"></div>
-                            <div class="item-title-box">
-                                <text class="item-title">{{$item.title}}</text>
-                                <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}">{{$item.subTitle}}</text>
-                            </div>
-                            <div class="item-right-text">
-                                <text>{{$item.rightText}}</text>
-                            </div>
-                        </div>
-
-                        <div class="item-arrow-box" @click="handleClickItem($item)">
-                            <div class="item-arrow-icon">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-line"></div>
-                </list-item>
-                <list-item type="{{$idx}}" if="{{$item.isGroup}}" class="item-group">
-                    <text if="{{$item.header}}" class="item-group-header">
-                        {{$item.header}}
-                    </text>
-                    <div if="{{$item.footer}}" class="item-group-footer">
-                        <block for="value in parseFooter($item.footer)">
-                            <text if="{{!value.link}}" class="footer-text">{{value.text}}</text>
-                            <a href="{{value.link}}" if="{{value.link}}" class="footer-link">{{value.text}}</a>
-                        </block>
-                    </div>
-                    <div if="{{$item.padding}}" class="item-group-padding">
-
-                    </div>
-
-                </list-item>
-            </block>
-            <list-item type="item-group-footer" if="{{footer}}" class="footer-box">
-                <div class="footer">
-                    <block for="parseFooter(footer)">
-                        <text if="{{!$item.link}}" class="footer-text">{{$item.text}}</text>
-                        <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{$item.text}}</a>
-                    </block>
-
-                </div>
-            </list-item>
-
-        </list>
-
+        <div class="title-text">
+          <text>{{ title }}</text>
+        </div>
+      </stack>
     </div>
+    <div class="title-line"></div>
+    <list>
+      <list-item type="header" if="{{header}}" class="header-box">
+        <div class="header">
+          <text>{{ header }}</text>
+        </div>
+      </list-item>
+      <block for="datasource">
+        <list-item type="{{$idx}}" if="{{!$item.isGroup}}">
+          <div class="item-content">
+            <div class="item-content-content">
+              <div if="showicon" class="item-content-content-icon">
+                <image src="{{$item.icon}}"></image>
+              </div>
+              <div
+                if="showicon"
+                class="item-content-content-icon-padding-right"
+              ></div>
+              <div class="item-title-box">
+                <text class="item-title">{{ $item.title }}</text>
+                <text
+                  class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}"
+                  >{{ $item.subTitle }}</text
+                >
+              </div>
+              <div class="item-right-text">
+                <text>{{ $item.rightText }}</text>
+              </div>
+            </div>
 
+            <div class="item-arrow-box" @click="handleClickItem($item)">
+              <div class="item-arrow-icon"></div>
+            </div>
+          </div>
 
+          <div class="item-line"></div>
+        </list-item>
+        <list-item type="{{$idx}}" if="{{$item.isGroup}}" class="item-group">
+          <text if="{{$item.header}}" class="item-group-header">
+            {{ $item.header }}
+          </text>
+          <div if="{{$item.footer}}" class="item-group-footer">
+            <block for="value in parseFooter($item.footer)">
+              <text if="{{!value.link}}" class="footer-text">{{
+                value.text
+              }}</text>
+              <a
+                href="{{value.link}}"
+                if="{{value.link}}"
+                class="footer-link"
+                >{{ value.text }}</a
+              >
+            </block>
+          </div>
+          <div if="{{$item.padding}}" class="item-group-padding"></div>
+        </list-item>
+      </block>
+      <list-item type="item-group-footer" if="{{footer}}" class="footer-box">
+        <div class="footer">
+          <block for="parseFooter(footer)">
+            <text if="{{!$item.link}}" class="footer-text">{{
+              $item.text
+            }}</text>
+            <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{
+              $item.text
+            }}</a>
+          </block>
+        </div>
+      </list-item>
+    </list>
+  </div>
 </template>
 <style lang="less">
-    @import '../theme.less';
-    @import './TwoLevelList.less';
+@import "../theme.less";
+@import "./TwoLevelList.less";
 </style>
 
 <script>
-
-    export default {
-
-        onInit() {
-
-        },
-        props: {
-
-            datasource: {
-                default: []
-            },
-            title: {
-                default: ''
-            },
-            showicon: {
-                default: false
-            },
-            header: {
-                default: undefined
-            },
-            footer: {
-                default: undefined
-            }
-        },
-        handleClickBack() {
-            this.$emit('evtBack', {});
-        },
-        handleClickItem(item) {
-
-            this.$emit('evtArrow', { item: item });
-
-        },
-        parseFooter(footer) {
-            var arr = [];
-            for (let i = 0; i < footer.length; i++) {
-                var item = footer[i];
-                var textArr = (item['text'] || '').split('');
-                var link = item['link'];
-
-                for (let j = 0; j < textArr.length; j++) {
-                    if (link) {
-                        arr.push({
-                            text: textArr[j],
-                            link: link
-                        })
-                    } else {
-                        arr.push({
-                            text: textArr[j]
-                        })
-                    }
-
-                }
-            }
-            return arr;
-
-
-        }
+export default {
+  onInit() {},
+  props: {
+    datasource: {
+      default: []
+    },
+    title: {
+      default: ""
+    },
+    showicon: {
+      default: false
+    },
+    header: {
+      default: undefined
+    },
+    footer: {
+      default: undefined
     }
+  },
+  handleClickBack() {
+    this.$emit("evtBack", {});
+  },
+  handleClickItem(item) {
+    this.$emit("evtArrow", { item: item });
+  },
+  parseFooter(footer) {
+    var arr = [];
+    for (let i = 0; i < footer.length; i++) {
+      var item = footer[i];
+      var textArr = (item["text"] || "").split("");
+      var link = item["link"];
+
+      for (let j = 0; j < textArr.length; j++) {
+        if (link) {
+          arr.push({
+            text: textArr[j],
+            link: link
+          });
+        } else {
+          arr.push({
+            text: textArr[j]
+          });
+        }
+      }
+    }
+    return arr;
+  }
+};
 </script>
