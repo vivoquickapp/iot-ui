@@ -21,14 +21,39 @@
 
 ## 目录结构
 
-```html
-├── ActionSheet │ ├── ActionSheet.less │ └── index.ux ├── Checkbox │ ├──
-Checkbox.less │ └── index.ux ├── ConfigNetSteps │ ├── ConfigNetSteps.less │ └──
-index.ux ├── Btn │ ├── Button.less │ └── index.ux ├── Btns │ ├── Buttons.less │
-└── index.ux ├── IOTSwitch │ ├── index.ux │ └── switch.less ├── Loading │ ├──
-Loading.less │ └── index.ux ├── Modal │ ├── Modal.less │ └── index.ux ├── NavBar
-│ ├── NavBar.less │ └── index.ux ├── README.md ├── TwoLevelList │ ├──
-TwoLevelList.less │ └── index.ux ├── theme.less
+```bash
+├── ActionSheet
+│   ├── ActionSheet.less
+│   └── index.ux
+├── Checkbox
+│   ├── Checkbox.less
+│   └── index.ux
+├── ConfigNetSteps
+│   ├── ConfigNetSteps.less
+│   └── index.ux
+├── Btn
+│   ├── Button.less
+│   └── index.ux
+├── Btns
+│   ├── Buttons.less
+│   └── index.ux
+├── IOTSwitch
+│   ├── index.ux
+│   └── switch.less
+├── Loading
+│   ├── Loading.less
+│   └── index.ux
+├── Modal
+│   ├── Modal.less
+│   └── index.ux
+├── NavBar
+│   ├── NavBar.less
+│   └── index.ux
+├── README.md
+├── TwoLevelList
+│   ├── TwoLevelList.less
+│   └── index.ux
+├── theme.less
 ```
 
 ## 组件
