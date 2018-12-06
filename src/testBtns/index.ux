@@ -1,98 +1,93 @@
-<import name="Btns" src='../../Btns/index.ux'></import>
+<import name="Btns" src="../../Btns/index.ux"></import>
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
     <div class="c1">
       <text class="t1" @click="fn">点击切换是否显示button文字</text>
-      <text>是否显示button文字:{{ showText}}</text>
+      <text>是否显示button文字:{{ showText }}</text>
     </div>
-    <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></Btns>
+    <Btns
+      show-text="{{showText}}"
+      column="{{column}}"
+      icon-width="{{iconWidth}}"
+      padding-top="{{paddingTop}}"
+      padding-bottom="{{paddingBottom}}"
+      text-height="{{textHeight}}"
+      data="{{data}}"
+      onevt-click="handleClick"
+    ></Btns>
   </div>
-
 </template>
 
 <style>
-  .box {
-    flex-direction: column;
-  }
+.box {
+  flex-direction: column;
+}
 
-  .c1 {
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-  }
+.c1 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
 
-  .t1 {
-    border-radius: 10px;
-    border: 1px solid blue;
-    padding: 40px;
+.t1 {
+  border-radius: 10px;
+  border: 1px solid blue;
+  padding: 40px;
+}
 
-  }
-
-  text {
-    font-size: 40px;
-  }
+text {
+  font-size: 40px;
+}
 </style>
 
 <script>
+export default {
+  data() {
+    return {
+      showText: true,
+      column: 4,
+      iconWidth: 140,
+      paddingTop: 60,
+      paddingBottom: 60,
+      textHeight: 80,
 
-  export default {
-
-    data() {
-      return {
-
-        showText: true,
-        column: 4,
-        iconWidth: 140,
-        paddingTop: 60,
-        paddingBottom: 60,
-        textHeight: 80,
-
-        data: [
-          {
-            disabled: false,
-            //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-            url: '/testBtns/rec.jpg',
-            name: '文字1',
-            fontColor: 'blue',
-
-          },
-          {
-            disabled: false,
-            url: '/testBtns/icon.png',
-            name: '文字1',
-            fontColor: '#ff0000',
-
-          }, {
-            disabled: true,
-            url: '/testBtns/rec.jpg',
-            name: '文字1',
-            fontColor: '#ff0000',
-          }
-
-
-        ]
-      }
-    },
-    handleClick(evt) {
-      let { index, item } = evt.detail;
-      if (index === 1) {
-        if (item['url'] === '/testBtns/icon.png') {
-          item['url'] = '/testBtns/rec.jpg';
-        } else {
-          item['url'] = '/testBtns/icon.png';
+      data: [
+        {
+          disabled: false,
+          //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
+          url: "/testBtns/rec.jpg",
+          name: "文字1",
+          fontColor: "blue"
+        },
+        {
+          disabled: false,
+          url: "/testBtns/icon.png",
+          name: "文字1",
+          fontColor: "#ff0000"
+        },
+        {
+          disabled: true,
+          url: "/testBtns/rec.jpg",
+          name: "文字1",
+          fontColor: "#ff0000"
         }
+      ]
+    };
+  },
+  handleClick(evt) {
+    let { index, item } = evt.detail;
+    if (index === 1) {
+      if (item["url"] === "/testBtns/icon.png") {
+        item["url"] = "/testBtns/rec.jpg";
+      } else {
+        item["url"] = "/testBtns/icon.png";
       }
-
-
-    },
-    fn() {
-
-      this.showText = !this.showText;
-
-
     }
+  },
+  fn() {
+    this.showText = !this.showText;
   }
+};
 </script>
