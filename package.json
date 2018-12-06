@@ -6,6 +6,7 @@
   },
   "description": "",
   "scripts": {
+    "start": "hap server --watch",
     "server": "hap server",
     "postinstall": "hap postinstall",
     "debug": "hap debug",
