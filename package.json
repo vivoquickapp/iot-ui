@@ -11,7 +11,14 @@
     "debug": "hap debug",
     "build": "hap build",
     "release": "hap release",
-    "watch": "hap watch"
+    "watch": "hap watch",
+    "precommit-msg": "echo '🚧 start pre-commit checks...' && exit 0",
+    "eslint:fix": "eslint src/**/**/*.js --fix",
+    "eslint:code": "eslint src/**/**/*.js",
+    "format:code": "prettier-eslint --write \"src/**/**/*.js\" \"src/**/**/*.less\"",
+    "prettier:js": "prettier --write 'src/**/**/*.js'",
+    "prettier:ux": "prettier --write './**/**/**.ux'",
+    "prettier-watch": "onchange '**/*.md' -- prettier --write {{changed}}"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -21,7 +28,10 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "cross-env": "^5.1.4",
     "css-what": "^2.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "hap-toolkit": "0.0.34",
+    "husky": "^1.2.0",
     "koa": "^2.3.0",
     "koa-body": "^2.5.0",
     "koa-router": "^7.2.1",
@@ -29,6 +39,9 @@
     "koa-static": "^4.0.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "prettier-eslint-cli": "^4.7.1",
     "socket.io": "^2.1.0",
     "webpack": "^3.11.0"
   }
