@@ -5,7 +5,6 @@
         <div class="title-icon" @click="handleClickBack">
           <div class="title-icon-2"></div>
         </div>
-
         <div class="title-text">
           <text>{{ title }}</text>
         </div>
@@ -25,27 +24,19 @@
               <div if="showicon" class="item-content-content-icon">
                 <image src="{{$item.icon}}"></image>
               </div>
-              <div
-                if="showicon"
-                class="item-content-content-icon-padding-right"
-              ></div>
+              <div if="showicon" class="item-content-content-icon-padding-right"></div>
               <div class="item-title-box">
                 <text class="item-title">{{ $item.title }}</text>
-                <text
-                  class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}"
-                  >{{ $item.subTitle }}</text
-                >
+                <text class="{{$item.subTitle?'item-title-sub':'item-title-sub-none'}}">{{ $item.subTitle }}</text>
               </div>
               <div class="item-right-text">
                 <text>{{ $item.rightText }}</text>
               </div>
             </div>
-
             <div class="item-arrow-box" @click="handleClickItem($item)">
               <div class="item-arrow-icon"></div>
             </div>
           </div>
-
           <div class="item-line"></div>
         </list-item>
         <list-item type="{{$idx}}" if="{{$item.isGroup}}" class="item-group">
@@ -54,15 +45,8 @@
           </text>
           <div if="{{$item.footer}}" class="item-group-footer">
             <block for="value in parseFooter($item.footer)">
-              <text if="{{!value.link}}" class="footer-text">{{
-                value.text
-              }}</text>
-              <a
-                href="{{value.link}}"
-                if="{{value.link}}"
-                class="footer-link"
-                >{{ value.text }}</a
-              >
+              <text if="{{!value.link}}" class="footer-text">{{value.text}}</text>
+              <a href="{{value.link}}" if="{{value.link}}" class="footer-link">{{ value.text }}</a>
             </block>
           </div>
           <div if="{{$item.padding}}" class="item-group-padding"></div>
@@ -71,18 +55,15 @@
       <list-item type="item-group-footer" if="{{footer}}" class="footer-box">
         <div class="footer">
           <block for="parseFooter(footer)">
-            <text if="{{!$item.link}}" class="footer-text">{{
-              $item.text
-            }}</text>
-            <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{
-              $item.text
-            }}</a>
+            <text if="{{!$item.link}}" class="footer-text">{{ $item.text }}</text>
+            <a href="{{$item.link}}" if="{{$item.link}}" class="footer-link">{{ $item.text }}</a>
           </block>
         </div>
       </list-item>
     </list>
   </div>
 </template>
+
 <style lang="less">
 @import "../theme.less";
 @import "./TwoLevelList.less";
