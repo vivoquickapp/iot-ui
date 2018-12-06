@@ -1,6 +1,6 @@
 <template>
-    <div class="action-sheet-box" show="{{self_visible}}" @click="handleCancel">
-        <div class="content {{visible?'content-animate':''}}" style="height:{{height}}px" show="{{self_visible}}">
+    <div class="action-sheet-box" show="{{selfVisible}}" @click="handleCancel">
+        <div class="content {{visible?'content-animate':''}}" style="height:{{height}}px" show="{{selfVisible}}">
             <list>
                 <block for="datasource">
                     <list-item type="{{$idx}}" @click="handleClick($item)">
@@ -31,7 +31,7 @@
     export default {
         data() {
             return {
-                self_visible: this.visible
+                selfVisible: this.visible
             }
         },
         props: {
@@ -46,11 +46,11 @@
             }
         },
         onInit() {
-            this.self_visible = this.visible;
+            this.selfVisible = this.visible;
             this.$watch('visible', 'watchPropsChange')
         },
         watchPropsChange(newVal) {
-            this.self_visible = newVal;
+            this.selfVisible = newVal;
 
         },
         handleClick(item) {

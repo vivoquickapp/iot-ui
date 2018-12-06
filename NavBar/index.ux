@@ -11,14 +11,14 @@
 
                         </div>
                         <div class="more-item more-item-head">
-                            <div class="m1-box">
-                                <div class="m1"></div>
+                            <div class="icon-dot-box">
+                                <div class="icon-dot"></div>
                             </div>
-                            <div class="m1-box">
-                                <div class="m1"></div>
+                            <div class="icon-dot-box">
+                                <div class="icon-dot"></div>
                             </div>
-                            <div class="m1-box">
-                                <div class="m1"></div>
+                            <div class="icon-dot-box">
+                                <div class="icon-dot"></div>
                             </div>
                         </div>
 
@@ -32,8 +32,8 @@
 
                         </div>
                         <stack>
-                            <div class="close-line-1"></div>
-                            <div class="close-line-2"></div>
+                            <div class="icon-close-line-1"></div>
+                            <div class="icon-close-line-2"></div>
                         </stack>
 
                     </stack>
