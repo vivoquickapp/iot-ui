@@ -38,8 +38,17 @@ Node.js (>= 8.*), Npm version 4+(Yarn preferred), and Git.
 
 ## 运行本项目
 
-+ git clone https://github.com/ your-project-name
-+ cd your-project-name
-+ 执行 npm install 安装依赖包
-+ 执行 npm run watch 监听打包快应用
-+ 执行 npm run server 打开服务器,扫描安装快应用
+``` bash
+
+# 克隆项目
+git clone https://github.com/ your-project-name
+# 进入目录
+cd your-project-name
+# 安装依赖包
+npm install
+# 监听打包快应用
+npm run watch
+# 打开服务器,扫描安装快应用
+npm run server
+
+```
