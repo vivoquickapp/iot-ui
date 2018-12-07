@@ -19,6 +19,10 @@
 + 如果使用IOT接口,manifest.json文件需要添加接口声明{"name": "service.iot"},然后import IOT from '@service.iot' 或 const IOT = require('@service.iot')
 + 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
 
+## 环境要求
+
+Node.js (>= 8.*), Npm version 4+(Yarn preferred), and Git.
+
 ## 组件
 + [Btn 按钮](/docs/Btn.md)
 + [Btns 按钮组](/docs/Btns.md)
@@ -34,6 +38,8 @@
 
 ## 运行本项目
 
++ git clone https://github.com/ your-project-name
++ cd your-project-name
 + 执行 npm install 安装依赖包
 + 执行 npm run watch 监听打包快应用
 + 执行 npm run server 打开服务器,扫描安装快应用
