@@ -1,65 +1,57 @@
 <import name="Btn" src="../Btn/index.ux"></import>
 
 <template>
-    <div class="root-box">
-        <div class="title">
-            <stack class="title-stack">
-                <div class="title-icon" @click="handleBackTo">
-                    <div class="title-icon-2"></div>
-                </div>
-
-                <div class="title-text">
-                    <text>{{title}}</text>
-                </div>
-
-            </stack>
-
+  <div class="root-box">
+    <div class="title">
+      <stack class="title-stack">
+        <div class="title-icon" @click="handleBackTo">
+          <div class="title-icon-2"></div>
         </div>
-        <div class="title-line"></div>
-        <div class="step-content">
-            <slot></slot>
+
+        <div class="title-text">
+          <text>{{ title }}</text>
         </div>
-        <div class="btn-box" if="buttons.length>0">
-            <div for="buttons">
-                <Btn title="{{$item.title}}" block="{{$item.block}}" type="{{$item.type}}" onevt-click="btnClick($idx,$item)"></Btn>
-            </div>
-        </div>
+      </stack>
     </div>
+    <div class="title-line"></div>
+    <div class="step-content"><slot></slot></div>
+    <div class="btn-box" if="buttons.length>0">
+      <div for="buttons">
+        <Btn
+          title="{{$item.title}}"
+          block="{{$item.block}}"
+          type="{{$item.type}}"
+          onevt-click="btnClick($idx,$item)"
+        ></Btn>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style lang="less">
-    @import '../theme.less';
-    @import './ConfigNetSteps.less';
+@import "../theme.less";
+@import "./ConfigNetSteps.less";
 </style>
 
 <script>
-
-
-    export default {
-        data() {
-            return {
-
-            }
-
-        },
-        props: {
-            title: {
-                default: ''
-            },
-            buttons: {
-                default: []
-            }
-
-        },
-        onInit() {
-
-        },
-        handleBackTo() {
-            this.$emit('evtBack', {});
-        },
-        btnClick(btnIndex, item) {
-
-            this.$emit('evtClickBtn', { item, btnIndex });
-        }
+export default {
+  data() {
+    return {};
+  },
+  props: {
+    title: {
+      default: ""
+    },
+    buttons: {
+      default: []
     }
+  },
+  onInit() {},
+  handleBackTo() {
+    this.$emit("evtBack", {});
+  },
+  btnClick(btnIndex, item) {
+    this.$emit("evtClickBtn", { item, btnIndex });
+  }
+};
 </script>

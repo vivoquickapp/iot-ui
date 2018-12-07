@@ -1,113 +1,94 @@
 <template>
-    <div class="root-box" @click="handleClick">
-        <div class="box {{activeClass}}">
-            <div class="ok-icon ok-icon-color {{okIcon}}" show="{{checked}}"></div>
-        </div>
+  <div class="root-box" @click="handleClick">
+    <div class="box {{activeClass}}">
+      <div class="ok-icon ok-icon-color {{okIcon}}" show="{{checked}}"></div>
     </div>
-
-
-
+  </div>
 </template>
 
 <style lang="less">
-    @import '../theme.less';
-    @import './Checkbox.less';
+@import "../theme.less";
+@import "./Checkbox.less";
 </style>
 
 <script>
+export default {
+  data() {
+    return {
+      my_checked: this.checked,
+      activeClass: "",
+      okIcon: ""
+    };
+  },
+  props: {
+    checked: {
+      default: false
+    },
 
-
-    export default {
-        data() {
-
-            return {
-                my_checked: this.checked,
-                activeClass: '',
-                okIcon: ''
-            }
-
-        },
-        props: {
-            checked: {
-                default: false
-            },
-
-            disabled: {
-                default: false
-            },
-            name: {
-                default: undefined
-            },
-            value: {
-                default: undefined
-            }
-        },
-        onInit() {
-            this.isChecked();
-            this.okIconChange();
-
-            this.$watch('checked', 'checkedChange');
-            this.$watch('disabled', 'configChange');
-
-        },
-        okIconChange() {
-            if (this.checked) {
-                if (this.disabled) {
-                    this.okIcon = 'disabled-checked-icon'
-
-                } else {
-                    this.okIcon = 'checked-icon'
-                }
-            } else {
-                this.okIcon = ''
-            }
-
-        },
-        checkedChange(newVal) {
-
-            this.my_checked = newVal;
-            this.isChecked();
-            this.okIconChange();
-
-
-        },
-        configChange() {
-            this.isChecked();
-            this.okIconChange();
-
-        },
-        handleClick() {
-            if (!this.disabled) {
-                this.my_checked = !this.my_checked;
-
-                this.isChecked();
-
-
-                this.$emit('evtChange', {
-                    checked: this.my_checked,
-                    name: this.name,
-                    value: this.value
-                });
-            }
-
-        },
-        isChecked() {
-
-            if (this.disabled) {
-                if (this.my_checked) {
-                    this.activeClass = 'disabled-checked';
-                } else {
-                    this.activeClass = 'disabled-dischecked';
-                }
-            } else {
-                if (this.my_checked) {
-                    this.activeClass = 'checked';
-                } else {
-                    this.activeClass = 'dischecked';
-                }
-            }
-
-
-        }
+    disabled: {
+      default: false
+    },
+    name: {
+      default: undefined
+    },
+    value: {
+      default: undefined
     }
+  },
+  onInit() {
+    this.isChecked();
+    this.okIconChange();
+
+    this.$watch("checked", "checkedChange");
+    this.$watch("disabled", "configChange");
+  },
+  okIconChange() {
+    if (this.checked) {
+      if (this.disabled) {
+        this.okIcon = "disabled-checked-icon";
+      } else {
+        this.okIcon = "checked-icon";
+      }
+    } else {
+      this.okIcon = "";
+    }
+  },
+  checkedChange(newVal) {
+    this.my_checked = newVal;
+    this.isChecked();
+    this.okIconChange();
+  },
+  configChange() {
+    this.isChecked();
+    this.okIconChange();
+  },
+  handleClick() {
+    if (!this.disabled) {
+      this.my_checked = !this.my_checked;
+
+      this.isChecked();
+
+      this.$emit("evtChange", {
+        checked: this.my_checked,
+        name: this.name,
+        value: this.value
+      });
+    }
+  },
+  isChecked() {
+    if (this.disabled) {
+      if (this.my_checked) {
+        this.activeClass = "disabled-checked";
+      } else {
+        this.activeClass = "disabled-dischecked";
+      }
+    } else {
+      if (this.my_checked) {
+        this.activeClass = "checked";
+      } else {
+        this.activeClass = "dischecked";
+      }
+    }
+  }
+};
 </script>

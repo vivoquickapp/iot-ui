@@ -1,73 +1,74 @@
 <template>
-    <div class="root-box" show="{{self_visible}}" @click="handleCancel">
-        <div class="content {{visible?'content-animate':''}}" show="{{self_visible}}" style="height:{{height}}px" @click="handleClickContent">
-            <div class="slot-box">
-                <div class="title" if="title">
-                    <text>{{title}}</text>
-                </div>
-                <div class="slot-content">
-                    <slot></slot>
-                </div>
-
-                <div class="btns">
-                    <div for="buttons" @click="handleButtonClick($item)">
-                        <text style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:48}}px">{{$item.name}}</text>
-                    </div>
-                </div>
-            </div>
+  <div class="root-box" show="{{self_visible}}" @click="handleCancel">
+    <div
+      class="content {{visible?'content-animate':''}}"
+      show="{{self_visible}}"
+      style="height:{{height}}px"
+      @click="handleClickContent"
+    >
+      <div class="slot-box">
+        <div class="title" if="title">
+          <text>{{ title }}</text>
         </div>
+        <div class="slot-content"><slot></slot></div>
+
+        <div class="btns">
+          <div for="buttons" @click="handleButtonClick($item)">
+            <text
+              style="color:{{$item.color?$item.color:'#666'}};font-size:{{$item.fontSize?$item.fontSize:48}}px"
+              >{{ $item.name }}</text
+            >
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <style lang="less">
-    @import '../theme.less';
-    @import './Modal.less';
+@import "../theme.less";
+@import "./Modal.less";
 </style>
 
 <script>
-
-    export default {
-        data() {
-            return {
-                self_visible: this.visible
-            }
-        },
-        props: {
-            visible: {
-                default: false
-            },
-            height: {
-                default: 700
-            },
-            title: {
-                default: undefined
-            },
-            buttons: {
-                default: []
-            }
-        },
-        onInit() {
-            this.$watch('visible', 'visiblechange')
-        },
-        visiblechange(newVal) {
-            this.self_visible = newVal;
-        },
-        handleCancel() {
-
-            this.$emit('evtCancel', {
-                item: { cancel: true }
-            });
-        },
-        handleButtonClick(item) {
-            this.$emit('evtClickButton', {
-                item: item
-            });
-
-        },
-        handleClickContent() {
-            //不做任何事情
-        }
-
-
+export default {
+  data() {
+    return {
+      self_visible: this.visible
+    };
+  },
+  props: {
+    visible: {
+      default: false
+    },
+    height: {
+      default: 700
+    },
+    title: {
+      default: undefined
+    },
+    buttons: {
+      default: []
     }
+  },
+  onInit() {
+    this.$watch("visible", "visiblechange");
+  },
+  visiblechange(newVal) {
+    this.self_visible = newVal;
+  },
+  handleCancel() {
+    this.$emit("evtCancel", {
+      item: { cancel: true }
+    });
+  },
+  handleButtonClick(item) {
+    this.$emit("evtClickButton", {
+      item: item
+    });
+  },
+  handleClickContent() {
+    //不做任何事情
+  }
+};
 </script>

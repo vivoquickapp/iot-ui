@@ -1,59 +1,55 @@
 <import name="NavBar" src="../../NavBar/index.ux"></import>
 <template>
-    <div class="box">
-        <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>
-        <div class="c1">
-            <!-- <text>{{content}}</text> -->
-        </div>
-    </div>
+  <div class="box">
+    <NavBar
+      config="{{navBarConfig}}"
+      onevt-close="handleClose"
+      onevt-more="handleMore"
+    ></NavBar>
+    <div class="c1"><!-- <text>{{content}}</text> --></div>
+  </div>
 </template>
 
 <style>
-    .box {
-        flex-direction: column;
-    }
+.box {
+  flex-direction: column;
+}
 
-    .c1 {
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-    }
+.c1 {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    .c1 text {
-        padding: 20px;
-    }
+.c1 text {
+  padding: 20px;
+}
 </style>
 
 <script>
-    let i = 0;
+let i = 0;
 
-    export default {
-        data() {
+export default {
+  data() {
+    return {
+      content: "hello world",
 
-            return {
-                content: 'hello world',
+      navBarConfig: {
+        showMore: true,
+        showClose: true,
+        title: "这是标题"
+      }
+    };
+  },
+  handleClose: function(evt) {
+    i++;
 
-                navBarConfig: {
-                    showMore: true,
-                    showClose: true,
-                    title: '这是标题',
-
-
-                }
-            }
-        },
-        handleClose: function (evt) {
-            i++;
-
-            this.content = evt.detail.name + "---" + i;
-        },
-        handleMore: function (evt) {
-            i++;
-            this.content = evt.detail.name + "---" + i;
-        },
-        onInit() {
-
-        },
-
-    }
+    this.content = evt.detail.name + "---" + i;
+  },
+  handleMore: function(evt) {
+    i++;
+    this.content = evt.detail.name + "---" + i;
+  },
+  onInit() {}
+};
 </script>
