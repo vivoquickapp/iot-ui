@@ -18,7 +18,6 @@
     "eslint:code": "eslint src/**/**/*.js",
     "format:code": "prettier-eslint --write \"src/**/**/*.js\" \"src/**/**/*.less\"",
     "prettier:js": "prettier --write 'src/**/**/*.js'",
-    "prettier:ux": "prettier --write './**/**/**.ux'",
     "prettier-watch": "onchange '**/*.md' -- prettier --write {{changed}}"
   },
   "devDependencies": {
