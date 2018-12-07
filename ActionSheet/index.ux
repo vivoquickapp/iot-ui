@@ -6,28 +6,21 @@
                     <list-item type="{{$idx}}" @click="handleClick($item)">
                         <div class="div-box">
                             <text>{{$item.name}}</text>
-
                         </div>
                         <div class="{{$idx+1==datasource.length?'div-line-none':'div-line'}}"></div>
                     </list-item>
                 </block>
-
-
             </list>
-
         </div>
-
     </div>
 </template>
 
 <style lang="less">
     @import '../theme.less';
     @import './ActionSheet.less';
-   
 </style>
 
 <script>
-
     export default {
         data() {
             return {
@@ -51,24 +44,16 @@
         },
         watchPropsChange(newVal) {
             this.selfVisible = newVal;
-
         },
         handleClick(item) {
-
-
-
             this.$emit('evtChoose', {
                 item
             })
         },
         handleCancel() {
-
             this.$emit('evtCancel', {
                 item: { cancel: true }
             });
         }
-
-
-
     }
 </script>

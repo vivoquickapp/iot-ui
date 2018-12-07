@@ -8,7 +8,6 @@
                 <div class="more" if="config.showMore" onclick="handleClickMore">
                     <stack>
                         <div class="more-item  {{activeMore}}">
-
                         </div>
                         <div class="more-item more-item-head">
                             <div class="icon-dot-box">
@@ -21,23 +20,17 @@
                                 <div class="icon-dot"></div>
                             </div>
                         </div>
-
                     </stack>
-
-
                 </div>
                 <div class="close" if="config.showClose" onclick="handleClickClose">
                     <stack>
                         <div class="close-item  {{activeClose}}">
-
                         </div>
                         <stack>
                             <div class="icon-close-line-1"></div>
                             <div class="icon-close-line-2"></div>
                         </stack>
-
                     </stack>
-
                 </div>
             </div>
         </stack>
@@ -50,15 +43,11 @@
 </style>
 
 <script>
-
-
     let defaultConfig = {
-
         showMore: true,
         showClose: true,
         title: ''
     };
-
     export default {
         data() {
             return {
@@ -66,29 +55,23 @@
                 activeClose: ''
             }
         },
-
         props: {
             config: {
                 default: defaultConfig
             }
         },
-
         onInit() {
             for (let key in defaultConfig) {
                 if (this.config[key] === undefined) {
                     this.config[key] = defaultConfig[key];
                 }
-
             }
         },
         handleClickMore() {
-
             this.activeMore = 'more-item-active';
             setTimeout(() => {
                 this.activeMore = '';
             }, 160)
-
-
             this.$emit('evtMore', { name: "more-btn" });
         },
         handleClickClose() {
@@ -96,10 +79,7 @@
             setTimeout(() => {
                 this.activeClose = '';
             }, 160)
-
             this.$emit('evtClose', { name: "close-btn" });
-
         }
-
     }
 </script>
