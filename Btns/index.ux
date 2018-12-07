@@ -19,9 +19,7 @@
           if="{{showText}}"
           style="height:{{textHeight+'px'}}"
         >
-          <text style="color:{{$item.fontColor?$item.fontColor:'#000000'}}">{{
-            $item.name
-          }}</text>
+          <text style="color:{{$item.fontColor?$item.fontColor:'#000000'}}">{{$item.name}}</text>
         </div>
       </div>
     </block>
