@@ -41,7 +41,7 @@ Node.js (>= 8.*), Npm version 4+(Yarn preferred), and Git.
 ``` bash
 
 # 克隆项目
-git clone https://github.com/ your-project-name
+git clone https://github.com/vivoquickapp/iot-ui your-project-name
 # 进入目录
 cd your-project-name
 # 安装依赖包
