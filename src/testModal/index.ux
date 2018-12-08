@@ -1,7 +1,7 @@
 <import name="Modal" src="../../Modal/index.ux"></import>
 <template>
   <div class="box">
-    <text @click="handleClick" class="btn-text"> 点击显示Modal </text>
+    <text @click="handleShowModal" class="btn-text"> 点击显示Modal </text>
     <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
       <div class="modal-content">
         <text>这是内容</text>
@@ -63,9 +63,9 @@
       this.visible = false;
       console.log(evt.detail.item); //点击的button;
     },
-    handleClick() {
+    handleShowModal() {
       this.visible = true;
-      console.log("handleClick点击");
+      console.log("handleShowModal点击");
     }
   };
 </script>

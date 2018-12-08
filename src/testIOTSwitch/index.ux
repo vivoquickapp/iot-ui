@@ -18,21 +18,16 @@
 
   export default {
     onInit() { },
-    click() {
-      this.disabled = !this.disabled;
+    data() {
+      return {
+
+        checked: true,
+        disabled: false
+      };
     },
     handleChange(evt) {
       console.info(`父组件：事件响应: `, evt.type, evt.detail.name);
       this.checked = evt.detail.checked;
-
-      this.i++;
-    },
-    data() {
-      return {
-        i: 0,
-        checked: true,
-        disabled: false
-      };
     }
   };
 </script>

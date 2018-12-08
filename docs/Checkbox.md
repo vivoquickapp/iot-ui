@@ -35,7 +35,6 @@
     onInit() { },
     data() {
       return {
-        i: 0,
         checked: true,
         disabled: false
       };
@@ -44,7 +43,6 @@
       this.disabled = !this.disabled;
     },
     handleChagne(evt) {
-      this.i++;
       console.log("点击CheckBox");
       console.log(evt.detail);
       this.checked = evt.detail.checked;
