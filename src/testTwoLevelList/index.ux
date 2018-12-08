@@ -6,8 +6,8 @@
     footer="{{footer}}"
     title="这是二级列表大标题"
     showicon="{{showicon}}"
-    onevt-back="backFn"
-    onevt-arrow="clickArrow"
+    onevt-back="handleClickBack"
+    onevt-arrow="handleClickDetailArrow"
   ></TwoLevelList>
 </template>
 
@@ -88,11 +88,11 @@ export default {
       }
     ]
   },
-  backFn(evt) {
+  handleClickBack(evt) {
     console.log("back");
     //点击左侧箭头
   },
-  clickArrow: function(evt) {
+  handleClickDetailArrow: function(evt) {
     console.log(evt.detail.item);
     //点击右侧箭头
   }

@@ -6,7 +6,7 @@
       onevt-close="handleClose"
       onevt-more="handleMore"
     ></NavBar>
-    <div class="c1"><!-- <text>{{content}}</text> --></div>
+   
   </div>
 </template>
 
@@ -14,26 +14,13 @@
 .box {
   flex-direction: column;
 }
-
-.c1 {
-  flex: 1;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.c1 text {
-  padding: 20px;
-}
 </style>
 
 <script>
-let i = 0;
 
 export default {
   data() {
     return {
-      content: "hello world",
-
       navBarConfig: {
         showMore: true,
         showClose: true,
@@ -42,13 +29,11 @@ export default {
     };
   },
   handleClose: function(evt) {
-    i++;
-
-    this.content = evt.detail.name + "---" + i;
+    console.log('close')
+   
   },
   handleMore: function(evt) {
-    i++;
-    this.content = evt.detail.name + "---" + i;
+    console.log('more')
   },
   onInit() {}
 };

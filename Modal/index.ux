@@ -1,8 +1,8 @@
 <template>
-  <div class="root-box" show="{{self_visible}}" @click="handleCancel">
+  <div class="root-box" show="{{selfVisible}}" @click="handleCancel">
     <div
       class="content {{visible?'content-animate':''}}"
-      show="{{self_visible}}"
+      show="{{selfVisible}}"
       style="height:{{height}}px"
       @click="handleClickContent"
     >
@@ -34,7 +34,7 @@
 export default {
   data() {
     return {
-      self_visible: this.visible
+      selfVisible: this.visible
     };
   },
   props: {
@@ -55,7 +55,7 @@ export default {
     this.$watch("visible", "visiblechange");
   },
   visiblechange(newVal) {
-    this.self_visible = newVal;
+    this.selfVisible = newVal;
   },
   handleCancel() {
     this.$emit("evtCancel", {
