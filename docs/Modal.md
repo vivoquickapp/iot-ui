@@ -26,93 +26,74 @@
 
 <import name="Modal" src="iot-ui/Modal/index.ux"></import>
 <template>
-    <div class="box">
-        <div class="c1">
-            <text @click="fn">
-                点击显示隐藏Modal
-            </text>
-        </div>
-        <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
-            <div class="c2">
-                <text>这是内容</text>
-                <text>这是内容...</text>
-            </div>
-
-        </Modal>
-    </div>
-
+  <div class="box">
+    <text @click="handleClick" class="btn-text"> 点击显示Modal </text>
+    <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
+      <div class="modal-content">
+        <text>这是内容</text>
+        <text>这是内容...</text>
+      </div>
+    </Modal>
+  </div>
 </template>
 
 <style lang="less">
-    .box {
-        align-items: center;
-    }
+  .box {
+    align-items: center;
+    padding: 40px;
+  }
 
-    .c1 {
-        border: 1px solid blue;
-        margin: 20px;
-        padding: 20px;
-        height: 100px;
-        border-radius: 10px;
-    }
+  .btn-text {
+    border-radius: 10px;
+    background-color: #409EFF;
+    padding: 40px;
+    color: #fff;
+    font-size: 40px;
+  }
 
-    .c2 {
-
-        flex-direction: column;
-    }
+  .modal-content {
+    flex-direction: column;
+  }
 </style>
 
 <script>
-
-
-    export default {
-        private: {
-            visible: false,
-            //height可以不传,默认值600
-            height: 500,
-            //title不传,或者传false,undefined是不显示标题
-            title: "这是标题",
-            buttons: [
-                {
-                    name: '取消',
-                    //color可以不传
-                    color: 'red',
-                    //fontSize可以不传
-                    fontSize: 30
-                }
-                , {
-                    name: '确认',
-                    color: '#0000FF',
-                    fontSize: 30
-                }
-
-            ]
-
-
+  export default {
+    private: {
+      visible: false,
+      //height可以不传,默认值700
+      height: 700,
+      //title不传,或者传false,undefined是不显示标题
+      title: "这是标题",
+      buttons: [
+        {
+          name: "取消",
+          //color可以不传
+          color: "red",
+          //fontSize可以不传
+          fontSize: 48
         },
-        onInit() {
-
-
-        },
-        handleCancel() {
-            //取消
-            this.visible = false;
-        },
-
-        handleButtonClick(evt) {
-            this.visible = false;
-            console.log(evt.detail.item);//点击的button;
-
-
-        },
-        fn() {
-
-            this.visible = true;
-            console.log('fn点击')
-
+        {
+          name: "确认",
+          color: "#0000FF",
+          fontSize: 48
         }
+      ]
+    },
+    onInit() { },
+    handleCancel() {
+      //取消
+      this.visible = false;
+    },
 
+    handleButtonClick(evt) {
+      this.visible = false;
+      console.log(evt.detail.item); //点击的button;
+    },
+    handleClick() {
+      this.visible = true;
+      console.log("handleClick点击");
     }
+  };
 </script>
 
 

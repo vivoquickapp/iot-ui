@@ -32,14 +32,15 @@
 <template>
   <!-- template里只能有一个根节点 -->
   <div class="box">
-    <div class="c1">
-      <text class="t1" @click="fn">点击切换是否显示button文字</text>
-      <text>是否显示button文字:{{ showText}}</text>
+    <div class="content-box">
+      <div>
+        <text class="btn-text" @click="handleToggle">点击切换是否显示button文字</text>
+      </div>
+      <text class="content">是否显示button文字:{{ showText }}</text>
     </div>
     <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
       text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></Btns>
   </div>
-
 </template>
 
 <style>
@@ -47,32 +48,33 @@
     flex-direction: column;
   }
 
-  .c1 {
+  text {
+    font-size: 40px;
+  }
+
+  .content-box {
     flex: 1;
     flex-direction: column;
     justify-content: center;
     padding: 40px;
   }
 
-  .t1 {
+  .btn-text {
     border-radius: 10px;
-    border: 1px solid blue;
+    background-color: #409EFF;
     padding: 40px;
-
+    color:#fff;
   }
 
-  text {
-    font-size: 40px;
+  .content {
+    height: 200px;
   }
 </style>
 
 <script>
-
   export default {
-
     data() {
       return {
-
         showText: true,
         column: 4,
         iconWidth: 140,
@@ -84,47 +86,39 @@
           {
             disabled: false,
             //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-            url: '/demo/testBtns/rec.jpg',
-            name: '文字1',
-            fontColor: 'blue',
-
+            url: "/testBtns/rec.jpg",
+            name: "文字1",
+            fontColor: "blue"
           },
           {
             disabled: false,
-            url: '/demo/testBtns/icon.png',
-            name: '文字1',
-            fontColor: '#ff0000',
-
-          }, {
+            url: "/testBtns/icon.png",
+            name: "文字1",
+            fontColor: "#ff0000"
+          },
+          {
             disabled: true,
-            url: '/demo/testBtns/rec.jpg',
-            name: '文字1',
-            fontColor: '#ff0000',
+            url: "/testBtns/rec.jpg",
+            name: "文字1",
+            fontColor: "#ff0000"
           }
-
-
         ]
-      }
+      };
     },
     handleClick(evt) {
       let { index, item } = evt.detail;
       if (index === 1) {
-        if (item['url'] === '/demo/testBtns/icon.png') {
-          item['url'] = '/demo/testBtns/rec.jpg';
+        if (item["url"] === "/testBtns/icon.png") {
+          item["url"] = "/testBtns/rec.jpg";
         } else {
-          item['url'] = '/demo/testBtns/icon.png';
+          item["url"] = "/testBtns/icon.png";
         }
       }
-
-
     },
-    fn() {
-
+    handleToggle() {
       this.showText = !this.showText;
-
-
     }
-  }
+  };
 </script>
 
 ``` 

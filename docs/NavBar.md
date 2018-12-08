@@ -14,61 +14,44 @@
 
 <import name="NavBar" src="iot-ui/NavBar/index.ux"></import>
 <template>
-    <div class="box">
-        <NavBar config="{{navBarConfig}}" onevt-close="handleClose" onevt-more="handleMore"></NavBar>
-        <div class="c1">
-            <text>{{content}}</text>
-        </div>
-    </div>
+  <div class="box">
+    <NavBar
+      config="{{navBarConfig}}"
+      onevt-close="handleClose"
+      onevt-more="handleMore"
+    ></NavBar>
+   
+  </div>
 </template>
 
 <style>
-    .box {
-        flex-direction: column;
-    }
-
-    .c1 {
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .c1 text {
-        padding: 20px;
-    }
+.box {
+  flex-direction: column;
+}
 </style>
 
 <script>
-    let i = 0;
 
-    export default {
-        data() {
-
-            return {
-                content: 'hello world',
-
-                navBarConfig: {
-                    showMore: true,
-                    showClose: true,
-                    title: '这是标题',
-
-
-                }
-            }
-        },
-        handleClose: function (evt) {
-            i++;
-
-            this.content = evt.detail.name + "---" + i;
-        },
-        handleMore: function (evt) {
-            i++;
-            this.content = evt.detail.name + "---" + i;
-        },
-        onInit() {
-
-        },
-
-    }
+export default {
+  data() {
+    return {
+      navBarConfig: {
+        showMore: true,
+        showClose: true,
+        title: "这是标题"
+      }
+    };
+  },
+  handleClose: function(evt) {
+    console.log('close')
+   
+  },
+  handleMore: function(evt) {
+    console.log('more')
+  },
+  onInit() {}
+};
 </script>
+
+
 ```

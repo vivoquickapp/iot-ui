@@ -15,54 +15,48 @@
 
 <import name="Btn" src="iot-ui/Btn/index.ux"></import>
 <template>
-    <div class="box">
-        <div class="item">
-            <Btn type="{{type}}" title='{{title}}' block="{{block}}" onevt-click="handleClickButton"></Btn>
-
-        </div>
-        <div class="item">
-            <Btn type="dashed" title='取消'></Btn>
-
-        </div>
-
-
+  <div class="box">
+    <div class="item">
+      <Btn
+        type="{{type}}"
+        title="{{title}}"
+        block="{{block}}"
+        onevt-click="handleClickButton"
+      ></Btn>
     </div>
+    <div class="item"><Btn type="dashed" title="取消"></Btn></div>
+  </div>
 </template>
 
 <style lang="less">
-    .box {
-        flex-direction: column;
+.box {
+  flex-direction: column;
 
-        justify-content: center;
-        align-items: center;
-    }
+  justify-content: center;
+  align-items: center;
+}
 
-    .item {
-        margin: 10px;
-    }
+.item {
+  margin: 10px;
+}
 </style>
 
 <script>
-
-    export default {
-
-        onInit() {
-
-        },
-        data() {
-
-            return {
-                block: false,//block属性true,将使按钮适合其父宽度
-                type: 'default',//dashed, primary
-                title: '按钮名字'
-            }
-        },
-        handleClickButton(evt) {
-            console.log('点击按钮')
-            console.log(evt);
-        }
-
-    }
+export default {
+  onInit() {},
+  data() {
+    return {
+      block: false, //block属性true,将使按钮适合其父宽度
+      type: "default", //dashed, primary
+      title: "按钮名字"
+    };
+  },
+  handleClickButton(evt) {
+    console.log("点击按钮");
+    console.log(evt);
+  }
+};
 </script>
+
 
 ```

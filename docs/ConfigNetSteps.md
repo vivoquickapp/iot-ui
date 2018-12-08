@@ -22,66 +22,58 @@
 
 ``` html
 <import name="ConfigNetSteps" src="iot-ui/ConfigNetSteps/index.ux"></import>
-
-
 <template>
-    <div>
-        <ConfigNetSteps title="设备名称" onevt-back="handleBack" buttons="{{buttons}}" onevt-click-btn="clickBtn">
-            <list>
-                <list-item for="productList" type="{{$idx}}">
-                    <text>{{$item.name}}</text>
-                </list-item>
-            </list>
-        </ConfigNetSteps>
-    </div>
-
-
+  <div>
+    <ConfigNetSteps title="设备名称" onevt-back="handleClickBack" buttons="{{buttons}}" onevt-click-btn="handleClickBtn">
+      <list>
+        <list-item for="productList" type="{{$idx}}">
+          <text>{{ $item.name }}</text>
+        </list-item>
+      </list>
+    </ConfigNetSteps>
+  </div>
 </template>
 
 <style lang="less">
-    list-item {
-        justify-content: center;
-    }
+  list-item {
+    justify-content: center;
+  }
 </style>
 
 <script>
-    let productList = [];
-    for (let i = 0; i < 100; i++) {
-        productList.push({
-            name: '产品' + i
-        });
+  let productList = [];
+  for (let i = 0; i < 100; i++) {
+    productList.push({
+      name: "产品" + i
+    });
+  }
+
+  export default {
+    data() {
+      return {
+        buttons: [
+          {
+            title: "重试",
+            block: true
+          },
+          {
+            title: "取消",
+            type: "dashed",
+            block: true
+          }
+        ],
+        productList: productList
+      };
+    },
+
+    onInit() { },
+    handleClickBack(evt) {
+      console.log(evt);
+    },
+    handleClickBtn(evt) {
+      console.log(evt.detail);
     }
-
-
-    export default {
-        data() {
-            return {
-                buttons: [
-                    {
-                        title: '重试',
-                        block: true
-                    },
-                    {
-                        title: '取消',
-                        type: 'dashed',
-                        block: true
-                    }
-                ],
-                productList: productList
-            }
-
-        },
-
-        onInit() {
-
-        },
-        handleBack(evt) {
-            console.log(evt);
-        },
-        clickBtn(evt) {
-            console.log(evt.detail);
-        }
-    }
+  };
 </script>
 
 ```

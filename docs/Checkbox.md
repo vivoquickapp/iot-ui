@@ -17,70 +17,39 @@
 
 <import name="CheckBox" src="iot-ui/CheckBox/index.ux"></import>
 <template>
-    <div class="box">
-        <!-- <text onclick="click" class="btn">点击切换disabled值</text>
-        <text>disabled值:{{disabled}}</text>
-        <text>checked值:{{checked}}</text> -->
-        <div>
-            <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
-        </div>
-
-
-        <!-- <text>改变次数{{i}}</text> -->
-
-    </div>
+  <div class="box">
+    <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
+  </div>
 </template>
 
 <style lang="less">
-    .box {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    text {
-        height: 100px;
-        margin: 30px;
-        width: 100%;
-        padding: 10px;
-    }
-
-    .btn {
-        border: 2px solid blue;
-        border-radius: 10px;
-        width: 600px;
-
-    }
+  .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 
 <script>
-
-    export default {
-
-        onInit() {
-
-        },
-        data() {
-
-            return {
-                i: 0,
-                checked: true,
-                disabled: false
-            }
-        },
-        click() {
-
-            this.disabled = !this.disabled;
-
-        },
-        handleChagne(evt) {
-            this.i++;
-            console.log('点击CheckBox')
-            console.log(evt.detail);
-            this.checked = evt.detail.checked;
-        }
-
+  export default {
+    onInit() { },
+    data() {
+      return {
+        i: 0,
+        checked: true,
+        disabled: false
+      };
+    },
+    click() {
+      this.disabled = !this.disabled;
+    },
+    handleChagne(evt) {
+      this.i++;
+      console.log("点击CheckBox");
+      console.log(evt.detail);
+      this.checked = evt.detail.checked;
     }
+  };
 </script>
 
 ``` 
