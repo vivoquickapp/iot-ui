@@ -4,7 +4,7 @@
   "subversion": {
     "toolkit": "0.0.34"
   },
-  "description": "",
+  "description": "基于快应用的iot组件库",
   "scripts": {
     "start": "hap server --watch",
     "server": "hap server",

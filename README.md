@@ -21,7 +21,7 @@
 
 ## 环境要求
 
-Node.js (>= 8.*), Npm version 4+(Yarn preferred), and Git.
+Node.js (>= 8.9.*), Npm version 4+(Yarn preferred), and Git.
 
 ## 组件
 + [Btn 按钮](/docs/Btn.md)
@@ -41,7 +41,7 @@ Node.js (>= 8.*), Npm version 4+(Yarn preferred), and Git.
 ``` bash
 
 # 克隆项目
-git clone https://github.com/vivoquickapp/iot-ui your-project-name
+git clone https://github.com/vivoquickapp/iot-ui.git your-project-name
 # 进入目录
 cd your-project-name
 # 安装依赖包
