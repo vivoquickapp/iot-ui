@@ -1,7 +1,7 @@
-<import name="IOTSwitch" src="../../IOTSwitch/index.ux"></import>
+<import name="ISwitch" src="../../ISwitch/index.ux"></import>
 <template>
   <div class="box">
-    <IOTSwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="handleChange" name="张三"></IOTSwitch>
+    <ISwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="handleChange" name="张三"></ISwitch>
   </div>
 </template>
 

@@ -37,7 +37,7 @@ let temArr = [
   "Btn",
   "Btns",
   "NavBar",
-  "IOTSwitch",
+  "ISwitch",
   "CheckBox",
   "Loading",
   "TwoLevelList",

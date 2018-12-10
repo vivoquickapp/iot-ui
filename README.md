@@ -27,7 +27,7 @@ Node.js (>= 8.9.*), Npm version 4+(Yarn preferred), and Git.
 + [Btn 按钮](/docs/Btn.md)
 + [Btns 按钮组](/docs/Btns.md)
 + [Checkbox 选项](/docs/Checkbox.md)
-+ [IOTSwitch 开关](/docs/IOTSwitch.md)
++ [ISwitch 开关](/docs/ISwitch.md)
 + [Loading](/docs/Loading.md)
 + [Modal 对话框](/docs/Modal.md)
 + [ActionSheet 对话框](/docs/ActionSheet.md)

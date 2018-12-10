@@ -40,7 +40,7 @@
       "testNavBar": {
         "component": "index"
       },
-      "testIOTSwitch": {
+      "testISwitch": {
         "component": "index"
       },
       "testCheckBox": {
