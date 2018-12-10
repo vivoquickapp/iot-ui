@@ -5,7 +5,7 @@
       <text @click="handleClick" class="btn-text"> 点击显示ActionSheet </text>
       <text class="choosed-value"> 选择的值:{{ choosedValue }} </text>
     </div>
-    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onevt-choose="handleChoose" onevt-cancel="handleCancel"></ActionSheet>
+    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onchoose="handleChoose" oncancel="handleCancel"></ActionSheet>
   </div>
 </template>
 

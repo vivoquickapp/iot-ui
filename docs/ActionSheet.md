@@ -7,8 +7,8 @@
 |  datasource | 选项数组 ,选项需要有name属性| array | [] |
 | height | ActionSheet对话框高度 | number | 600 |
 | visible | ActionSheet对话框是否显示 | boolean | false |
-| onevt-choose | 选择事件 | | |
-| onevt-cancel | 取消事件 | | |
+| onchoose | 选择事件 | | |
+| oncancel | 取消事件 | | |
 
 ### 示例
 
@@ -21,7 +21,7 @@
       <text @click="handleClick" class="btn-text"> 点击显示ActionSheet </text>
       <text class="choosed-value"> 选择的值:{{ choosedValue }} </text>
     </div>
-    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onevt-choose="handleChoose" onevt-cancel="handleCancel"></ActionSheet>
+    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onchoose="handleChoose" oncancel="handleCancel"></ActionSheet>
   </div>
 </template>
 

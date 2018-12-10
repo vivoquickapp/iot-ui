@@ -46,12 +46,12 @@
             this.selfVisible = newVal;
         },
         handleClick(item) {
-            this.$emit('evtChoose', {
+            this.$emit('choose', {
                 item
             })
         },
         handleCancel() {
-            this.$emit('evtCancel', {
+            this.$emit('cancel', {
                 item: { cancel: true }
             });
         }
