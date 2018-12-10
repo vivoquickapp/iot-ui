@@ -90,7 +90,7 @@ export default {
   handleClick(index, item) {
     if (!item["disabled"]) {
       // item['click'](item);
-      this.$emit("click", { index, item });
+      this.$emit("aClick", { index, item });
     }
   }
 };

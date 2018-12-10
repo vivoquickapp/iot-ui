@@ -9,7 +9,7 @@
       <text class="content">是否显示button文字:{{ showText }}</text>
     </div>
     <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" onclick="handleClick"></Btns>
+      text-height="{{textHeight}}" data="{{data}}" ona-click="handleClick"></Btns>
   </div>
 </template>
 
@@ -77,6 +77,7 @@
     },
     handleClick(evt) {
       let { index, item } = evt.detail;
+      console.log('a')
       if (index === 1) {
         if (item["url"] === "/testBtns/icon.png") {
           item["url"] = "/testBtns/rec.jpg";
