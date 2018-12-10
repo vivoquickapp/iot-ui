@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <ConfigNetSteps title="设备名称" onevt-back="handleClickBack" buttons="{{buttons}}" onevt-click-btn="handleClickBtn">
+    <ConfigNetSteps title="设备名称" onback="handleClickBack" buttons="{{buttons}}" onconfirm="handleClickBtn">
       <list>
         <list-item for="productList" type="{{$idx}}">
           <text>{{ $item.name }}</text>

@@ -9,8 +9,8 @@
 | showicon | 是否显示图标 | boolean | false | 
 | header | 是否显示页眉 | string 或 boolean | false |
 | footer | 是否显示页脚 | array 或 boolean | false |
-| onevt-back | 返回按钮事件 | | |
-| onevt-arrow | 右边箭头按钮事件 | | |
+| onback | 返回按钮事件 | | |
+| onarrow | 右边箭头按钮事件 | | |
 
 属性footer可以为false或者不设置当footer为数组时,属性footer数组项:
 
@@ -44,8 +44,8 @@
     footer="{{footer}}"
     title="这是二级列表大标题"
     showicon="{{showicon}}"
-    onevt-back="handleClickBack"
-    onevt-arrow="handleClickDetailArrow"
+    onback="handleClickBack"
+    onarrow="handleClickDetailArrow"
   ></TwoLevelList>
 </template>
 

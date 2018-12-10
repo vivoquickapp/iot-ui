@@ -7,7 +7,7 @@
 |  datasource | 选项数组 ,选项需要有name属性| array | [] |
 | height | ActionSheet对话框高度 | number | 600 |
 | visible | ActionSheet对话框是否显示 | boolean | false |
-| onchoose | 选择事件 | | |
+| onselect | 选择事件 | | |
 | oncancel | 取消事件 | | |
 
 ### 示例
@@ -21,7 +21,7 @@
       <text @click="handleClick" class="btn-text"> 点击显示ActionSheet </text>
       <text class="choosed-value"> 选择的值:{{ choosedValue }} </text>
     </div>
-    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onchoose="handleChoose" oncancel="handleCancel"></ActionSheet>
+    <ActionSheet visible="{{visible}}" datasource="{{datasource}}" height="{{height}}" onselect="handleSelect" oncancel="handleCancel"></ActionSheet>
   </div>
 </template>
 
@@ -65,7 +65,7 @@
       choosedValue: ""
     },
     onInit() { },
-    handleChoose(evt) {
+    handleSelect(evt) {
       console.log(evt.detail);
       this.visible = false; //选中之后 this.visible 需要设置为false
       this.choosedValue = evt.detail.item.name;

@@ -58,12 +58,12 @@ export default {
     this.selfVisible = newVal;
   },
   handleCancel() {
-    this.$emit("evtCancel", {
+    this.$emit("cancel", {
       item: { cancel: true }
     });
   },
   handleButtonClick(item) {
-    this.$emit("evtClickButton", {
+    this.$emit("confirm", {
       item: item
     });
   },

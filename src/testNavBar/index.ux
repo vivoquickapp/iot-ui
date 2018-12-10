@@ -3,8 +3,8 @@
   <div class="box">
     <NavBar
       config="{{navBarConfig}}"
-      onevt-close="handleClose"
-      onevt-more="handleMore"
+      onclose="handleClose"
+      onmore="handleMore"
     ></NavBar>
    
   </div>

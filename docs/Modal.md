@@ -8,8 +8,8 @@
 | height | 对话框高度 | number | 600 | 
 | title |  对话框标题,可以不设置| string,boolean | undefined |
 | buttons | 对话框按钮数组 | array | [] |
-| onevt-cancel | 取消事件 | | |
-| onevt-click-button | 点击按钮事件 | | |
+| oncancel | 取消事件 | | |
+| onconfirm | 点击按钮事件 | | |
 
 属性buttons数组项:
 
@@ -28,7 +28,7 @@
 <template>
   <div class="box">
     <text @click="handleShowModal" class="btn-text"> 点击显示Modal </text>
-    <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
+    <Modal visible="{{visible}}" height="{{height}}" oncancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onconfirm="handleButtonClick">
       <div class="modal-content">
         <text>这是内容</text>
         <text>这是内容...</text>

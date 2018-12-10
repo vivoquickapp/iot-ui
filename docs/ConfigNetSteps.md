@@ -6,8 +6,8 @@
 | -----| ---- | ---- | ---- |
 | title | 设备名称 | string | |
 | buttons | 按钮数组 | array | [] |
-| onevt-back | 点击返回事件 | | | 
-| onevt-click-btn | 点击buttons事件 | | |
+| onback | 点击返回事件 | | | 
+| onconfirm | 点击buttons事件 | | |
 
 属性buttons数组项:
 
@@ -24,7 +24,7 @@
 <import name="ConfigNetSteps" src="iot-ui/ConfigNetSteps/index.ux"></import>
 <template>
   <div>
-    <ConfigNetSteps title="设备名称" onevt-back="handleClickBack" buttons="{{buttons}}" onevt-click-btn="handleClickBtn">
+    <ConfigNetSteps title="设备名称" onback="handleClickBack" buttons="{{buttons}}" onconfirm="handleClickBtn">
       <list>
         <list-item for="productList" type="{{$idx}}">
           <text>{{ $item.name }}</text>

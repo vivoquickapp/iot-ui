@@ -90,10 +90,10 @@ export default {
     }
   },
   handleClickBack() {
-    this.$emit("evtBack", {});
+    this.$emit("back", {});
   },
   handleClickItem(item) {
-    this.$emit("evtArrow", { item: item });
+    this.$emit("arrow", { item: item });
   },
   parseFooter(footer) {
     var arr = [];

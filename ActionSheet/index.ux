@@ -46,7 +46,7 @@
             this.selfVisible = newVal;
         },
         handleClick(item) {
-            this.$emit('choose', {
+            this.$emit('select', {
                 item
             })
         },

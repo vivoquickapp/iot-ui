@@ -42,7 +42,7 @@ export default {
     setTimeout(() => {
       this.animate = 0;
     }, 100);
-    this.$emit("evtClick", {});
+    this.$emit("click", {});
   }
 };
 </script>

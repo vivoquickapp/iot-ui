@@ -12,7 +12,7 @@
 | padding-top | 按钮组padding-top | number | 20 |
 | padding-bottom | 按钮组padding-bottom | number | 20 |
 | data | data是一个数组,数组里的对象是每个按钮的信息,| array | |
-| onevt-click | 点击事件 |  | |
+| onclick | 点击事件 |  | |
 
 
 属性data数组的项目:
@@ -39,7 +39,7 @@
       <text class="content">是否显示button文字:{{ showText }}</text>
     </div>
     <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" onevt-click="handleClick"></Btns>
+      text-height="{{textHeight}}" data="{{data}}" onclick="handleClick"></Btns>
   </div>
 </template>
 

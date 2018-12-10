@@ -1,7 +1,7 @@
 <import name="CheckBox" src="../../CheckBox/index.ux"></import>
 <template>
   <div class="box">
-    <CheckBox name="age" value="{{15}}" checked="{{checked}}" onevt-change="handleChagne" disabled="{{disabled}}"></CheckBox>
+    <CheckBox name="age" value="{{15}}" checked="{{checked}}" onchange="handleChagne" disabled="{{disabled}}"></CheckBox>
   </div>
 </template>
 

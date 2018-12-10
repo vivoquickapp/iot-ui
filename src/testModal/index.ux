@@ -2,7 +2,7 @@
 <template>
   <div class="box">
     <text @click="handleShowModal" class="btn-text"> 点击显示Modal </text>
-    <Modal visible="{{visible}}" height="{{height}}" onevt-cancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onevt-click-button="handleButtonClick">
+    <Modal visible="{{visible}}" height="{{height}}" oncancel="handleCancel" title="{{title}}" buttons="{{buttons}}" onconfirm="handleButtonClick">
       <div class="modal-content">
         <text>这是内容</text>
         <text>这是内容...</text>

@@ -68,7 +68,7 @@ export default {
 
       this.isChecked();
 
-      this.$emit("evtChange", {
+      this.$emit("change", {
         checked: this.my_checked,
         name: this.name,
         value: this.value

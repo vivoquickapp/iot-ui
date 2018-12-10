@@ -5,8 +5,8 @@
 | 属性  | 说明   |  类型 | 默认值  |
 | -----| ---- | ---- | ---- |
 |  config | 配置项| object | {showMore: true,showClose: true, title: '' } |
-| onevt-close | 关闭事件 | | |
-| onevt-more | 更多事件 | | |
+| onclose | 关闭事件 | | |
+| onmore | 更多事件 | | |
 
 ### 示例
 
@@ -17,8 +17,8 @@
   <div class="box">
     <NavBar
       config="{{navBarConfig}}"
-      onevt-close="handleClose"
-      onevt-more="handleMore"
+      onclose="handleClose"
+      onmore="handleMore"
     ></NavBar>
    
   </div>

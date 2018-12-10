@@ -6,8 +6,8 @@
     footer="{{footer}}"
     title="这是二级列表大标题"
     showicon="{{showicon}}"
-    onevt-back="handleClickBack"
-    onevt-arrow="handleClickDetailArrow"
+    onback="handleClickBack"
+    onarrow="handleClickDetailArrow"
   ></TwoLevelList>
 </template>
 

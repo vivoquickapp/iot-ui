@@ -1,4 +1,4 @@
-### IOTSwitch开关
+### ISwitch开关
 属性:
 
 | 属性  | 说明   |  类型 | 默认值  |
@@ -6,15 +6,15 @@
 |  checked | 指定当前是否选中 | boolean | false |
 | disabled | 失效状态 | boolean | false |
 | name | 可不设置,触发的事件会携带回设置的name值 | any | undefined |
-| onevt-change | 事件 | | |
+| onchange | 事件 | | |
 
 ### 示例
 ``` html
 
-<import name="IOTSwitch" src="iot-ui/IOTSwitch/index.ux"></import>
+<import name="ISwitch" src="iot-ui/ISwitch/index.ux"></import>
 <template>
   <div class="box">
-    <IOTSwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="handleChange" name="张三"></IOTSwitch>
+    <ISwitch checked="{{checked}}" disabled="{{disabled}}" onchange="handleChange" name="张三"></ISwitch>
   </div>
 </template>
 

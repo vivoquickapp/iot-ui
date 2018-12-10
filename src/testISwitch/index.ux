@@ -1,7 +1,7 @@
 <import name="ISwitch" src="../../ISwitch/index.ux"></import>
 <template>
   <div class="box">
-    <ISwitch checked="{{checked}}" disabled="{{disabled}}" onevt-change="handleChange" name="张三"></ISwitch>
+    <ISwitch checked="{{checked}}" disabled="{{disabled}}" onchange="handleChange" name="张三"></ISwitch>
   </div>
 </template>
 

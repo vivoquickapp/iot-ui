@@ -48,10 +48,10 @@ export default {
   },
   onInit() {},
   handleBackTo() {
-    this.$emit("evtBack", {});
+    this.$emit("back", {});
   },
   btnClick(btnIndex, item) {
-    this.$emit("evtClickBtn", { item, btnIndex });
+    this.$emit("confirm", { item, btnIndex });
   }
 };
 </script>

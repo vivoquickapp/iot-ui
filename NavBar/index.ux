@@ -72,14 +72,14 @@
             setTimeout(() => {
                 this.activeMore = '';
             }, 160)
-            this.$emit('evtMore', { name: "more-btn" });
+            this.$emit('more', { name: "more-btn" });
         },
         handleClickClose() {
             this.activeClose = 'more-item-active';
             setTimeout(() => {
                 this.activeClose = '';
             }, 160)
-            this.$emit('evtClose', { name: "close-btn" });
+            this.$emit('close', { name: "close-btn" });
         }
     }
 </script>
