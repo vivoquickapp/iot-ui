@@ -6,7 +6,7 @@
         type="{{type}}"
         title="{{title}}"
         block="{{block}}"
-        onclick="handleClickButton"
+        ontap="handleClickButton"
       ></Btn>
     </div>
     <div class="item"><Btn type="dashed" title="取消"></Btn></div>

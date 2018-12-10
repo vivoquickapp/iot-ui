@@ -9,7 +9,7 @@
       <text class="content">是否显示button文字:{{ showText }}</text>
     </div>
     <Btns show-text="{{showText}}" column="{{column}}" icon-width="{{iconWidth}}" padding-top="{{paddingTop}}" padding-bottom="{{paddingBottom}}"
-      text-height="{{textHeight}}" data="{{data}}" ona-click="handleClick"></Btns>
+      text-height="{{textHeight}}" data="{{data}}" ontap="handleClick"></Btns>
   </div>
 </template>
 
