@@ -21,7 +21,7 @@
           title="{{$item.title}}"
           block="{{$item.block}}"
           type="{{$item.type}}"
-          onevt-click="btnClick($idx,$item)"
+          ontap="btnClick($idx,$item)"
         ></Btn>
       </div>
     </div>
