@@ -20,6 +20,15 @@
 | fontSize | 按钮文字尺寸 | number|  |
 
 
+### 注意 ⚠️
+
+```
+1.0.0 版本取消事件使用 onevt-cancel 而非 oncancel
+1.0.0 版本点击按钮事件使用 onevt-click-button 而非 onconfirm
+
+```
+
+
 ### 示例
 
 ``` html

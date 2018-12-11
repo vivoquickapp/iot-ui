@@ -8,7 +8,14 @@
 | disabled | 失效状态 | boolean | false |
 | name | 可不设置,触发的事件会携带回设置的name值 | any | undefined |
 | value |触发的事件会携带回设置的value值 | any | undefined |
-| onchange | 事件 | | |
+| onchange | 改变事件 | | |
+
+### 注意 ⚠️
+
+```
+ 1.0.0 版本改变事件使用 onevt-change 而非 onchange
+
+```
 
 
 ### 示例

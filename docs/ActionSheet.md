@@ -10,6 +10,15 @@
 | onselect | 选择事件 | | |
 | oncancel | 取消事件 | | |
 
+
+### 注意 ⚠️
+
+```
+ 1.0.0 版本选择事件使用 onevt-choose 而非 onselect
+ 1.0.0 版本取消事件使用 onevt-cancel 而非 oncancel
+
+```
+
 ### 示例
 
 ``` html

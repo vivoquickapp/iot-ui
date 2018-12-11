@@ -18,6 +18,16 @@
 | block | 将按钮宽度调整为其父宽度的选项 | boolean | false |
 | type | 设置按钮类型，可选值为 primary default dashed或者不设	| string |	default |
 
+
+
+### 注意 ⚠️
+
+```
+ 1.0.0 版本点击返回事件使用 onevt-back 而非 onback
+ 1.0.0 版本点击buttons事件使用 onevt-click-btn 而非 onconfirm
+
+```
+
 ### 示例
 
 ``` html

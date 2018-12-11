@@ -8,6 +8,15 @@
 | onclose | 关闭事件 | | |
 | onmore | 更多事件 | | |
 
+
+### 注意 ⚠️
+
+```
+1.0.0 版本关闭事件使用 onevt-close 而非 onclose
+1.0.0 版本更多事件使用 onevt-more 而非 onmore
+
+```
+
 ### 示例
 
 ``` html 

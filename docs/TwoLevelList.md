@@ -32,6 +32,13 @@
 | padding | 和属性isGroup配合使用,分组padding | number 或boolean | false |
 | footer | 分组页脚 | array 或 boolean | false |
 
+### 注意 ⚠️
+
+```
+1.0.0 版本返回按钮事件使用 onevt-back 而非 onback
+1.0.0 版本右边箭头按钮事件使用 onevt-arrow 而非 onarrow
+
+```
 
 ### 示例
 
