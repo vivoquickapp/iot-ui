@@ -5,6 +5,10 @@
     "toolkit": "0.0.34"
   },
   "description": "基于快应用的iot组件库",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vivoquickapp/iot-ui.git"
+  },
   "scripts": {
     "start": "hap server --watch",
     "server": "hap server",
