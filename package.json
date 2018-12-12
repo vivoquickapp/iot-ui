@@ -4,6 +4,8 @@
   "subversion": {
     "toolkit": "0.0.34"
   },
+  "author": "tech bro in vivo",
+  "keywords": "IoT,iot,quick app",
   "description": "基于快应用的iot组件库",
   "repository": {
     "type": "git",
