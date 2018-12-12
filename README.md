@@ -25,12 +25,12 @@ Node.js (>= 8.9.*), Npm version 4+(Yarn preferred), and Git.
 ## 组件
 + [Btn 按钮](/docs/Btn.md)
 + [Btns 按钮组](/docs/Btns.md)
-+ [Checkb 选项](/docs/Checkbox.md)
++ [Checkbox 选项](/docs/Checkbox.md)
 + [ISwitch 开关](/docs/ISwitch.md)
 + [Loading](/docs/Loading.md)
 + [Modal 对话框](/docs/Modal.md)
 + [ActionSheet 对话框](/docs/ActionSheet.md)
-+ [NavBa 导航栏](/docs/NavBa.md)
++ [NavBar 导航栏](/docs/NavBar.md)
 + [ConfigNetSteps 配网步骤](/docs/ConfigNetSteps.md)
 + [TwoLevelList 二级列表](/docs/TwoLevelList.md)
 
