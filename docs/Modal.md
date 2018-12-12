@@ -5,13 +5,13 @@
 | 属性  | 说明   |  类型 | 默认值  |
 | -----| ---- | ---- | ---- |
 |  visible | 对话框是否可见 | boolean | false |
-| height | 对话框高度 | number | 600 | 
+| height | 对话框高度 | number | 600 |
 | title |  对话框标题,可以不设置| string,boolean | undefined |
 | buttons | 对话框按钮数组 | array | [] |
 | oncancel | 取消事件 | | |
 | onconfirm | 点击按钮事件 | | |
 
-属性buttons数组项:
+属性button数组项:
 
 | 属性  | 说明   |  类型 | 默认值  |
 | -----| ---- | ---- | ---- |
@@ -20,7 +20,7 @@
 | fontSize | 按钮文字尺寸 | number|  |
 
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
 1.0.0 版本取消事件使用 onevt-cancel 而非 oncancel

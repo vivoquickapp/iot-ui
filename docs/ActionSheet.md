@@ -11,7 +11,7 @@
 | oncancel | 取消事件 | | |
 
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
  1.0.0 版本选择事件使用 onevt-choose 而非 onselect

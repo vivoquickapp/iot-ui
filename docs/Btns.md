@@ -1,4 +1,4 @@
-### Btns按钮组
+### Btns按钮组
 
 
 属性:
@@ -15,7 +15,7 @@
 | ontap | 点击事件 |  | |
 
 
-属性data数组的项目:
+属性data数组的项目:
 
 | 属性 | 说明 | 类型  | 默认值 |
 | --- | ---- | --- | --- |
@@ -24,14 +24,14 @@
 | fontColor | 文字颜色 | string |
 | url | 图标路径 | string | |
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
  1.0.0 版本点击事件使用 onevt-click 而非 ontap
 
 ```
 
-### 示例
+###示例
 
 ``` html
 
@@ -92,7 +92,7 @@
         data: [
           {
             disabled: false,
-            //注意: url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
+            //注意:url请使用绝对路径,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
             url: "/testBtns/rec.jpg",
             name: "文字1",
             fontColor: "blue"
@@ -128,4 +128,4 @@
   };
 </script>
 
-``` 
+```

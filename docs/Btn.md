@@ -9,15 +9,15 @@
 | block | 将按钮宽度调整为其父宽度的选项 | boolean | false |
 |  ontap | 点击按钮事件 | | |
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
  1.0.0 版本点击按钮事件使用 onevt-click 而非 ontap
 
 ```
 
-### 示例
-``` html 
+###示例
+``` html
 
 <import name="Btn" src="iot-ui/Btn/index.ux"></import>
 <template>

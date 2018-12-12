@@ -6,21 +6,21 @@
 | -----| ---- | ---- | ---- |
 | title | 设备名称 | string | |
 | buttons | 按钮数组 | array | [] |
-| onback | 点击返回事件 | | | 
+| onback | 点击返回事件 | | |
 | onconfirm | 点击buttons事件 | | |
 
-属性buttons数组项:
+属性button数组项:
 
 
 | 属性  | 说明   |  类型 | 默认值  |
 | -----| ---- | ---- | ---- |
 | title | 按钮名字 | string | |
 | block | 将按钮宽度调整为其父宽度的选项 | boolean | false |
-| type | 设置按钮类型，可选值为 primary default dashed或者不设	| string |	default |
+| type | 设置按钮类型，可选值为 primary default dashed或者不设  | string |      default |
 
 
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
  1.0.0 版本点击返回事件使用 onevt-back 而非 onback

@@ -6,7 +6,7 @@
 | -----| ---- | ---- | ---- |
 | datasource | 数据数组 | array | [] |
 | title | 标题 | string | |
-| showicon | 是否显示图标 | boolean | false | 
+| showicon | 是否显示图标 | boolean | false |
 | header | 是否显示页眉 | string 或 boolean | false |
 | footer | 是否显示页脚 | array 或 boolean | false |
 | onback | 返回按钮事件 | | |
@@ -25,14 +25,14 @@
 | -----| ---- | ---- | ---- |
 | title | 标题 | string| |
 | subTitle | 副标题 | string | |
-| rightText | 右侧小字 | string | | 
+| rightText | 右侧小字 | string | |
 | icon | 如果showicon为true,请设置图标路径地址 | string | |
 | isGroup | 和属性header或者padding配合使用 | boolean | false|
 | header | 和属性isGroup配合使用,分组页眉 | string 或boolean | false |
 | padding | 和属性isGroup配合使用,分组padding | number 或boolean | false |
 | footer | 分组页脚 | array 或 boolean | false |
 
-### 注意 ⚠️
+###注意 ⚠️
 
 ```
 1.0.0 版本返回按钮事件使用 onevt-back 而非 onback
