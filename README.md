@@ -10,8 +10,8 @@
  <import name="Btn" src="iot-ui/Btn/index.ux"></import>
 ```
 
-## 注意
-
+## 注意 ⚠️
++ 2.0版本并不不兼容1.0的版本. 请详细查看每个组件的文档
 + 如果想修改组件默认样式,请修改组件库下的theme.less文件
 + 注意组件图片的引用路径.路径错误会导致图片无法显示. 图片路径请使用绝对路径或者http地址,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
 
