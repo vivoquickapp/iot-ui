@@ -14,8 +14,7 @@
 + 2.0版本并不不兼容1.0的版本. 请详细查看每个组件的文档
 + 如果想修改组件默认样式,请修改组件库下的theme.less文件
 + 注意组件图片的引用路径.路径错误会导致图片无法显示.图片路径请使用绝对路径或者http地址,例如你的 icon.png图片在  <project name>/src/Mydir/icon.png下,那么绝对路径就是/Mydir/icon.png
-
-+有的示例使用了prompt,manifest.json文件需要添加接口声明,[接口声明示例](https://doc.quickapp.cn/features/system/prompt.html)
++ 有的示例使用了prompt,manifest.json文件需要添加接口声明,[接口声明示例](https://doc.quickapp.cn/features/system/prompt.html)
 + 如果使用IOT接口,manifest.json文件需要添加接口声明{"name": "service.iot"},然后import IOT from '@service.iot' 或 const IOT = require('@service.iot')
 + 组件是按照1080设计宽度开发的,manifest.json文件config.designWidth需要设置成1080,可以参考[页面样式与布局-方案一](https://doc.quickapp.cn/tutorial/framework/page-style-and-layout.html)
 
