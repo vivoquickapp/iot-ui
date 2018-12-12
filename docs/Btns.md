@@ -24,14 +24,14 @@
 | fontColor | 文字颜色 | string |
 | url | 图标路径 | string | |
 
-###注意 ⚠️
+### 注意 ⚠️
 
 ```
  1.0.0 版本点击事件使用 onevt-click 而非 ontap
 
 ```
 
-###示例
+### 示例
 
 ``` html
 

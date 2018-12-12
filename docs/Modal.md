@@ -20,7 +20,7 @@
 | fontSize | 按钮文字尺寸 | number|  |
 
 
-###注意 ⚠️
+### 注意 ⚠️
 
 ```
 1.0.0 版本取消事件使用 onevt-cancel 而非 oncancel

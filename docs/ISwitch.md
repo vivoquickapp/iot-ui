@@ -8,7 +8,7 @@
 | name | 可不设置触发的事件会携带回设置的name值 | any | undefined |
 | onchange | 事件 | | |
 
-###注意 ⚠️
+### 注意 ⚠️
 
 ```
  1.0.0 版本 IOTSwitch 组件同 ISwitch 组件
